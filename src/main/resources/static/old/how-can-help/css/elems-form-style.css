@@ -1,0 +1,81 @@
+.input-text__custom {
+  background: #EAEAEA;
+  border: 1px solid #EAEAEA;
+  border-radius: 20px;
+  padding: 10px 0 10px 50px;
+  font-size: 18px;
+  line-height: 25px;
+  color:#1BBAE1;
+  background: url(../image/donation-money.svg);
+  background-repeat: no-repeat;
+  background-position: 4%;
+}
+.input-text__custom {
+  color: #1BBAE1;
+}
+.input-text__custom:focus,
+.input-text__custom:focus-visible,
+.input-text__custom:active {
+  font-weight: 700;
+  background: url(../image/donation-money-active.svg);
+  background-repeat: no-repeat;
+  background-position: 4%;
+  border: 1px solid #1BBAE1;
+}
+.input-text__custom::-webkit-input-placeholder {
+  color: #C4C4C4;
+}
+.input-text__custom::-moz-placeholder {
+  color: #C4C4C4;
+}
+.input-text__error {
+  padding: 4px 0 0 16px;
+  min-height: 16px;
+  font-size: 12px;
+  color: #E32828;
+}
+.input-radio {
+  display: flex;
+  padding: 10px 0 0 0;
+}
+.input-radio__item:first-child {
+  margin: 0 12px 0 0;
+}
+.input-radio__default {
+  position: absolute;
+  opacity: 0;
+  z-index: -1;
+}
+.input-radio__custom {
+  position: relative;
+  border: 1px solid #C4C4C4;
+  box-sizing: border-box;
+  border-radius: 20px;
+  color: #C4C4C4;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 25px;
+  padding: 8px 11px 10px;
+  cursor: pointer;
+  z-index: 2;
+  transition: all .6s ease;
+}
+.input-radio__default:not(:disabled):not(:checked)+.input-radio__custom:hover {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+  transition: all .6s ease;
+}
+.input-radio__default:checked+.input-radio__custom {
+  border: 1px solid #1BBAE1;
+  color: #1BBAE1;
+  transition: all .6s ease;
+}
+.form__btn:disabled {
+  background: #C4C4C4;
+  color: #fff;
+  transition: all .6s ease;
+}
+.form__btn {
+  background: #1BBAE1;
+  color: #fff;
+  transition: all .6s ease;
+}

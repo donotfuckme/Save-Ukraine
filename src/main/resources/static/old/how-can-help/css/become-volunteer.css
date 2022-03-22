@@ -1,0 +1,162 @@
+.become-volunteer h2 {
+  padding: 0 0 37px 0;
+}
+.volunteer-content__text {
+  font-size: 18px;
+  line-height: 25px;
+  color: #144652;
+}
+@media (max-width: 768px) {
+  .volunteer-content__text {
+    font-size: 14px;
+    line-height: 18px;
+  }
+}
+.volunteer-content__text:first-child {
+  margin: 0 0 30px 0;
+}
+.become-volunteer__title {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 49px;
+  color: #0786A5;
+  padding: 30px 0;
+}
+@media (max-width: 500px) {
+  .become-volunteer__title {
+     font-size: 24px;
+    line-height: 22px;
+  }
+}
+/*FORM------------------------------------------------*/
+.volunteer-form {
+  display: flex;
+  justify-content: space-between;
+  margin: 44px 0 100px;
+}
+@media (max-width: 768px) {
+  .volunteer-form {
+    margin: 20px 0 28px;
+  }
+}
+@media (max-width: 500px) {
+  .volunteer-form {
+    flex-direction: column;
+  }
+}
+.volunteer-form__body{
+  padding: 12px 0 12px 33px;
+}
+@media (max-width: 500px) {
+  .volunteer-form__body {
+    margin: 155px 0 0 0;
+    padding: 0 8px;
+  }
+}
+.volunteer-form__body h3 {
+  padding: 0 0 44px 0;
+}
+.volunteer-content__list {
+  margin: 0 0 30px 0;
+}
+@media (max-width: 500px) {
+  .volunteer-form__body h3 {
+    padding: 0 0 24px 0;
+  }
+  .volunteer-content__list {
+    margin: 0 0 16px 0;
+  }
+}
+.volunteer-content__item {
+  font-size: 18px;
+  line-height: 25px;
+  color: #144652;
+}
+@media (max-width: 768px) {
+  .volunteer-content__item {
+    font-size: 14px;
+    line-height: 22px;
+  }
+}
+.volunteer-form__image {
+  flex: 0 0 41%;
+  position: relative;
+  padding: 0 0 51% 0;
+}
+@media (max-width: 500px) {
+  .volunteer-form__image img {
+    min-height: 300px;
+  }
+}
+.volunteer-form__body {
+  flex: 1 1 auto;
+}
+.form-volunteer__item {
+  margin: 0 0 20px 0;
+}
+.form-volunteer__item:last-child {
+  margin: 0 0 34px 0;
+}
+.form-volunteer__title {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 25px;
+  padding: 0 0 7px 0;
+  color: #0786A5;
+}
+input.form-volunteer__input {
+  width: 100%;
+  box-sizing: border-box;
+  display: block;
+}
+/*FORM after sendin----------------------------------------*/
+.form-volunteer {
+  /*display: none;*/
+}
+.form-volunteer.form-hidden{
+  display: none;
+}
+
+.volunteer-form__sending {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: space-between;
+}
+.sending-form {
+  display: none;
+}
+.sending-form__content {
+  color: #00AD64;
+  position: relative;
+  padding: 0 0 80% 60px;
+}
+@media (max-width: 500px) {
+  .sending-form__content{
+    padding: 0 0 24px 60px;
+  }
+}
+.sending-form__content:before {
+  content: '';
+  position: absolute;
+  width: 46px;
+  height: 46px;
+  background: url(../image/check-mark.svg);
+  left: 0;
+  top: 0;
+}
+.sending-form__text:first-child {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 25px;
+}
+.sending-form__text:last-child {
+  font-size: 16px;
+  line-height: 22px;
+}
+.sending-form__link {
+  font-size: 16px;
+  line-height: 22px;
+  text-decoration-line: underline;
+  color: #00AD64;
+}
