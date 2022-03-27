@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>БФ «Врятувати Україну»</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Open Sans" rel="stylesheet">
+
+  <link th:href="@{/css/style.css}" rel="stylesheet">
+
+</head>
+
+<body>
+
+<div class="wrapper" id="donation">
+
+  <!-- Header -->
+  <th:block th:replace="fragments/header"/>
+
+  <!-- Main menu -->
+  <th:block th:replace="fragments/main-menu"/>
+
+  <section class="donation">
+    <div class="donation__container container">
+      <div class="donation__main-link main-link">
+        <a th:href="@{/index#main-page}" class="main-link__anchor">Головна</a>
+        <a th:href="@{/help#how-can-help}" class="main-link__subanchor">/ Як я можу допомогти?</a>
+        <p class="main-link__submenu"> / Пожертвування</p>
+      </div>
+      <h2 class="donation__title title">Як зробити пожертвування?</h2>
+      <div class="donation__text text-parag">Благодійний Фонд «Врятувати Україну» – незалежна благодійна організація, яка перебуває на повному самозабезпеченні. У нас немає спонсорів та меценатів, які б щомісячно оплачували роботу наших співробітників, оренду складу, комунальні послуги, бензин та обслуговування авто, виготовлення скарбничок та інші потреби. Тож 13-15% кожного внеску йде на підтримку роботи фонду. Детальніше про нашу роботу тут.</div>
+      <div class="donation__image">
+        <img class="image-responsive" th:src="@{/img/donation.png}" alt="Ukrane">
+      </div>
+      <h3 class="donation__subtitle subtitle" id="donation-now">Підтримай Україну</h3>
+      <div class="donation__tabs tabs-donation">
+        <ul class="tabs-donation__navigation nav-tabs">
+          <li class="nav-tabs__item tabs-active" onclick="showPage(event,'page1')">Оплатити на картку</li>
+          <li class="nav-tabs__item" onclick="showPage(event, 'page2')">Оплатити за реквізитами</li>
+        </ul>
+        <ul class="tabs-donation__pages">
+          <li class="tabs-donation__page tabs-active" id="page1">
+            <h4 class="tabs-donation__title">№1 Введіть суму пожертвування або оберіть серед запропонованих варіантів:</h4>
+            <ul class="tabs-donation__price price-donation">
+              <li class="price-donation__item pay-card">10</li>
+              <li class="price-donation__item pay-card">20</li>
+              <li class="price-donation__item pay-card">50</li>
+              <li class="price-donation__item pay-card">100</li>
+              <li class="price-donation__item pay-card">200</li>
+              <li class="price-donation__item pay-card">500</li>
+            </ul>
+            <form action="#" class="tabs-donation__form form-donation">
+              <div class="form-donation__item input-text">
+                <input type="text" class="input-text__custom" placeholder="Сума пожертвування" id="pay-card">
+                <p class="input-text__error"></p>
+              </div>
+              <div class="form-donation__item input-radio">
+                <div class="input-radio__item">
+                  <input type="radio" name="currency" value="грн" class="input-radio__default" id="ukr1" checked>
+                  <label for="ukr1" class="input-radio__custom">грн</label>
+                </div>
+                <div class="input-radio__item">
+                  <input type="radio" name="currency" value="долл" class="input-radio__default" id="usa1">
+                  <label for="usa1" class="input-radio__custom">долл</label>
+                </div>
+              </div>
+            </form>
+            <button type="button" class="form__btn tabs-donation__btn _btn" disabled id="btn-card">Пожертвувати</button>
+          </li>
+          <li class="tabs-donation__page" id="page2">
+            <h4 class="tabs-donation__title">№2 Введіть суму пожертвування або оберіть серед запропонованих варіантів:</h4>
+            <ul class="tabs-donation__price price-donation">
+              <li class="price-donation__item pay-requisites">10</li>
+              <li class="price-donation__item pay-requisites">20</li>
+              <li class="price-donation__item pay-requisites">50</li>
+              <li class="price-donation__item pay-requisites">100</li>
+              <li class="price-donation__item pay-requisites">200</li>
+              <li class="price-donation__item pay-requisites">500</li>
+            </ul>
+            <form action="#" class="tabs-donation__form form-donation">
+              <div class="form-donation__item input-text">
+                <input type="text" class="input-text__custom" placeholder="Сума пожертвування" id="pay-requisites">
+                <p class="input-text__error"></p>
+              </div>
+              <div class="form-donation__item input-radio">
+                <div class="input-radio__item">
+                  <input type="radio" name="currency" value="грн" class="input-radio__default" id="ukr2" checked>
+                  <label for="ukr2" class="input-radio__custom">грн</label>
+                </div>
+                <div class="input-radio__item">
+                  <input type="radio" name="currency" value="долл" class="input-radio__default" id="usa2">
+                  <label for="usa2" class="input-radio__custom">долл</label>
+                </div>
+              </div>
+            </form>
+            <button type="button" class="form__btn tabs-donation__btn _btn" disabled id="btn-requisites">Пожертвувати</button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <th:block th:replace="fragments/footer"/>
+
+</div>
+
+</body>
+
+</html>

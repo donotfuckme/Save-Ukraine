@@ -1,0 +1,264 @@
+.about-us__content {
+  text-align: center;
+}
+
+.about-us__parag {
+  text-align: justify;
+}
+
+.about-us__image {
+  position: relative;
+}
+
+.about-us__image_big {
+  margin: 0 8% 50px;
+  padding: 0 0 48% 0;
+}
+
+.about-us__image_midle {
+  margin: 50px 17%;
+  padding: 0 0 48% 0;
+}
+
+@media (max-width: 768px) {
+  .about-us__image_big {
+    margin: 0 0 20px 0;
+    padding: 0 0 63% 0;
+  }
+
+  .about-us__image_midle {
+    margin: 20px 0;
+    padding: 0 0 65% 0;
+  }
+}
+
+.about-us__slogan {
+  font-style: italic;
+  font-size: 18px;
+  line-height: 25px;
+  color: #0786A5;
+  padding: 50px 15%;
+  position: relative;
+}
+
+.about-us__slogan:before,
+.about-us__slogan:after {
+  content: '';
+  position: absolute;
+  width: 26px;
+  height: 22px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: url('../img/quotes.svg');
+}
+
+.about-us__slogan:before {
+  left: 10%;
+}
+
+.about-us__slogan:after {
+  right: 10%;
+  transform: translateY(-50%) rotate(-180deg);
+}
+
+@media (max-width: 768px) {
+  .about-us__slogan {
+    font-size: 12px;
+    line-height: 16px;
+    padding: 25px 10%;
+  }
+
+  .about-us__slogan:before {
+    left: 1.5%;
+  }
+
+  .about-us__slogan:after {
+    right: 1.5%;
+  }
+}
+
+@media (max-width: 450px) {
+  .about-us__slogan:before {
+    left: 0;
+  }
+
+  .about-us__slogan:after {
+    right: 0;
+  }
+}
+
+.parag-link {
+  color: #0786A5;
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+/*.about-us__purpose {
+  padding: 0 0 50px 0;
+}*/
+.purpose__title {
+  padding: 24px 0 0 0;
+}
+
+.purpose__container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.purpose__content {
+  flex: 1 1 auto;
+  padding: 30px 30px 15px 0;
+}
+
+.purpose__image {
+  flex: 0 0 33%;
+  position: relative;
+  padding: 0 0 72% 0;
+}
+
+@media (max-width: 550px) {
+  .purpose__container {
+    flex-direction: column;
+  }
+
+  .purpose__content {
+    flex: 0 1 100%;
+    padding: 16px 0;
+  }
+
+  .purpose__image {
+    flex: 0 1 100%;
+    padding: 0 0 130% 0;
+  }
+
+  .purpose__image img {
+    object-position: center 19%;
+  }
+}
+
+.about-us__item-li {
+  font-size: 18px;
+  line-height: 25px;
+  color: #144652;
+  margin: 0 0 20px 0;
+}
+
+.about-us__item-li:last-child {
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .about-us__item-li {
+    font-size: 14px;
+    line-height: 19px;
+    margin: 0 0 16px 0;
+  }
+}
+
+.tasks__list {
+  padding: 20px 0 0 0;
+}
+
+.tasks__content {
+  padding: 0 0 54px 0;
+}
+
+@media (max-width: 768px) {
+  .tasks__content {
+    padding: 0 0 24px 0;
+  }
+}
+
+.responsibilities__container {
+  display: flex;
+  justify-content: space-between;
+}
+
+@media (max-width: 768px) {
+  .responsibilities__container {
+    flex-direction: column;
+  }
+}
+
+.responsibilities__image {
+  position: relative;
+  padding: 0 0 44% 0;
+  flex: 0 0 60%;
+}
+
+@media (max-width: 768px) {
+  .responsibilities__image {
+    flex: 0 0 100%;
+    padding: 0 0 75% 0;
+  }
+}
+
+.responsibilities__content {
+  flex: 1 1 auto;
+  padding: 0 0 0 30px;
+  align-self: stretch;
+}
+
+.responsibilities__title {
+  padding: 0 0 50px 0;
+}
+
+@media (max-width: 768px) {
+  .responsibilities__content {
+    padding: 0;
+  }
+
+  .responsibilities__title {
+    padding: 30px 0 20px;
+  }
+}
+
+.responsibilities__parag {
+  margin: 0 0 20px 0;
+}
+
+.statutory-documents__container {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -15px;
+}
+
+.statutory-documents__image {
+  flex: 0 1 25%;
+  margin: 0 0 20px 0;
+  padding: 0 15px;
+}
+
+@media (max-width: 992px) {
+  .statutory-documents__image {
+    flex: 0 1 33.33%;
+  }
+}
+
+@media (max-width: 768px) {
+  .statutory-documents__image {
+    flex: 0 1 50%;
+  }
+}
+
+@media (max-width: 550px) {
+  .statutory-documents__image {
+    flex: 0 1 100%;
+  }
+}
+
+.statutory-documents__bound {
+  padding: 0 0 120% 0;
+  position: relative;
+  box-shadow: 0 0 10px #000;
+}
+
+.statutory-documents__parag {
+  padding: 30px 0 50px 0;
+}
+
+@media (max-width: 768px) {
+  .statutory-documents__parag {
+    padding: 12px 0 30px 0;
+  }
+}

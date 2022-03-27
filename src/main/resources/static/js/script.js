@@ -55,3 +55,6 @@ if (document.querySelector('.slider-main-building')){
     },
   })
 }
+
+const observer = lozad();
+observer.observe();

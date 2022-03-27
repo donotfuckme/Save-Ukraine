@@ -34,33 +34,32 @@
       <div class="how-help__body">
         <div class="how-help__item">
           <div class="how-help__image">
-            <img class="image-responsive"  th:src="@{/img/how-can-help/become-volunteer.png}" alt="Volunteer">
+            <img th:src="@{/img/how-can-help/become-volunteer.png}" class="image-responsive" alt="Volunteer">
           </div>
           <div class="how-help__row">
             <h3 class="how-help__subtitle">Стати Волонтером</h3>
-            <a th:href="@{become-volunteer#become-volunteer}" class="how-help__link icon-arrow-right2"></a>
+            <a th:href="@{/help/become-volunteer#become-volunteer}" class="how-help__link icon-arrow-right2"></a>
           </div>
         </div>
         <div class="how-help__item">
           <div class="how-help__image">
-            <img class="image-responsive" th:src="@{/img/how-can-help/pay-money.png}" alt="Volunteer">
+            <img th:src="@{/img/how-can-help/pay-money.png}" class="image-responsive" alt="Volunteer">
           </div>
           <div class="how-help__row">
             <h3 class="how-help__subtitle">Пожертвувати Кошти</h3>
-            <a th:href="@{donation#donation-now}" class="how-help__link icon-arrow-right2"></a>
+            <a th:href="@{/help/donation#donation-now}" class="how-help__link icon-arrow-right2"></a>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <a class="icon-arrow-right2" href="#" id="scrollToTop"></a>
-
   <!-- Footer -->
   <th:block th:replace="fragments/footer"/>
 
 </div>
 
+<a class="icon-arrow-right2" href="#" id="scrollToTop"></a>
 <script th:src="@{/js/style.js}"></script>
 
 </body>

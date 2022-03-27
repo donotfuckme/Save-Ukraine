@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>БФ «Врятувати Україну»</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Open Sans" rel="stylesheet">
+
+  <link th:href="@{/css/style.css}" rel="stylesheet">
+
+</head>
+
+<body>
+
+<div class="wrapper">
+
+  <!-- Header -->
+  <th:block th:replace="fragments/header"/>
+
+  <!-- Main menu -->
+  <th:block th:replace="fragments/main-menu"/>
+
+  <section class="report" id="report-item1">
+    <div class="container__report container">
+      <div class="how-help__main-link main-link">
+        <a th:href="@{/index#main-page}" class="main-link__anchor">Головна</a>
+        <a th:href="@{/reports#reports}" class="main-link__subanchor">/ Звіти</a>
+        <p class="main-link__submenu"> / Звіт 1</p>
+      </div>
+      <h2 class="reports__title title">Звіт від 15-03-2022, 15:00</h2>
+      <p class="report__city">Харків</p>
+      <p class="report__parag">
+        Міжнародний Благодійний фонд «Врятувати Україну» - це не прибуткова організація, яка має на меті уникнути гуманітарної катастрофи в Україні, викликаної військовою агресією з боку Росії.
+        Наш фонд надаватиме гуманітарну допомогу всім гостро нужденним лише через перевірених волонтерів, або власними силами під час військових дій і після них.
+        Після перемоги України фонд займеться відновленням найкрасивішого рідного міста - героя Харкова.
+      </p>
+      <div class="report__slider slider-report">
+        <div class="slider-report__big">
+          <p>
+            <img th:src="@{/img/reports_01.png}" alt="Україна волонтери" id="bigImg" class="image-responsive">
+          </p>
+        </div>
+        <div class="slider-report__all all-slider">
+          <div class="all-slider__window">
+            <div id="all-slider-report" class="all-slider__list">
+              <div class="all-slider__item">
+                <a th:href="@{/img/reports_01.png}" class="all-slider__link" title="UA Volunteer">
+                  <img th:href="@{/img/reports_01.png}" alt="">
+                </a>
+              </div>
+              <div class="all-slider__item">
+                <a th:href="@{/img/reports_02.png}" class="all-slider__link" title="UA Volunteer">
+                  <img th:href="@{/img/reports_02.png}" alt="">
+                </a>
+              </div>
+              <div class="all-slider__item">
+                <a th:href="@{/img/reports_03.png}" class="all-slider__link" title="UA Volunteer">
+                  <img th:href="@{/img/reports_03.png}" alt="">
+                </a>
+              </div>
+              <div class="all-slider__item">
+                <a th:href="@{/img/reports_04.png}" class="all-slider__link" title="UA Volunteer">
+                  <img th:href="@{/img/reports_04.png}" alt="">
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="buttons">
+            <button class="navigation icon-arrow-right2" id="previous"></button>
+            <button class="navigation icon-arrow-right2" id="next"></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <th:block th:replace="fragments/footer"/>
+
+</div>
+
+<a class="icon-arrow-right2" href="#" id="scrollToTop"></a>
+<script th:src="@{/js/script.js}"></script>
+
+</body>
+
+</html>

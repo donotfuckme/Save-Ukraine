@@ -10,11 +10,21 @@
 @import url('slider-building-style.css');
 @import url('footer-style.css');
 
+/* about us styles */
+@import url('about-us-style.css');
+
+/* contacts styles */
+@import url('contacts-style.css');
+
 /* reports styles */
 @import url('reports-style.css');
 
 /* how can i help styles*/
 @import url('how-can-help-style.css');
-@import url('donation.css');
 @import url('elems-form-style.css');
+
+/* donation styles */
+@import url('donation.css');
+
+/* become volunteer styles */
 @import url('become-volunteer.css');

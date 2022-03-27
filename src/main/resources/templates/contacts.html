@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>БФ «Врятувати Україну»</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Open Sans" rel="stylesheet">
+
+  <link th:href="@{/css/style.css}" rel="stylesheet">
+
+</head>
+
+<body>
+
+<div class="wrapper">
+
+  <!-- Header -->
+  <th:block th:replace="fragments/header"/>
+
+  <!-- Main menu -->
+  <th:block th:replace="fragments/main-menu"/>
+
+  <section class="contacts" id="contacts">
+    <div class="contacts__container container">
+      <div class="main-link">
+        <a th:href="@{/index#main-page}" class="main-link__anchor">Головна</a>
+        <p class="main-link__submenu"> / Як я можу допомогти?</p>
+      </div>
+      <h2 class="contacts__title title">Контакти</h2>
+      <div class="contacts__body">
+        <div class="contacts__elem">
+          <h3 class="contacts__subtitle">Телефон</h3>
+          <div class="contacts__item icon-phone">
+            <a href="tel:+380509248524">+380 50 924 85 24</a>
+          </div>
+          <h3 class="contacts__subtitle">E-mail</h3>
+          <div class="contacts__item icon-envelop">
+            <a href="mailto:CharityUA2022@gmail.com">CharityUA2022@gmail.com</a>
+          </div>
+        </div>
+        <div class="contacts__elem">
+          <h3 class="contacts__subtitle">Мессенджери</h3>
+          <div class="messengers__items">
+            <div class="messengers__item contacts__item">
+              <a title="Viber" href="viber://chat?number=380509248524">+380 50 924 85 24</a>
+            </div>
+            <div class="messengers__item contacts__item">
+              <a title="Telegram" href="https://telegram.me/SaveUA_2022" target="_blank">+380 50 924 85 24</a>
+            </div>
+            <div class="messengers__item contacts__item">
+              <a title="Whatsapp" href="whatsapp://send?phone=380509248524">+380 50 924 85 24</a>
+            </div>
+          </div>
+        </div>
+        <div class="contacts__elem">
+          <h3 class="contacts__subtitle">Соціальні мережі</h3>
+          <div class="social-media__items">
+            <div class="social-media__item">
+              <a href="#!" class="icon-instagram" target="blank"></a>
+            </div>
+            <div class="social-media__item">
+              <a href="#!" class="icon-facebook" target="blank"></a>
+            </div>
+            <div class="social-media__item">
+              <a href="#!" class="icon-twitter" target="blank"></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="contacts__adress">
+        <h3 class="contacts__subtitle">Адреса</h3>
+        <div class="contacts__icon icon-location2">
+          <p>Україна, 21030, Вінницька область, м.Вінниця, вул.Келецька, 103 офіс 4</p>
+        </div>
+      </div>
+      <div id="map"></div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <th:block th:replace="fragments/footer"/>
+
+</div>
+
+<a class="icon-arrow-right2" href="#" id="scrollToTop"></a>
+<script th:src="@{/js/script.js}"></script>
+
+</body>
+
+</html>

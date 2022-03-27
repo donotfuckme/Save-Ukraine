@@ -1,35 +1,47 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <body>
 <nav class="main-menu" id="menu-stiky">
   <div class="main-menu__container container">
     <div class="menu__row" id="main-menu">
       <div class="main-menu__body">
-        <ul class="menu__list" >
+        <ul class="menu__list">
           <li class="menu__item">
-            <a href="#!" class="menu__link">Про Фонд</a>
+            <a href="/" class="menu__link">Про Фонд</a>
             <ul class="menu__sub-list">
-              <li><a href="about-us/about-us.html#about-us" class="menu__sub-link">Про нас</a></li>
+              <li><a th:href="@{/about-us#about-us}" class="menu__sub-link">Про нас</a></li>
               <li><a href="#" class="menu__sub-link">Про Харків</a></li>
               <li><a href="#" class="menu__sub-link">Реквізити</a></li>
             </ul>
           </li>
           <li class="menu__item">
-            <a href="how-can-help/how-can-help.html#how-can-help" class="menu__link">Як я можу допомогти</a>
+            <a th:href="@{/help#how-can-help}" class="menu__link">Як я можу допомогти</a>
             <ul class="menu__sub-list">
-              <li><a href="how-can-help/become-volunteer.html#become-volunteer" class="menu__sub-link">Стати волонтером</a></li>
-              <li><a href="how-can-help/donation.html#donation" class="menu__sub-link">Пожертвувати кошти</a></li>
+              <li>
+                <a th:href="@{/help/become-volunteer#become-volunteer}" class="menu__sub-link">
+                  Стати волонтером
+                </a>
+              </li>
+              <li>
+                <a th:href="@{/help/donation#donation}" class="menu__sub-link">
+                  Пожертвувати кошти
+                </a>
+              </li>
             </ul>
           </li>
           <li class="menu__item">
-            <a href="reports/reports.html#reports" class="menu__link">Звіти</a>
+            <a th:href="@{/reports#reports}" class="menu__link">Звіти</a>
           </li>
-          <li class="menu__item"><a href="#" class="menu__link">Реквізити</a></li>
-          <li class="menu__item"><a href="contacts/contacts.html#contacts" class="menu__link">Контакти</a></li>
+          <li class="menu__item">
+            <a href="#" class="menu__link">Реквізити</a>
+          </li>
+          <li class="menu__item">
+            <a th:href="@{/contacts#contacts}" class="menu__link">Контакти</a>
+          </li>
         </ul>
       </div>
       <div class="menu__donate donate">
-        <a href="how-can-help/donation.html#donation-now" class="donate__link _btn">Допомогти</a>
+        <a th:href="@{/help/donation#donation-now}" class="donate__link _btn">Допомогти</a>
       </div>
     </div>
   </div>
