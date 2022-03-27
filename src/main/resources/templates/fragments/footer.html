@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<body>
+<footer class="footer">
+  <div class="footer__container container">
+    <div class="footer__row">
+      <div class="footer__donate donate">
+        <a th:href="@{how-can-help/donation.html#donation-now}" class="donate__link _btn">Допомогти</a>
+      </div>
+      <div class="footer__logo logo">
+        <a href="#!" class="logo__link">
+          <img th:src="@{/img/LOGO.svg}" alt="logotype Ukraine">
+        </a>
+      </div>
+    </div>
+    <div class="footer__body">
+      <div class="footer__item contacts">
+        <h3 class="contacts__title">Контакти</h3>
+        <div class="contacts__items">
+          <div class="contacts__item icon-location2">м.Харків</div>
+          <div class="contacts__item icon-phone">
+            <a href="tel:+380509248524">+380 50 924 85 24</a>
+          </div>
+          <div class="contacts__item icon-envelop">
+            <a href="mailto:CharityUA2022@gmail.com">CharityUA2022@gmail.com</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer__item messengers">
+        <h3 class="messengers__title">Месенджери</h3>
+        <div class="messengers__items">
+          <div class="messengers__item contacts__item icon-viber">
+            <a title="Viber" href="viber://chat?number=380509248524">+380 50 924 85 24</a>
+          </div>
+          <div class="messengers__item contacts__item icon-telegram">
+            <a title="Telegram" href="https://telegram.me/SaveUA_2022" target="_blank">+380 50 924 85 24</a>
+          </div>
+          <div class="messengers__item contacts__item icon-whatsapp">
+            <a title="Whatsapp" href="whatsapp://send?phone=380509248524">+380 50 924 85 24</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer__item social-media">
+        <h3 class="social-media__title">Подписывайтесь на нас</h3>
+        <div class="social-media__items">
+          <div class="social-media__item">
+            <a href="#!" class="icon-instagram" target="blank"></a>
+          </div>
+          <div class="social-media__item">
+            <a href="#!" class="icon-facebook" target="blank"></a>
+          </div>
+          <div class="social-media__item">
+            <a href="#!" class="icon-twitter" target="blank"></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer__item copyright">
+        <h3 class="social-media__title">Розробники сайту</h3>
+        <div class="copyright__items">
+          <div class="copyright__item">Дизайн сайту -</div>
+          <div class="copyright__item">Розробка сайту -</div>
+          <div class="copyright__item">(с) Всі права захищено, 2022</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>Врятувати Україну</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Open Sans" rel="stylesheet">
+
+  <link th:href="@{/css/style.css}" rel="stylesheet">
+
+  <link href="https://unpkg.com/swiper@8/swiper-bundle.min.css" rel="stylesheet"/>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+
+</head>
+
+<body>
+
+<div class="wrapper" id="main-page">
+
+  <div class="flag-gifs">
+    <div class="gif-ukraine gif-ukraine-left">
+      <img th:src="@{/img/flag-ukraine.gif}" alt="Прапор України" class="image-responsive">
+    </div>
+    <div class="gif-ukraine gif-ukraine-right">
+      <img th:src="@{/img/flag-ukraine.gif}" alt="Прапор України" class="image-responsive">
+    </div>
+  </div>
+
+  <!-- Header -->
+  <th:block th:replace="fragments/header"/>
+
+  <!-- Main menu -->
+  <th:block th:replace="fragments/main-menu"/>
+
+  <!-- Main -->
+  <main class="main">
+    <section class="main__slider slider-main">
+      <div class="main__container container">
+        <div class="slider-main__body">
+          <div class="slider-main__content slider-content">
+            <p class="slider-main__parag">Міждународний Благодійний Фонд</p>
+            <h2 class="slider-main__title">Врятувати <span>Україну</span></h2>
+            <div class="slider-main__text">Ми - не прибуткова організація. Наша мета допомогти <span>уникнути гуманітарної катострофи в Україні</span>,
+              викликаної військовою агресією Російської Федерації.
+            </div>
+            <a th:href="@{how-can-help/donation.html#donation-now}" class="slider-main__button _btn">Допомогти
+              Україні</a>
+          </div>
+          <div class="slider-main-ukrain swiper">
+            <div class="slider-wrapper-ukrain swiper-wrapper">
+              <div class="slide-main-ukrain swiper-slide">
+                <img th:src="@{/img/slider-ukrain/ukraine-slider_1.png}" alt="Харьков">
+              </div>
+              <div class="slide-main-ukrain swiper-slide">
+                <img th:src="@{/img/slider-ukrain/ukraine-slider_2.png}" alt="Харьков">
+              </div>
+              <div class="slide-main-ukrain swiper-slide">
+                <img th:src="@{/img/slider-ukrain/ukraine-slider_3.png}" alt="Харьков">
+              </div>
+              <div class="slide-main-ukrain swiper-slide">
+                <img th:src="@{/img/slider-ukrain/ukraine-slider_4.png}" alt="Харьков">
+              </div>
+            </div>
+            <div class="swiper-pagination slider-dots-ukrain"></div>
+            <div class="slider-arrows">
+              <div class="swiper-button-prev slider-arrows-prev"></div>
+              <div class="swiper-button-next slider-arrows-next"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="main__picture"></div>
+    <section class="main__about-us about-us">
+      <div class="main__container container">
+        <h2 class="main__title title">Про Фонд</h2>
+        <div class="about-us__body">
+          <div class="about-us__text">
+            <p class="about-us__parag">
+              Міжнародний Благодійний фонд «Врятувати Україну» - це не прибуткова організація, яка має на меті уникнути
+              гуманітарної катастрофи в Україні, викликаної військовою агресією з боку Росії.
+            </p>
+            <p class="about-us__parag">
+              Наш фонд надаватиме гуманітарну допомогу всім гостро нужденним лише через перевірених волонтерів, або
+              власними силами під час військових дій і після них.
+            </p>
+            <p class="about-us__parag">
+              Після перемоги України фонд займеться відновленням найкрасивішого рідного міста - героя Харкова.
+            </p>
+          </div>
+          <div class="about-us__content">
+            <div class="about-us__content-item">
+              <div class="content-item__img">
+                <img th:src="@{/img/about-us/humanitarian-aid.svg}" alt="">
+              </div>
+              <p class="content-item__text">
+                Не прибуткова організація, мета якої - уникнути гуманітарної катастрофи в Україні
+              </p>
+            </div>
+            <div class="about-us__content-item">
+              <div class="content-item__img">
+                <img th:src="@{/img/about-us/hand&heart.svg}" alt="">
+              </div>
+              <p class="content-item__text">
+                Перевірені волонтери та надання допомоги власними силами
+              </p>
+            </div>
+            <div class="about-us__content-item">
+              <div class="content-item__img">
+                <img th:src="@{/img/about-us/location-city.svg}" alt="">
+              </div>
+              <p class="content-item__text">
+                Після перемоги - відновлення міста-героя Харкова
+              </p>
+            </div>
+          </div>
+          <div class="about-us__images">
+            <div class="about-us__images_bound">
+              <div class="about-us__image">
+                <img class="image-responsive" th:src="@{/img/about-us/about-us__img1.png}" alt="Волонтери">
+              </div>
+            </div>
+            <div class="about-us__images_bound">
+              <div class="about-us__image">
+                <img class="image-responsive" th:src="@{/img/about-us/about-us__img2.png}" alt="Волонтери">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="main-oda oda">
+      <div class="oda__wrapper">
+        <div class="oda__container">
+          <div class="oda__image">
+            <img class="image-responsive" th:src="@{/img/main-ODA.png}" alt="ОДА Харків">
+          </div>
+          <div class="oda__content">
+            <p>Наша місія</p>
+            <p><span class="oda__color-blue">або</span></p>
+            <p>Україна До та <span class="oda__color-red">Після</span></p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="main-slider-building">
+      <div class="main__container container">
+        <div class="slider-main-building swiper">
+          <div class="slider-wrapper-building swiper-wrapper">
+            <div class="slide-building swiper-slide">
+              <div class="slide-building__images">
+                <div class="slide-building__image">
+                  <img th:src="@{/img/slide-building/slide-building_01.png}" alt="">
+                </div>
+                <div class="slide-building__image">
+                  <img th:src="@{/img/slide-building/slide-building_11.png}" alt="">
+                </div>
+              </div>
+              <div class="slide-building__text">
+                Мирний харківський двір у центрі міста
+              </div>
+            </div>
+            <div class="slide-building swiper-slide">
+              <div class="slide-building__images">
+                <div class="slide-building__image">
+                  <img th:src="@{/img/slide-building/slide-building_02.png}" alt="">
+                </div>
+                <div class="slide-building__image">
+                  <img th:src="@{/img/slide-building/slide-building_22.png}" alt="">
+                </div>
+              </div>
+              <div class="slide-building__text">
+                Новосалтівський ринок
+              </div>
+            </div>
+          </div>
+          <div class="slider-building__arrows building-arrows">
+            <div class="swiper-button-prev building-arrow building-arrows__prev icon-arrow-right2"></div>
+            <div class="swiper-button-next building-arrow building-arrows__next icon-arrow-right2"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="main__reports reports">
+      <div class="main__container container">
+        <div class="reports__row">
+          <h2 class="main__title title">Звіти</h2>
+          <div class="reports__anchor anchor">
+            <a th:href="@{reports/reports.html#all-report}" class="anchor__link icon-arrow-right2">Подивитись всі звіти</a>
+          </div>
+        </div>
+        <div class="reports__body">
+          <div class="reports__item item-reports">
+            <div class="item-reports__image">
+              <img class="image-responsive" th:src="@{/img/reports/reports_01.png}" alt="Харків">
+            </div>
+            <div class="item-reports__content">
+              <div class="item-reports__subtitle">
+                <p>Харків</p>
+                <p>15-03-2022, 15:00</p>
+              </div>
+              <div class="item-reports__text">
+                А это наш бусик. По нам попали когда мы на нем ехали. Немного кантузило, а так, ни царапины. Пацаны...
+              </div>
+              <div class="item-reports__link">
+                <a href="" class="anchor__link icon-arrow-right2">Подивитись повністю</a>
+              </div>
+            </div>
+          </div>
+          <div class="reports__item item-reports">
+            <div class="item-reports__image">
+              <img class="image-responsive" th:src="@{/img/reports/reports_02.png}" alt="Київ">
+            </div>
+            <div class="item-reports__content">
+              <div class="item-reports__subtitle">
+                <p>Київ</p>
+                <p>15-03-2022, 15:00</p>
+              </div>
+              <div class="item-reports__text">
+                А это наш бусик. По нам попали когда мы на нем ехали. Немного кантузило, а так, ни царапины. Пацаны...
+              </div>
+              <div class="item-reports__link">
+                <a href="" class="anchor__link icon-arrow-right2">Подивитись повністю</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <th:block th:replace="fragments/footer"/>
+</div>
+
+<a class="icon-circle-left" href="#" id="anchor-top" onclick="return up()"></a>
+<script th:src="@{/js/script.js}"></script>
+
+</body>
+
+</html>
