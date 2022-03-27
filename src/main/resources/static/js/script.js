@@ -1,4 +1,4 @@
-function include (url) {
+const include = (url) => {
   const script = document.createElement('script')
 
   script.src = url;
@@ -55,5 +55,3 @@ if (document.querySelector('.slider-main-building')){
     },
   })
 }
-
-

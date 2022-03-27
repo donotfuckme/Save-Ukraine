@@ -4,9 +4,6 @@
 <footer class="footer">
   <div class="footer__container container">
     <div class="footer__row">
-      <div class="footer__donate donate">
-        <a th:href="@{how-can-help/donation.html#donation-now}" class="donate__link _btn">Допомогти</a>
-      </div>
       <div class="footer__logo logo">
         <a href="#!" class="logo__link">
           <img th:src="@{/img/LOGO.svg}" alt="logotype Ukraine">
@@ -15,9 +12,9 @@
     </div>
     <div class="footer__body">
       <div class="footer__item contacts">
-        <h3 class="contacts__title">Контакти</h3>
+        <h3 class="footer__subtitle">Контакти</h3>
         <div class="contacts__items">
-          <div class="contacts__item icon-location2">м.Харків</div>
+          <div class="contacts__item icon-location2">м.Вінниця</div>
           <div class="contacts__item icon-phone">
             <a href="tel:+380509248524">+380 50 924 85 24</a>
           </div>
@@ -27,21 +24,21 @@
         </div>
       </div>
       <div class="footer__item messengers">
-        <h3 class="messengers__title">Месенджери</h3>
+        <h3 class="footer__subtitle">Месенджери</h3>
         <div class="messengers__items">
-          <div class="messengers__item contacts__item icon-viber">
+          <div class="messengers__item contacts__item">
             <a title="Viber" href="viber://chat?number=380509248524">+380 50 924 85 24</a>
           </div>
-          <div class="messengers__item contacts__item icon-telegram">
+          <div class="messengers__item contacts__item">
             <a title="Telegram" href="https://telegram.me/SaveUA_2022" target="_blank">+380 50 924 85 24</a>
           </div>
-          <div class="messengers__item contacts__item icon-whatsapp">
+          <div class="messengers__item contacts__item">
             <a title="Whatsapp" href="whatsapp://send?phone=380509248524">+380 50 924 85 24</a>
           </div>
         </div>
       </div>
       <div class="footer__item social-media">
-        <h3 class="social-media__title">Подписывайтесь на нас</h3>
+        <h3 class="footer__subtitle">Підписуйтесь на нас</h3>
         <div class="social-media__items">
           <div class="social-media__item">
             <a href="#!" class="icon-instagram" target="blank"></a>
@@ -54,13 +51,15 @@
           </div>
         </div>
       </div>
-      <div class="footer__item copyright">
-        <h3 class="social-media__title">Розробники сайту</h3>
-        <div class="copyright__items">
-          <div class="copyright__item">Дизайн сайту -</div>
-          <div class="copyright__item">Розробка сайту -</div>
-          <div class="copyright__item">(с) Всі права захищено, 2022</div>
-        </div>
+      <div class="footer__item links-help">
+        <a th:href="@{/become-volunteer#become-volunteer}">Стати волонтером</a>
+        <a th:href="@{/donation#donation-now}">Пожертвувати</a>
+      </div>
+      <div class="footer__copyright copyright">
+        <div class="copyright__item">(с) Всі права захищено, 2022.</div>
+        <div class="copyright__item">Сайт розробляли:</div>
+        <div class="copyright__item">Шевченко Тарас - ссилка,</div>
+        <div class="copyright__item">Шевченко Тарас - ссилка.</div>
       </div>
     </div>
   </div>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>БФ «Врятувати Україну»</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Open Sans" rel="stylesheet">
+
+  <link th:href="@{/css/style.css}" rel="stylesheet">
+
+</head>
+
+<body>
+
+<div class="wrapper" id="how-can-help">
+
+  <!-- Header -->
+  <th:block th:replace="fragments/header"/>
+
+  <!-- Main menu -->
+  <th:block th:replace="fragments/main-menu"/>
+
+  <section class="how-help">
+    <div class="how-help__container container">
+      <div class="how-help__main-link main-link">
+        <a th:href="@{/index#main-page}" class="main-link__anchor">Головна</a>
+        <p class="main-link__submenu"> / Як я можу допомогти?</p>
+      </div>
+      <h2 class="how-help__title title">Як я можу допомогти?</h2>
+      <div class="how-help__body">
+        <div class="how-help__item">
+          <div class="how-help__image">
+            <img class="image-responsive"  th:src="@{/img/how-can-help/become-volunteer.png}" alt="Volunteer">
+          </div>
+          <div class="how-help__row">
+            <h3 class="how-help__subtitle">Стати Волонтером</h3>
+            <a th:href="@{become-volunteer#become-volunteer}" class="how-help__link icon-arrow-right2"></a>
+          </div>
+        </div>
+        <div class="how-help__item">
+          <div class="how-help__image">
+            <img class="image-responsive" th:src="@{/img/how-can-help/pay-money.png}" alt="Volunteer">
+          </div>
+          <div class="how-help__row">
+            <h3 class="how-help__subtitle">Пожертвувати Кошти</h3>
+            <a th:href="@{donation#donation-now}" class="how-help__link icon-arrow-right2"></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <a class="icon-arrow-right2" href="#" id="scrollToTop"></a>
+
+  <!-- Footer -->
+  <th:block th:replace="fragments/footer"/>
+
+</div>
+
+<script th:src="@{/js/style.js}"></script>
+
+</body>
+
+</html>

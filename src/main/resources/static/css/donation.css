@@ -1,47 +1,48 @@
 .donation__container {
   width: 100%;
 }
+
 .donation__title {
   padding: 0 0 37px 0;
-  color: #0786A5;
+  /*color: #0786A5;*/
 }
+
 .donation__text {
-  font-size: 18px;
-  line-height: 25px;
-  color: #144652;
   padding: 0 0 45px 0;
 }
+
 .donation__image {
   position: relative;
   padding: 0 0 25% 0;
 }
+
 .donation__subtitle {
-  font-size: 48px;
-  line-height: 65px;
-  color: #0786A5;
   padding: 45px 0 70px;
 }
+
 @media (max-width: 768px) {
   .donation__subtitle {
     padding: 20px 0 28px;
-    font-size: 36px;
-    line-height: 44px;
   }
 }
+
 /*TABS------------------------------------------------*/
 .donation__tabs {
   margin: 0 0 95px 0;
 }
+
 @media (max-width: 768px) {
   .donation__tabs {
     margin: 0 0 28px 0;
   }
 }
+
 .nav-tabs {
   display: flex;
   position: relative;
   transform: translateY(1px);
 }
+
 .nav-tabs__item {
   border: 1px solid #0786A5;
   margin: 0 17px 0 0;
@@ -50,35 +51,43 @@
   font-size: 16px;
   line-height: 22px;
 }
+
 @media (max-width: 768px) {
   .nav-tabs__item {
     font-size: 14px;
     padding: 4px 12px;
   }
 }
+
 .nav-tabs__item.tabs-active {
   background: #0786A5;
   color: #fff;
 }
+
 .nav-tabs__item:last-child {
   margin: 0;
 }
+
 .tabs-donation__pages {
   border: 1px solid #0786A5;
   box-sizing: border-box;
   padding: 0 0 48px 95px;
 }
+
 @media (max-width: 768px) {
   .tabs-donation__pages {
     padding: 0 0 24px 24px;
   }
 }
+
 .tabs-donation__page {
   display: none;
 }
+
 .tabs-donation__page.tabs-active {
   display: block;
 }
+
 .tabs-donation__title {
   font-weight: 700;
   font-size: 18px;
@@ -86,17 +95,20 @@
   color: #0786A5;
   padding: 50px 0 0 0;
 }
+
 @media (max-width: 500px) {
   .tabs-donation__title {
     font-size: 14px;
     padding: 20px 0 0 0;
   }
 }
+
 .price-donation {
   display: flex;
   flex-wrap: wrap;
   padding: 14px 0;
 }
+
 .price-donation__item {
   background: #EAEAEA;
   border-radius: 20px;
@@ -107,38 +119,48 @@
   padding: 3px 17px;
   cursor: pointer;
 }
+
 .price-donation__item:last-child {
   margin: 0;
 }
+
 @media (max-width: 500px) {
   .price-donation__item {
     margin: 0 10px 10px 0;
   }
+
   .price-donation__item:last-child {
     margin: 0 0 10px 0;
   }
 }
+
 .price-donation__item.sum-active {
   background: #1BBAE1;
   color: #fff;
 }
+
 .tabs-donation__form {
   margin: 0 0 20px 0;
 }
+
 .form-donation {
   display: flex;
 }
+
 .form-donation__item:first-child {
   margin: 0 24px 0 0;
 }
+
 @media (max-width: 500px) {
-  .form-donation{
+  .form-donation {
     flex-direction: column;
   }
+
   .form-donation__item:first-child {
     margin: 0;
   }
 }
+
 @media (max-width: 500px) {
   .tabs-donation__btn {
     margin: 24px 0 0 0;

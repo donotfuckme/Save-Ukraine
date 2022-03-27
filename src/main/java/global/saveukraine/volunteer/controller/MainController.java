@@ -14,4 +14,9 @@ public class MainController {
   public String index() {
     return "index";
   }
+
+  @GetMapping("/how-can-i-help")
+  public String howCanIHelp() {
+    return "how-can-i-help";
+  }
 }

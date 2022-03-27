@@ -1,75 +1,52 @@
-  //Burger
-document.getElementById("burger-menu").onclick = (event) => {
-  document.getElementById("burger-menu").classList.toggle('open')
-  document.getElementById("main-menu").classList.toggle('active')
+//Burger
+document.getElementById('burger-menu').onclick = (event) => {
+  document.getElementById('burger-menu').classList.toggle('open')
+  document.getElementById('main-menu').classList.toggle('active')
   document.getElementsByTagName('header')[0].classList.toggle('transperent')
   document.getElementsByTagName('body')[0].classList.toggle('hidden')
+  document.getElementById('content-header').classList.toggle('active-contacts')
+  document.getElementsByClassName('content-header__contacts')[0].classList.toggle('active-contacts')
 }
 
 //Scroll+fixed menu
-window.onscroll = function() {
-  checkMarginToTop();
-}
-
-const nav = document.getElementById("menu-stiky");
+const nav = document.getElementById('menu-stiky')
 
 let sticky = nav.offsetTop;
 
-function checkMarginToTop() {
-  if (window.pageYOffset > sticky) {
-    nav.classList.add("menu-sticky");
-  } else {
-    nav.classList.remove("menu-sticky");
-  }
+function checkMarginToTop () {
+  window.pageYOffset > sticky
+    ? nav.classList.add('menu-sticky')
+    : nav.classList.remove('menu-sticky')
 }
 
-//Show submenu mobile version
-const arrows = document.getElementsByClassName("arrow-submenu");
+//Scroll to top
+const scrollElem = document.getElementById('scrollToTop')
 
-for (let i = 0; i < arrows.length; i++) {
-  arrows[i].onclick = (event) => {
-    event.target.classList.toggle("init")
+window.onscroll = (event) => {
 
-    let panel = event.target.nextElementSibling
-    if (panel.style.maxHeight){
-      panel.style.maxHeight = null
-    } else {
-      panel.style.maxHeight = `${panel.scrollHeight}px`
-    } 
-  }
+  checkMarginToTop() //stiky menu
+
+  window.scrollY > 200
+    ? scrollElem.style.opacity = 1
+    : scrollElem.style.opacity = 0
 }
 
-//Anchor to top
-// document.getElementById('anchor-top').onclick = (event) => {
-//   function up () {
-//     let top = Math.max(document.body.scrollTop, document.documentElement.scrollTop)
+function goUp () {
+  const top = Math.max(document.body.scrollTop, document.documentElement.scrollTop)
 
-//     if(top > 0) {
-//      window.scrollBy(0, ((top+100)/-10))
+  let timeOut
 
-//       const t = setTimeout(() => up(), 20)
-//     } else clearTimeout(t)
-//       return false
-//     }
-// }
+  if(top > 0) {
+    window.scrollBy(0, -100)
 
-$(document).ready(function(){
-       $('#scroller').hide();  
-      //fade in/out based on scrollTop value
-      $(window).scroll(function() {
-        if ($(window).scrollTop() > 100) {
-          $('#scroller').fadeIn();
-        }else{
-          $('#scroller').fadeOut();
-          // alert ('hello word');
-        }
-      });
-     
-      // scroll body to 0px on click
-      $('#scroller').click(function () {
-        $('body,html').animate({
-          scrollTop: 0
-        }, 400);
-        return false;
-      });
-    });
+    timeOut = setTimeout(() => goUp(), 20)
+
+  } else clearTimeout(timeOut)
+}
+
+scrollElem.onclick = (event) => {
+
+  event.preventDefault()
+
+  goUp()
+}
