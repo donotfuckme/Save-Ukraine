@@ -76,11 +76,12 @@ button {
   font-size: 56px;
   line-height: 76px;
   font-weight: 700;
-  padding: 40px 0;
+  padding: 30px 0 37px;
   color: #0786A5;
 }
 
 .main__title {
+  padding: 40px 0;
   color: #FFD500;
 }
 
@@ -196,7 +197,7 @@ button {
 @media (max-width: 768px) {
   .main-link {
     flex-wrap: wrap;
-    padding: 70px 0 8px 0;
+    padding: 80px 0 0 0;
   }
 }
 

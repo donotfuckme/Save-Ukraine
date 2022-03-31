@@ -9,7 +9,7 @@ const include = (url) => {
 include('js/all-script.js')
 
 //Sliders
-if (document.querySelector('.slider-main-ukrain')){
+if (document.querySelector('.slider-main-ukrain')) {
   const swiperUkrain = new Swiper('.slider-main-ukrain', {
     observer: true,
     observerParents: true,
@@ -24,7 +24,7 @@ if (document.querySelector('.slider-main-ukrain')){
     parallax: true,
     autoplay: true,
     pagination: {
-      el: '.swiper-pagination',
+      el: '.swiper-pagination'
     },
     navigation: {
       nextEl: '.slider-main-ukrain .slider-arrows-next',
@@ -33,7 +33,7 @@ if (document.querySelector('.slider-main-ukrain')){
   })
 }
 
-if (document.querySelector('.slider-main-building')){
+if (document.querySelector('.slider-main-building')) {
   const swiperBuilding = new Swiper('.slider-main-building', {
     observer: true,
     observerParents: true,
@@ -55,6 +55,3 @@ if (document.querySelector('.slider-main-building')){
     },
   })
 }
-
-const observer = lozad();
-observer.observe();

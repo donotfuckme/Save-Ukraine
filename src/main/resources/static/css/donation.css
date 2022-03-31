@@ -2,11 +2,6 @@
   width: 100%;
 }
 
-.donation__title {
-  padding: 0 0 37px 0;
-  /*color: #0786A5;*/
-}
-
 .donation__text {
   padding: 0 0 45px 0;
 }
@@ -166,4 +161,3 @@
     margin: 24px 0 0 0;
   }
 }
-

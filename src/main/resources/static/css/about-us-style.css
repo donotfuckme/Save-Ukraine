@@ -93,9 +93,6 @@
   text-decoration: underline;
 }
 
-/*.about-us__purpose {
-  padding: 0 0 50px 0;
-}*/
 .purpose__title {
   padding: 24px 0 0 0;
 }
@@ -217,40 +214,64 @@
   margin: 0 0 20px 0;
 }
 
-.statutory-documents__container {
-  display: flex;
-  flex-wrap: wrap;
-  margin: 0 -15px;
+@media (min-width: 650px) {
+  .statutory-documents__container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .statutory-documents__image {
+    flex: 0 1 50%;
+    margin: 0 0 20px 0;
+    padding: 0 15px;
+  }
+
+  .statutory-documents__bound {
+    padding: 0 0 120% 0;
+  }
 }
 
-.statutory-documents__image {
-  flex: 0 1 25%;
-  margin: 0 0 20px 0;
-  padding: 0 15px;
-}
-
-@media (max-width: 992px) {
+@media (min-width: 850px) {
   .statutory-documents__image {
     flex: 0 1 33.33%;
   }
 }
 
-@media (max-width: 768px) {
+@media (min-width: 992px) {
   .statutory-documents__image {
-    flex: 0 1 50%;
+    flex: 0 1 25%;
   }
 }
 
-@media (max-width: 550px) {
+@media (max-width: 650px) {
   .statutory-documents__image {
-    flex: 0 1 100%;
+    max-height: 600px;
+    /*padding: 0;*/
+  }
+
+  .statutory-documents__bound {
+    padding: 0 0 90% 0;
   }
 }
 
 .statutory-documents__bound {
-  padding: 0 0 120% 0;
   position: relative;
   box-shadow: 0 0 10px #000;
+}
+
+.statutory-documents__num {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  font-size: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  bottom: 15px;
+  right: 15px;
+  background: #0786A5;
+  color: #fff;
 }
 
 .statutory-documents__parag {
