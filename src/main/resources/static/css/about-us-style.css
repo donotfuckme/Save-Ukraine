@@ -246,7 +246,6 @@
 @media (max-width: 650px) {
   .statutory-documents__image {
     max-height: 600px;
-    /*padding: 0;*/
   }
 
   .statutory-documents__bound {

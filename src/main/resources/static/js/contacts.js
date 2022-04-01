@@ -17,19 +17,30 @@ function initMap() {
     styles: [
       {
         "stylers": [
-          {"hue": "#007fff"},
-          {"saturation": 89}]
+          {
+            "hue": "#007fff"
+          },
+          {
+            "saturation": 89
+          }
+        ]
       },
       {
         "featureType": "water",
         "stylers": [
-          {"color": "#ffffff"}]
+          {
+            "color": "#ffffff"
+          }
+        ]
       },
       {
         "featureType": "administrative.country",
         "elementType": "labels",
         "stylers": [
-          {"visibility": "off"}]
+          {
+            "visibility": "off"
+          }
+        ]
       }
     ]
   }
@@ -40,7 +51,7 @@ function initMap() {
     position: pos,
     map: myMap,
     title: 'БФ "Врятувати Україну"',
-    icon: 'image/Marker.svg',
+    icon: 'img/Marker.svg',
     animation: google.maps.Animation.BOUNCE
   })
 }
