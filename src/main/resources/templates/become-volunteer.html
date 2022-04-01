@@ -65,13 +65,14 @@
           <form action="#" class="volunteer-form__form form-volunteer">
             <div class="form-volunteer__item">
               <div class="form-volunteer__title">Ваші ПІБ</div>
-              <input type="text" class="input-text__custom form-volunteer__input" id="input-name">
+              <input type="text" class="input-text__custom form-volunteer__input field-input" id="input-name">
+              <p class="input-text__error"></p>
             </div>
             <div class="form-volunteer__item">
               <div class="form-volunteer__title">Ваша стать</div>
               <div class="input-radio">
                 <div class="input-radio__item">
-                  <input type="radio" name="currency" value="жін" class="input-radio__default" id="woman" checked>
+                  <input type="radio" name="currency" value="жін" class="input-radio__default" id="woman">
                   <label for="woman" class="input-radio__custom">жін</label>
                 </div>
                 <div class="input-radio__item">
@@ -82,13 +83,15 @@
             </div>
             <div class="form-volunteer__item">
               <div class="form-volunteer__title">Місто</div>
-              <input type="text" class="input-text__custom form-volunteer__input" id="input-city" disabled>
+              <input type="text" class="input-text__custom form-volunteer__input field-input" id="input-city" disabled>
+              <p class="input-text__error"></p>
             </div>
             <div class="form-volunteer__item">
               <div class="form-volunteer__title">Телефон для зв’язку</div>
-              <input type="tel" class="input-text__custom form-volunteer__input" placeholder="(0XX)XXX XX XX" id="input-tel" disabled>
+              <input type="tel" class="input-text__custom form-volunteer__input field-input" placeholder="(0XX)XXX XX XX" id="input-tel" disabled>
+              <p class="input-text__error"></p>
             </div>
-            <button type="button" class="_btn" id="volunter-btn" disabled>Стати волонтером</button>
+            <input type="submit" class="form__btn _btn" id="volunter-btn" Value="Стати волонтером" disabled>
           </form>
           <div class="volunteer-form__sending sending-form">
             <div class="sending-form__content">
