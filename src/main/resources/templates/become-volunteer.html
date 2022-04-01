@@ -65,29 +65,30 @@
           <form action="#" class="volunteer-form__form form-volunteer">
             <div class="form-volunteer__item">
               <div class="form-volunteer__title">Ваші ПІБ</div>
-              <input type="text" class="input-text__custom form-volunteer__input">
+              <input type="text" class="input-text__custom form-volunteer__input" id="input-name">
             </div>
             <div class="form-volunteer__item">
               <div class="form-volunteer__title">Ваша стать</div>
               <div class="input-radio">
                 <div class="input-radio__item">
-                  <input type="radio" name="currency" value="жін" class="input-radio__default" id="ukr1" checked>
-                  <label for="ukr1" class="input-radio__custom">жін</label>
+                  <input type="radio" name="currency" value="жін" class="input-radio__default" id="woman" checked>
+                  <label for="woman" class="input-radio__custom">жін</label>
                 </div>
                 <div class="input-radio__item">
-                  <input type="radio" name="currency" value="чол" class="input-radio__default" id="usa1">
-                  <label for="usa1" class="input-radio__custom">чол</label>
+                  <input type="radio" name="currency" value="чол" class="input-radio__default" id="man">
+                  <label for="man" class="input-radio__custom">чол</label>
                 </div>
               </div>
             </div>
             <div class="form-volunteer__item">
               <div class="form-volunteer__title">Місто</div>
-              <input type="text" class="input-text__custom form-volunteer__input">
+              <input type="text" class="input-text__custom form-volunteer__input" id="input-city" disabled>
             </div>
             <div class="form-volunteer__item">
               <div class="form-volunteer__title">Телефон для зв’язку</div>
-              <input type="tel" class="input-text__custom form-volunteer__input" placeholder="(0XX)XXX XX XX">
+              <input type="tel" class="input-text__custom form-volunteer__input" placeholder="(0XX)XXX XX XX" id="input-tel" disabled>
             </div>
+            <button type="button" class="_btn" id="volunter-btn" disabled>Стати волонтером</button>
           </form>
           <div class="volunteer-form__sending sending-form">
             <div class="sending-form__content">

@@ -174,100 +174,138 @@ if (document.querySelector('.statutory-documents__slider')) {
 } //End Page about-us slider documents
 
 //Page donation change Tab
-const showPage = (event, numberPage) => {
-  const navTabLinks = document.querySelectorAll('.nav-tabs__item')
+const navTabLinks = document.querySelectorAll('.nav-tabs__item')
 
-  for (let item of navTabLinks) {
-    item.classList.remove('tabs-active')
+for (let navTabLink of navTabLinks) {
+  navTabLink.onclick = (event) => {
+    removeAddTabLinkActive(event.target)
+
+    showTabPage(event.target)
   }
+}
+
+const removeAddTabLinkActive = (propActive) => {
+  for (let navTabLink of navTabLinks) {
+    navTabLink.classList.remove('tabs-active')
+  }
+
+  propActive.classList.add('tabs-active')
+}
+
+const showTabPage = (propActive) => {
   const pages = document.querySelectorAll('.tabs-donation__page')
 
   for (let page of pages) {
     page.classList.remove('tabs-active')
   }
 
-  document.getElementById(numberPage).classList.add('tabs-active')
-  event.target.classList.add('tabs-active')
-} //End change Tab
+  document.getElementById(`${propActive.dataset.tab_id}`).classList.add('tabs-active')
+}
+//End change Tab
 
 //Page donation check Input
-const checkValue = (prop, btnId) => {
-  let inputValue = parseFloat(prop.value.trim()) || 0
+const checkValue = (inputElem, value, btnId) => {
+  let inputValue = parseFloat(value.trim()) || 0
 
-  console.log(inputValue, '<===inputValue')
-
-  console.log((inputValue > 0), '<===inputValue < 0')
+  console.log(inputValue, '<===inputValue') //delete
 
   if (inputValue > 0) {
-    Object.assign(prop.nextElementSibling, {
+    Object.assign(inputElem.nextElementSibling, {
       innerText: ''
     })
   } else {
-    Object.assign(prop.nextElementSibling, {
+    Object.assign(inputElem.nextElementSibling, {
       innerText: 'Невірний формат суми'
     })
+    // inputElem.style = 'border: 1px solid #EAEAEA'
   }
 
-  (prop.value === '') && (prop.nextElementSibling.innerText = '')
+  (value === '') && (inputElem.nextElementSibling.innerText = '')
 
-  Object.assign(btnId, {
+  Object.assign(document.getElementById(`${btnId}`), {
     disabled: !(inputValue > 0)
   })
 } //End check input
 
+const inputsDonate = document.getElementsByClassName('input-text__donate')
+
+for (let inputDonate of inputsDonate) {
+  inputDonate.oninput = (event) => {
+    checkValue(event.target, event.target.value, inputDonate.dataset.btn_id)
+
+    removeClassActive(listSumDonate)
+  }
+}
+
 //Page donation Insert sum
-const inputPayCard = document.getElementById('pay-card')
-const inputPayRequisites = document.getElementById('pay-requisites')
+const listSumDonate = document.getElementsByClassName('price-donation__item')
 
-const btnPayCard = document.getElementById('btn-card')
-const btnPayRequisites = document.getElementById('btn-requisites')
+for (let itemSumDonate of listSumDonate) {
+  itemSumDonate.onclick = (event) => {
+    removeClassActive(listSumDonate)
 
-inputPayCard.oninput = (event) => checkValue(event.target, btnPayCard)
+    addClassActive(event.target)
 
-inputPayRequisites.oninput = (event) => checkValue(event.target, btnPayRequisites)
-
-
-const sumListOfCard = document.getElementsByClassName('pay-card')
-const sumListOfRequisites = document.getElementsByClassName('pay-requisites')
-
-for (let sumOfCard of sumListOfCard) {
-  sumOfCard.onclick = (event) => {
-    insertValueCard(event.target, sumListOfCard)
+    insertSum(event.target)
   }
 }
+const insertSum = (property) => {
 
-for (let sumOfRequisites of sumListOfRequisites) {
-  sumOfRequisites.onclick = (event) => {
-    insertValueRequisites(event.target, sumListOfRequisites)
-  }
+  console.log(property.dataset.sum, '<===property.dataset.sum Card') //delete
+
+  const inputDonate = document.getElementById(`${property.dataset.input_donate}`)
+
+  Object.assign(inputDonate, {
+    value: property.dataset.sum
+    // style: 'border: 1px solid #1BBAE1'
+  })
+
+  checkValue(inputDonate, property.dataset.sum, inputDonate.dataset.btn_id)
 }
-const toggleSumActive = (itemActive, sumList) => {
-  for (let sumItem of sumList) {
+
+const removeClassActive = (listSumDonate) => {
+  for (let sumItem of listSumDonate) {
     sumItem.classList.remove('sum-active')
   }
-
-  itemActive.classList.add('sum-active')
 }
 
-const insertValueCard = (property, sumList) => {
-  toggleSumActive(property, sumList)
+const addClassActive = (property) => property.classList.add('sum-active')
+//End page donation Insert value
 
-  console.log(property.textContent)
+//Check form volunteer
+const nameRule = /^[A-Za-z]{2,10}$/
+const telephoneRule = /^\(?([0]{1}[3-9]{2})\)?[- ]?([0-9]{3})[- ]?([0-9]{2})[- ]?([0-9]{2})$/
 
-  Object.assign(inputPayCard, {
-    value: property.textContent
-  })
+const inputName = document.getElementById('input-name')
+const inputCity = document.getElementById('input-city')
+const inputTel = document.getElementById('input-tel')
+const btnBecomeVolunteer = document.getElementById('volunter-btn')
+
+const validateName = (value) => {
+  const result = Boolean(value.match(nameRule))
+
+  inputCity.disabled = !result
 }
 
-const insertValueRequisites = (property, sumList) => {
-  toggleSumActive(property, sumList)
+const validateCity = (value) => {
+  const result = Boolean(value.match(nameRule))
 
-  console.log(property.textContent)
+  inputTel.disabled = !result
+}
 
-  Object.assign(inputPayRequisites, {
-    value: property.textContent
-  })
-} //End page donation Insert value
+const validateTel = (value) => {
+  const result = Boolean(value.match(telephoneRule))
+
+  btnBecomeVolunteer.disabled = !result
+}
+
+const funcsValidate = [validateName, validateCity, validateTel]
+
+// ; [inputName, inputCity, inputTel]
+//   .map((item, index) => Object.assign(item, {
+//     oninput: (event) => funcsValidate[index](event.target.value)
+//   }))
+//End Check form volunteer
 
 //Init map
 function initMap() {

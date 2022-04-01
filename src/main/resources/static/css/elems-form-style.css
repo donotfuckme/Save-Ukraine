@@ -8,7 +8,7 @@
   color: #1BBAE1;
   background: url(../img/donation-money.svg);
   background-repeat: no-repeat;
-  background-position: 4%;
+  background-position: 5%;
 }
 
 .input-text__custom {
@@ -18,10 +18,9 @@
 .input-text__custom:focus,
 .input-text__custom:focus-visible,
 .input-text__custom:active {
-  font-weight: 700;
   background: url(../img/donation-money-active.svg);
   background-repeat: no-repeat;
-  background-position: 4%;
+  background-position: 5%;
   border: 1px solid #1BBAE1;
 }
 
