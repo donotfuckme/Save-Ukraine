@@ -69,7 +69,6 @@
   object-fit: cover;
 }
 
-
 .buttons {
 }
 
@@ -80,4 +79,129 @@
 }
 
 .icon-cheveron-right {
+}
+
+.report-baner {
+  position: relative;
+  width: 100%;
+  /*min-height: 286px;*/
+}
+
+.report-baner:before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: url(../img/report-item-baner.png) center / cover;
+}
+
+.report-arrows {
+}
+
+.report-arrows__body {
+  padding: 100px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.report-arrows__prev {
+}
+
+.icon-arrow-right2 {
+}
+
+.report-arrows__next {
+}
+
+.report-arrows__link {
+  font-family: 'Open Sans', sans-serif;
+  position: relative;
+  font-size: 18px;
+  line-height: 25px;
+  font-weight: 700;
+  color: #C4C4C4;
+  display: block;
+  transition: all .6s ease;
+}
+
+.report-arrows__link:before,
+.report-arrows__link:after {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: all .6s ease;
+}
+
+.report-arrows__link:before {
+  font-family: 'icomoon';
+  color: #fff;
+  font-weight: 400;
+  font-size: 28px;
+  left: 0;
+  z-index: 3;
+}
+
+.report-arrows__link:after {
+  content: '';
+  width: 40px;
+  height: 40px;
+  background: #C4C4C4;
+}
+
+.report-arrows__link:hover {
+  color: #0786A5;
+  transition: all .6s ease;
+}
+
+.report-arrows__link:hover:after {
+  background: #0786A5;
+  transition: all .6s ease;
+}
+
+.report-arrows__prev a:before {
+  left: 6px;
+  transform: rotate(-180deg) translateY(50%);
+}
+
+.report-arrows__next a:before {
+  left: 272px;
+}
+
+.report-arrows__prev a:after {
+  left: 0;
+}
+
+.report-arrows__next a:after {
+  right: 0;
+}
+
+.report-arrows__prev a {
+  padding: 0 0 0 50px;
+}
+
+.report-arrows__next a {
+  padding: 0 50px 0 0;
+}
+
+.report-baner__body {
+  padding: 32px 0;
+  position: relative;
+  z-index: 2;
+}
+
+.report-baner__title {
+  max-width: 70%;
+  font-size: 56px;
+  line-height: 76px;
+  color: #fff;
+  padding: 0 0 32px 0;
+}
+
+@media (max-width: 768px) {
+  .report-baner__title {
+
+    font-size: 42px;
+    line-height: 44px;
+  }
 }
