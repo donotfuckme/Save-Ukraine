@@ -154,20 +154,29 @@ if (document.querySelector('.statutory-documents__slider')) {
     }
   }
 
-  if (window.innerWidth < 650 && isMobile.any()) {
+  if (window.innerWidth < 768 && isMobile.any()) {
     const swiper = new Swiper('.statutory-documents__slider', {
-      ggrabCursor: true,
-      effect: "creative",
-      creativeEffect: {
-        prev: {
-          shadow: true,
-          translate: ["-135%", 0, -500],
-        },
-        next: {
-          shadow: true,
-          translate: ["135%", 0, -500],
-        },
+      // ggrabCursor: true,
+      centeredSlides: true,
+      spaceBetween: 20,
+      zoom: true,
+      slidesPerView: 1.5,
+      breakpoints: {
+        500: {
+          slidesPerView: 2.7,
+        }
       },
+      // effect: "creative",
+      // creativeEffect: {
+      //   prev: {
+      //     shadow: true,
+      //     translate: ["-135%", 0, -500],
+      //   },
+      //   next: {
+      //     shadow: true,
+      //     translate: ["135%", 0, -500],
+      //   },
+      // },
       loop: true,
     })
   }
