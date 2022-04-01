@@ -171,8 +171,8 @@ button {
 }
 
 ._btn:hover {
-  color: #144652;
-  background: #FFD500;
+  /*color: #144652;*/
+  background: linear-gradient(to bottom, #0786A5, rgba(255, 213, 0, 0.9));
   transition: all .6s ease;
 }
 

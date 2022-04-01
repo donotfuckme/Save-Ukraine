@@ -59,7 +59,7 @@
 .how-help__item:hover .how-help__image:before {
   transition: all .8s ease;
   opacity: 0.9;
-  background: linear-gradient(to bottom, #0786A5, rgba(255, 213, 0, 0.9));;
+  background: linear-gradient(to bottom, #0786A5, rgba(255, 213, 0, 0.9));
 }
 
 @media (max-width: 768px) {

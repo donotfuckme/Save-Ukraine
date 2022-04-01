@@ -99,7 +99,38 @@ if (document.querySelector('.slider-main-building')) {
     },
   })
 }
-
+//Report page slider big-small
+if (document.querySelector('.swiper-report__small')) {
+  const swiperReportSmall = new Swiper(".swiper-report__small", {
+    loop: true,
+    spaceBetween: 10,
+    slidesPerView: 2,
+    breakpoints: {
+      450: {
+        slidesPerView: 2,
+      },
+      768: {
+        slidesPerView: 3,
+      },
+      992: {
+        slidesPerView: 4,
+      },
+    },
+    freeMode: true,
+    watchSlidesProgress: true,
+  })
+  const swiperReportBig = new Swiper('.swiper-report__big', {
+    loop: true,
+    spaceBetween: 10,
+    navigation: {
+      nextEl: ".swiper-arrow__next",
+      prevEl: ".swiper-arrow__prev",
+    },
+    thumbs: {
+      swiper: swiperReportSmall,
+    },
+  })
+}
 //Page about-us slider documents
 if (document.querySelector('.statutory-documents__slider')) {
   let isMobile = {
@@ -248,19 +279,30 @@ function initMap() {
     styles: [
       {
         "stylers": [
-          {"hue": "#007fff"},
-          {"saturation": 89}]
+          {
+            "hue": "#007fff"
+          },
+          {
+            "saturation": 89
+          }
+        ]
       },
       {
         "featureType": "water",
         "stylers": [
-          {"color": "#ffffff"}]
+          {
+            "color": "#ffffff"
+          }
+        ]
       },
       {
         "featureType": "administrative.country",
         "elementType": "labels",
         "stylers": [
-          {"visibility": "off"}]
+          {
+            "visibility": "off"
+          }
+        ]
       }
     ]
   }
