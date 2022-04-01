@@ -213,11 +213,22 @@ const checkValue = (inputElem, value, btnId) => {
     Object.assign(inputElem.nextElementSibling, {
       innerText: ''
     })
+    inputElem.style = `
+      background: url(../img/donation-money-active.svg);
+      border: 1px solid #1BBAE1;
+      background-repeat: no-repeat;
+      background-position: 5%;
+    `
   } else {
     Object.assign(inputElem.nextElementSibling, {
       innerText: 'Невірний формат суми'
     })
-    // inputElem.style = 'border: 1px solid #EAEAEA'
+    inputElem.style = `
+      background: url(../img/donation-money.svg);
+      border: 1px solid #EAEAE;
+      background-repeat: no-repeat;
+      background-position: 5%;
+    `
   }
 
   (value === '') && (inputElem.nextElementSibling.innerText = '')
@@ -256,8 +267,13 @@ const insertSum = (property) => {
   const inputDonate = document.getElementById(`${property.dataset.input_donate}`)
 
   Object.assign(inputDonate, {
-    value: property.dataset.sum
-    // style: 'border: 1px solid #1BBAE1'
+    value: property.dataset.sum,
+    style: `
+      background: url(../how-can-help/image/donation-money-active.svg);
+      border: 1px solid #1BBAE1;
+      background-repeat: no-repeat;
+      background-position: 5%;
+    `
   })
 
   checkValue(inputDonate, property.dataset.sum, inputDonate.dataset.btn_id)
