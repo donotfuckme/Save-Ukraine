@@ -83,6 +83,7 @@
 .form__btn:disabled {
   background: #C4C4C4;
   color: #fff;
+  cursor: auto;
   transition: all .6s ease;
 }
 
