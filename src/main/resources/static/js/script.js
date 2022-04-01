@@ -159,7 +159,10 @@ if (document.querySelector('.statutory-documents__slider')) {
       ggrabCursor: true,
       // centeredSlides: true,
       spaceBetween: 15,
-      zoom: true,
+      zoom: {
+        maxRatio: 2.2,
+        minRatio: 1
+      },
       slidesPerView: 1.5,
       breakpoints: {
         500: {
