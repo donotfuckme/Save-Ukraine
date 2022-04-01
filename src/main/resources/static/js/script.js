@@ -158,7 +158,7 @@ if (document.querySelector('.statutory-documents__slider')) {
     const swiper = new Swiper('.statutory-documents__slider', {
       ggrabCursor: true,
       // centeredSlides: true,
-      spaceBetween: 20,
+      spaceBetween: 15,
       zoom: true,
       slidesPerView: 1.5,
       breakpoints: {
