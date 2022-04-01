@@ -246,23 +246,19 @@
 
 @media (max-width: 768px) {
   .statutory-documents__image {
-    /*max-height: 600px;*/
+    max-height: 600px;
   }
 
   .statutory-documents__bound {
     padding: 0 0 90% 0;
   }
 
-  .swiper-zoom-container > canvas, .swiper-zoom-container > img, .swiper-zoom-container > svg {
+  .swiper-zoom-container > img {
     object-fit: cover;
   }
 
   .swiper-slide-zoomed {
     z-index: 5;
-  }
-
-  .swiper-slide-zoomed.swiper-zoom-container {
-    object-fit: cover;
   }
 
   .swiper-slide-zoomed img {
