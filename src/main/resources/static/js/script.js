@@ -285,24 +285,10 @@ const addClassActive = (property) => property.classList.add('sum-active')
 //End page donation Insert value
 
 //Check form volunteer
-const nameRule = /^[А-Я]{0,1}[а-я]{1,15}( [А-Я]{0,1}[а-я]{1,15}){0,1}$|^[A-Z]{0,1}[a-z]{1,15}( [A-Z]{0,1}[a-z]{1,15}){0,1}$/
-const cityRule = /^[A-Za-z]{2,150}$/
-const telephoneRule = /^\(?([0]{1}[3-9]{2})\)?[- ]?([0-9]{3})[- ]?([0-9]{2})[- ]?([0-9]{2})$/
-
-const formVolunteer = document.querySelector('.form-volunteer')
-const inputName = document.getElementById('txtFullName')
-const inputCity = document.getElementById('txtCity')
-const inputTel = document.getElementById('txtPhone')
-const btnBecomeVolunteer = document.getElementById('volunter-btn')
+// const nameRule = /^[А-Я]{0,1}[а-я]{1,15}( [А-Я]{0,1}[а-я]{1,15}){0,1}$|^[A-Z]{0,1}[a-z]{1,15}( [A-Z]{0,1}[a-z]{1,15}){0,1}$/
+// const cityRule = /^[A-Za-z]{2,150}$/
 
 // const fields = formVolunteer.querySelectorAll('.field-input')
-
-// formVolunteer.addEventListener('submit', function (event) {
-//   console.log('clicked on validate')
-//
-//   removeErrorMessage()
-//   event.preventDefault()
-// })
 
 const removeErrorMessage = () => {
   const errors = document.querySelectorAll('.input-text__error')
@@ -319,43 +305,70 @@ const checkFieldsPresence = (itemInput) => {
   })
 }
 
-const validateName = (itemInput) => {
-  const result = Boolean(itemInput.value.match(nameRule))
+// const validateName = (itemInput) => {
+//   const result = Boolean(itemInput.value.match(nameRule))
 
-  result ? removeErrorMessage() : itemInput.nextElementSibling.innerText = 'Невірний формат'
+//   result ? removeErrorMessage() : itemInput.nextElementSibling.innerText = 'Невірний формат'
 
-  checkFieldsPresence(itemInput)
+//   checkFieldsPresence(itemInput)
 
-  inputCity.disabled = !result
-}
+//   inputCity.disabled = !result
+// }
 
-const validateCity = (itemInput) => {
-  const result = Boolean(itemInput.value.match(cityRule))
+// const validateCity = (itemInput) => {
+//   const result = Boolean(itemInput.value.match(cityRule))
 
-  result ? removeErrorMessage() : itemInput.nextElementSibling.innerText = 'Невірний формат'
+//   result ? removeErrorMessage() : itemInput.nextElementSibling.innerText = 'Невірний формат'
 
-  checkFieldsPresence(itemInput)
+//   checkFieldsPresence(itemInput)
 
-  inputTel.disabled = !result
-}
+//   inputTel.disabled = !result
+// }
 
-const validateTel = (itemInput) => {
+// const validateTel = (itemInput) => {
 
-  const result = Boolean(itemInput.value.match(telephoneRule))
+//   const result = Boolean(itemInput.value.match(telephoneRule))
 
-  result ? removeErrorMessage() : itemInput.nextElementSibling.innerText = 'Невірний формат'
+//   result ? removeErrorMessage() : itemInput.nextElementSibling.innerText = 'Невірний формат'
 
-  checkFieldsPresence(itemInput)
+//   checkFieldsPresence(itemInput)
 
-  btnBecomeVolunteer.disabled = !result
-}
+//   btnBecomeVolunteer.disabled = !result
+// }
+const inputRules = [
+  /^[А-Я]{0,1}[а-я]{1,15}( [А-Я]{0,1}[а-я]{1,15})( [А-Я]{0,1}[а-я]{1,15}){0,1}$/,
+  /^[А-Яа-я]{2,15}$/,
+  /^\(?([0]{1}[3-9]{2})\)?[- ]?([0-9]{3})[- ]?([0-9]{2})[- ]?([0-9]{2})$/
+]
 
-const funcsValidate = [validateName, validateCity, validateTel]
+const inputName = document.getElementById('txtFullName')
+const inputCity = document.getElementById('txtCity')
+const inputTel = document.getElementById('txtPhone')
+const btnBecomeVolunteer = document.getElementById('volunter-btn')
+
+const validateInputValue = (itemInput, regex) => {
+    const result = Boolean(itemInput.value.match(regex))
+
+    result ? removeErrorMessage() : itemInput.nextElementSibling.innerText = 'Невірний формат'
+
+    checkFieldsPresence(itemInput)
+
+    btnBecomeVolunteer.disabled = !result
+  }
 
 ;[inputName, inputCity, inputTel]
   .map((item, index) => Object.assign(item, {
-    oninput: (event) => funcsValidate[index](event.target)
+    oninput: (event) => validateInputValue(event.target, inputRules[index])
   }))
+
+const formVolunteer = document.querySelector('.form-volunteer')
+
+formVolunteer.addEventListener('submit', function (event) {
+  event.preventDefault()
+  console.log('clicked on validate')
+
+  removeErrorMessage()
+})
 //End Check form volunteer
 
 //Init map

@@ -16,7 +16,7 @@
 
 <body>
 
-<div class="wrapper">
+<div class="wrapper" id="reports">
 
   <!-- Header -->
   <th:block th:replace="fragments/header"/>
@@ -24,7 +24,7 @@
   <!-- Main menu -->
   <th:block th:replace="fragments/main-menu"/>
 
-  <section class="reports" id="reports">
+  <section class="reports">
     <div class="reports__container container">
 
       <div class="how-help__main-link main-link">
@@ -44,10 +44,8 @@
               <img class="image-responsive" src="#" th:src="@{/img/reports_01.png}" th:alt="${report.city}">
             </div>
             <div class="item-reports__content">
-              <div class="item-reports__subtitle">
-                <p th:text="${report.city}"></p>
-                <p th:text="${#temporals.format(report.dateTimeOf, 'dd-MM-yyyy, HH:mm')}"></p>
-              </div>
+              <p class="item-reports__date" th:text="${#temporals.format(report.dateTimeOf, 'dd-MM-yyyy, HH:mm')}"></p>
+              <p class="item-reports__subtitle" th:text="${report.title}"></p>
               <p class="item-reports__text" th:text="${report.description}"></p>
               <div class="item-reports__link">
                 <a th:href="'/reports/' + ${report.id}" class="anchor__link icon-arrow-right2">Подивитись повністю</a>

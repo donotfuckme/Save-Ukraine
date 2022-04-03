@@ -20,7 +20,6 @@
 
 .anchor__link {
   color: #0786A5;
-  font-weight: 700;
   font-size: 18px;
   line-height: 25px;
   display: block;
@@ -103,6 +102,7 @@
     flex-direction: column;
     align-items: stretch;
     margin: 0 0 30px 0;
+    flex-wrap: nowrap;
   }
 }
 
@@ -115,6 +115,7 @@
 
 .item-reports {
   display: flex;
+  width: 100%;
   align-items: stretch;
   justify-content: space-between;
   flex-direction: column;
@@ -142,18 +143,28 @@
 .item-reports__content {
   flex: 1 1 auto;
   color: #0786A5;
-  font-size: 18px;
-  line-height: 25px;
   background: #F5F5F5;
   padding: 0 20px;
 }
 
+.item-reports__date {
+  font-size: 12px;
+  line-height: 16px;
+  color: #144652;
+  padding: 15px 0 0 0;
+}
+
 .item-reports__subtitle {
   font-weight: 700;
+  font-size: 24px;
+  line-height: 33px;
   padding: 15px 0 20px;
 }
 
 .item-reports__text {
+  font-size: 18px;
+  line-height: 25px;
+  color: #144652;
   margin: 0 0 35px 0;
   height: 50px;
   overflow: hidden;
@@ -171,18 +182,19 @@
   content: '';
   position: absolute;
   height: 20px;
-  width: 40%;
+  width: 50%;
   bottom: 0;
   right: 0;
   z-index: 2;
-  background: linear-gradient(to right, transparent 15%, rgba(245, 245, 245, .8) 50%, #F5F5F5 100%);
-  background: -webkit-linear-gradient(to right, transparent 15%, rgba(245, 245, 245, .8) 50%, #F5F5F5 100%);
-  background: -o-linear-gradient(to right, transparent 15%, rgba(245, 245, 245, .8) 50%, #F5F5F5 100%);
-  background: -ms-linear-gradient(to right, transparent 15%, rgba(245, 245, 245, .8) 50%, #F5F5F5 100%);
-  background: -moz-linear-gradient(to right, transparent 15%, rgba(245, 245, 245, .8) 50%, #F5F5F5 100%);
+  background: linear-gradient(to right, transparent 5%, #F5F5F5 100%);
+  /*  background: -webkit-linear-gradient(to right, transparent 15%, rgba(245, 245, 245, .8) 50%, #F5F5F5 100%);
+    background: -o-linear-gradient(to right, transparent 15%, rgba(245, 245, 245, .8) 50%, #F5F5F5 100%);
+    background: -ms-linear-gradient(to right, transparent 15%, rgba(245, 245, 245, .8) 50%, #F5F5F5 100%);
+    background: -moz-linear-gradient(to right, transparent 15%, rgba(245, 245, 245, .8) 50%, #F5F5F5 100%);*/
 }
 
 .item-reports__link {
   padding: 0 0 30px 0;
   text-align: right;
+  font-weight: 400;
 }
