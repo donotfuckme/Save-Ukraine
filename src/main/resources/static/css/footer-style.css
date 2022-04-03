@@ -215,7 +215,7 @@
 
   .copyright__item:nth-child(1) {
     margin: 10px 0 0 0;
-    order: 4;
+    order: 5;
   }
 
   .copyright__item:nth-child(2) {
@@ -229,5 +229,20 @@
   .copyright__item:nth-child(4) {
     order: 3;
   }
+
+  .copyright__item:nth-child(5) {
+    order: 4;
+  }
+}
+
+.copyright__item a {
+  color: #0786A5;
+  transition: all .6s ease;
+}
+
+.copyright__item a:hover {
+  color: #144652;
+  text-decoration: underline;
+  transition: all .6s ease;
 }
 

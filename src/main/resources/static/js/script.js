@@ -65,7 +65,7 @@ if (document.querySelector('.slider-main-ukrain')) {
     loop: true,
     loopAdditionalSlides: 5,
     preloadImages: false,
-    parallax: true,
+    // parallax: true,
     autoplay: true,
     pagination: {
       el: '.swiper-pagination'
@@ -83,16 +83,13 @@ if (document.querySelector('.slider-main-building')) {
     observer: true,
     observerParents: true,
     slidesPerView: 1,
-    spaceBetween: 32,
+    // spaceBetween: 32,
     watchOverflow: true,
     speed: 1200,
     loop: true,
     loopAdditionalSlides: 5,
     preloadImages: false,
     parallax: true,
-    // pagination: {
-    //   el: '.swiper-pagination',
-    // },
     navigation: {
       nextEl: '.building-arrows__next',
       prevEl: '.building-arrows__prev',
@@ -157,7 +154,6 @@ if (document.querySelector('.statutory-documents__slider')) {
   if (window.innerWidth < 768 && isMobile.any()) {
     const swiper = new Swiper('.statutory-documents__slider', {
       ggrabCursor: true,
-      // centeredSlides: true,
       spaceBetween: 15,
       zoom: {
         maxRatio: 2.2,
