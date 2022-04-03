@@ -1,3 +1,7 @@
+.slider-main {
+  height: 700px;
+}
+
 .slider-main__body {
   display: flex;
   justify-content: space-between;
