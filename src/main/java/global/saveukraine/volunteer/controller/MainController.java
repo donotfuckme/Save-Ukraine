@@ -11,43 +11,28 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @AllArgsConstructor
 public class MainController {
 
-  @GetMapping("/")
+  @GetMapping
   public String index() {
     return "index";
   }
 
-  @GetMapping("/about-us")
+  @GetMapping("about-us")
   public String aboutUs() {
     return "about-us";
   }
 
-  @GetMapping("/contacts")
+  @GetMapping("contacts")
   public String contacts() {
     return "contacts";
   }
 
-  @GetMapping("/reports")
+  @GetMapping("reports")
   public String reports() {
     return "reports";
   }
 
-  @GetMapping("/reports/{id}")
+  @GetMapping("reports/{id}")
   public String report(@PathVariable String id) {
     return "report";
-  }
-
-  @GetMapping("/help")
-  public String howCanIHelp() {
-    return "help";
-  }
-
-  @GetMapping("/help/become-volunteer")
-  public String becomeVolunteer() {
-    return "become-volunteer";
-  }
-
-  @GetMapping("/help/donation")
-  public String donation() {
-    return "donation";
   }
 }

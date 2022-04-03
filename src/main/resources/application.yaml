@@ -1,0 +1,26 @@
+logging:
+  level:
+    "org.springframework": info
+    "global.saveukraine": debug
+
+spring:
+  mail:
+    host: smtp.gmail.com
+    # sensitive data
+    username:
+    # sensitive data
+    password:
+    properties:
+      mail:
+        transport:
+          protocol: smtp
+        smtp:
+          port: 587
+          auth: true
+          starttls:
+            enable: true
+            required: true
+
+mail:
+  subject: "Заявка на волонтера"
+  text-placeholder: "Имя: %s%nПол: %s%nГород: %s%nТелефон:%s"

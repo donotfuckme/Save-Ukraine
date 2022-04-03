@@ -58,47 +58,49 @@
       </div>
       <div class="become-volunteer__form volunteer-form">
         <div class="volunteer-form__image">
-          <img th:src="@{/img/become-volunteer.png}" alt="aid" class="image-responsive">
+          <img src="#" th:src="@{/img/become-volunteer.png}" alt="aid" class="image-responsive">
         </div>
         <div class="volunteer-form__body">
           <h3 class="subtitle">Анкета для волонтерів</h3>
-          <form action="#" class="volunteer-form__form form-volunteer">
+          <form class="volunteer-form__form form-volunteer" action="#" th:action="@{/help/become-volunteer}"
+                method="post" name="a">
             <div class="form-volunteer__item">
-              <div class="form-volunteer__title">Ваші ПІБ</div>
-              <input type="text" class="input-text__custom form-volunteer__input field-input" id="input-name">
+              <label for="txtFullName" class="form-volunteer__title">Ваші ПІБ</label>
+              <input id="txtFullName" type="text" name="fullName" class="input-text__custom form-volunteer__input field-input">
               <p class="input-text__error"></p>
             </div>
             <div class="form-volunteer__item">
               <div class="form-volunteer__title">Ваша стать</div>
               <div class="input-radio">
                 <div class="input-radio__item">
-                  <input type="radio" name="currency" value="жін" class="input-radio__default" id="woman">
-                  <label for="woman" class="input-radio__custom">жін</label>
+                  <input id="boolWoman" type="radio" name="female" value="жін" class="input-radio__default">
+                  <label for="boolWoman" class="input-radio__custom">жін</label>
                 </div>
                 <div class="input-radio__item">
-                  <input type="radio" name="currency" value="чол" class="input-radio__default" id="man">
-                  <label for="man" class="input-radio__custom">чол</label>
+                  <input id="boolMan" type="radio" name="male" value="чол" class="input-radio__default">
+                  <label for="boolMan" class="input-radio__custom">чол</label>
                 </div>
               </div>
             </div>
             <div class="form-volunteer__item">
-              <div class="form-volunteer__title">Місто</div>
-              <input type="text" class="input-text__custom form-volunteer__input field-input" id="input-city" disabled>
+              <label for="txtCity" class="form-volunteer__title">Місто</label>
+              <input id="txtCity" type="text" name="city" class="input-text__custom form-volunteer__input field-input" disabled>
               <p class="input-text__error"></p>
             </div>
             <div class="form-volunteer__item">
-              <div class="form-volunteer__title">Телефон для зв’язку</div>
-              <input type="tel" class="input-text__custom form-volunteer__input field-input" placeholder="(0XX)XXX XX XX" id="input-tel" disabled>
+              <label for="txtPhone" class="form-volunteer__title">Телефон для зв’язку</label>
+              <input id="txtPhone" type="tel" name="phone" class="input-text__custom form-volunteer__input field-input"
+                     placeholder="(0XX)XXX XX XX" disabled>
               <p class="input-text__error"></p>
             </div>
-            <input type="submit" class="form__btn _btn" id="volunter-btn" Value="Стати волонтером" disabled>
+            <button type="submit" class="form__btn _btn" id="volunter-btn" disabled>Стати волонтером</button>
           </form>
           <div class="volunteer-form__sending sending-form">
             <div class="sending-form__content">
               <p class="sending-form__text">Дякуємо! Ваша анкета прийнята.</p>
               <p class="sending-form__text">Незабаром ми зв’яжемось з Вами.</p>
             </div>
-            <a href="#!" class="sending-form__link">Заповнити анкету ще раз</a>
+            <a href="#" class="sending-form__link">Заповнити анкету ще раз</a>
           </div>
         </div>
       </div>

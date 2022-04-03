@@ -294,20 +294,19 @@ const cityRule = /^[A-Za-z]{2,150}$/
 const telephoneRule = /^\(?([0]{1}[3-9]{2})\)?[- ]?([0-9]{3})[- ]?([0-9]{2})[- ]?([0-9]{2})$/
 
 const formVolunteer = document.querySelector('.form-volunteer')
-const inputName = document.getElementById('input-name')
-const inputCity = document.getElementById('input-city')
-const inputTel = document.getElementById('input-tel')
+const inputName = document.getElementById('txtFullName')
+const inputCity = document.getElementById('txtCity')
+const inputTel = document.getElementById('txtPhone')
 const btnBecomeVolunteer = document.getElementById('volunter-btn')
 
 // const fields = formVolunteer.querySelectorAll('.field-input')
 
-formVolunteer.addEventListener('submit', function (event) {
-  event.preventDefault()
-  console.log('clicked on validate')
-
-  removeErrorMessage()
-
-})
+// formVolunteer.addEventListener('submit', function (event) {
+//   console.log('clicked on validate')
+//
+//   removeErrorMessage()
+//   event.preventDefault()
+// })
 
 const removeErrorMessage = () => {
   const errors = document.querySelectorAll('.input-text__error')
