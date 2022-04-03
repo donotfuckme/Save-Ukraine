@@ -98,10 +98,12 @@
 
 .swiper-button-next.building-arrow.building-arrows__next.icon-arrow-right2 {
   right: 25%;
+  color: #0786A5;
 }
 
 .swiper-button-prev.building-arrow.building-arrows__prev.icon-arrow-right2 {
   left: 25%;
+  color: #0786A5;
 }
 
 .swiper-button-next:after, .swiper-button-prev:after {
