@@ -21,6 +21,9 @@ public class EmailService {
   @Value("${spring.mail.username}")
   private String sender;
 
+  @Value("${mail.receiver}")
+  private String mailReceiver;
+
   @Value("${mail.subject}")
   private String mailSubject;
 
@@ -31,7 +34,7 @@ public class EmailService {
     log.debug("sender = '{}', mail subject = '{}'", sender, mailSubject);
     SimpleMailMessage message = new SimpleMailMessage();
     message.setFrom(sender);
-    message.setTo("antoxashow@gmail.com");
+    message.setTo(mailReceiver);
     message.setSubject(mailSubject);
     String gender = isEmpty(volunteerUserOrder.getMale()) ? "Мужчина" : isEmpty(volunteerUserOrder.getFemale()) ? "Женщина" : "Не указано";
     String formattedText = format(mailTextPlaceholder, volunteerUserOrder.getFullName(), gender, volunteerUserOrder.getCity(), volunteerUserOrder.getPhone());

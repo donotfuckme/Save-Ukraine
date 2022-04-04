@@ -22,5 +22,6 @@ spring:
             required: true
 
 mail:
+  receiver: "antonxashow@gmail.com"
   subject: "Заявка на волонтера"
   text-placeholder: "Имя: %s%nПол: %s%nГород: %s%nТелефон:%s"
