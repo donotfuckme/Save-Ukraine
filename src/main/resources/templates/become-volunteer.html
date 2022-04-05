@@ -10,7 +10,7 @@
 
   <link rel="canonical" href="#"/>
 
-  <link rel="shortcut icon" href="@{img/favicon.ico}" type="image/x-icon">
+  <link rel="shortcut icon" th:href="@{/img/favicon.ico}" type="image/x-icon">
 
   <link href="https://fonts.googleapis.com/css?family=Open Sans" rel="stylesheet">
 
@@ -35,7 +35,7 @@
         <a th:href="@{/help#how-can-help}" class="main-link__subanchor">/ Як я можу допомогти?</a>
         <p class="main-link__submenu"> / Стати волонтером</p>
       </div>
-      <h2 class="how-help__title title">Як стати волонтером?</h2>
+      <h1 class="how-help__title title">Як стати волонтером?</h1>
       <div class="become-volunteer__content volunteer-content">
         <p class="volunteer-content__text text-parag">
           Наша мрія - жити у мирній, щасливій країні. А країна - це, перш за
@@ -47,7 +47,7 @@
           інвестують свій час, ресурси та вміння у втілення соціально значимих проєктів: гуманітарна допомога, допомога
           військовим, силам ТрО, допомога у відбудові міст, що постраждали від війни.
         </p>
-        <h3 class="subtitle">Завдання волонтера:</h3>
+        <h2 class="subtitle">Завдання волонтера:</h2>
         <ul class="volunteer-content__list">
           <li class="volunteer-content__item">- збір інформації про тих, хто потребує допомоги;</li>
           <li class="volunteer-content__item">- складання списку необхідного;</li>
@@ -65,7 +65,7 @@
           <img src="#" th:src="@{/img/become-volunteer.png}" alt="aid" class="image-responsive">
         </div>
         <div class="volunteer-form__body">
-          <h3 class="subtitle">Анкета для волонтерів</h3>
+          <h2 class="subtitle">Анкета для волонтерів</h2>
           <form class="volunteer-form__form form-volunteer" action="#" th:action="@{/help/become-volunteer}"
                 method="post" name="a">
             <div class="form-volunteer__item">

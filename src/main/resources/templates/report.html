@@ -10,7 +10,7 @@
 
   <link rel="canonical" href="#"/>
 
-  <link rel="shortcut icon" href="@{img/favicon.ico}" type="image/x-icon">
+  <link rel="shortcut icon" th:href="@{/img/favicon.ico}" type="image/x-icon">
 
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open Sans" >
 
@@ -38,41 +38,41 @@
         <a th:href="@{/reports#reports}" class="main-link__subanchor">/ Звіти</a>
         <p class="main-link__submenu" th:text="' / Звіт від ' + ${#temporals.format(report.dateTimeOf, 'dd-MM-yyyy, HH:mm')}"></p>
       </div>
-      <h2 class="reports__title title" th:text="'Звіт від ' + ${#temporals.format(report.dateTimeOf, 'dd-MM-yyyy, HH:mm')}"></h2>
+      <h1 class="reports__title title" th:text="'Звіт від ' + ${#temporals.format(report.dateTimeOf, 'dd-MM-yyyy, HH:mm')}"></h1>
       <p class="report__city" th:text="${report.city}"></p>
       <p class="report__parag" th:text="${report.description}"></p>
       <div class="report__slider slider-report">
         <div class="swiper swiper-report__big">
           <div class="swiper-wrapper">
             <div class="swiper-slide slide-report__big">
-              <img th:src="@{/img/reports_01.png}">
+              <img th:src="@{/img/reports_01.png}" alt="">
             </div>
             <div class="swiper-slide slide-report__big">
-              <img th:src="@{/img/reports_02.png}">
+              <img th:src="@{/img/reports_02.png}" alt="">
             </div>
             <div class="swiper-slide slide-report__big">
-              <img th:src="@{/img/reports_03.png}">
+              <img th:src="@{/img/reports_03.png}" alt="">
             </div>
             <div class="swiper-slide slide-report__big">
-              <img th:src="@{/img/reports_04.png}">
+              <img th:src="@{/img/reports_04.png}" alt="">
             </div>
             <div class="swiper-slide slide-report__big">
-              <img th:src="@{/img/reports_01.png}">
+              <img th:src="@{/img/reports_01.png}" alt="">
             </div>
             <div class="swiper-slide slide-report__big">
-              <img th:src="@{/img/reports_02.png}">
+              <img th:src="@{/img/reports_02.png}" alt="">
             </div>
             <div class="swiper-slide slide-report__big">
-              <img th:src="@{/img/reports_03.png}">
+              <img th:src="@{/img/reports_03.png}" alt="">
             </div>
             <div class="swiper-slide slide-report__big">
-              <img th:src="@{/img/reports_04.png}">
+              <img th:src="@{/img/reports_04.png}" alt="">
             </div>
             <div class="swiper-slide slide-report__big">
-              <img th:src="@{/img/reports_01.png}">
+              <img th:src="@{/img/reports_01.png}" alt="">
             </div>
             <div class="swiper-slide slide-report__big">
-              <img th:src="@{/img/reports_02.png}">
+              <img th:src="@{/img/reports_02.png}" alt="">
             </div>
           </div>
           <div class="swiper-report-arrows swiper-arrow__next icon-arrow-right2"></div>
@@ -81,34 +81,34 @@
         <div thumbsSlider="" class="swiper swiper-report__small">
           <div class="swiper-wrapper">
             <div class="swiper-slide slide-report__small">
-              <img th:src="@{/img/reports_01.png}">
+              <img th:src="@{/img/reports_01.png}" alt="">
             </div>
             <div class="swiper-slide slide-report__small">
-              <img th:src="@{/img/reports_02.png}">
+              <img th:src="@{/img/reports_02.png}" alt="">
             </div>
             <div class="swiper-slide slide-report__small">
-              <img th:src="@{/img/reports_03.png}">
+              <img th:src="@{/img/reports_03.png}" alt="">
             </div>
             <div class="swiper-slide slide-report__small">
-              <img th:src="@{/img/reports_04.png}">
+              <img th:src="@{/img/reports_04.png}" alt="">
             </div>
             <div class="swiper-slide slide-report__small">
-              <img th:src="@{/img/reports_01.png}">
+              <img th:src="@{/img/reports_01.png}" alt="">
             </div>
             <div class="swiper-slide slide-report__small">
-              <img th:src="@{/img/reports_02.png}">
+              <img th:src="@{/img/reports_02.png}" alt="">
             </div>
             <div class="swiper-slide slide-report__small">
-              <img th:src="@{/img/reports_03.png}">
+              <img th:src="@{/img/reports_03.png}" alt="">
             </div>
             <div class="swiper-slide slide-report__small">
-              <img th:src="@{/img/reports_04.png}">
+              <img th:src="@{/img/reports_04.png}" alt="">
             </div>
             <div class="swiper-slide slide-report__small">
-              <img th:src="@{/img/reports_01.png}">
+              <img th:src="@{/img/reports_01.png}" alt="">
             </div>
             <div class="swiper-slide slide-report__small">
-              <img th:src="@{/img/reports_02.png}">
+              <img th:src="@{/img/reports_02.png}" alt="">
             </div>
           </div>
         </div>

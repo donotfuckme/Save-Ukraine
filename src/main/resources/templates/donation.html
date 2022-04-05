@@ -10,7 +10,7 @@
 
   <link rel="canonical" href="#"/>
 
-  <link rel="shortcut icon" href="@{img/favicon.ico}" type="image/x-icon">
+  <link rel="shortcut icon" th:href="@{/img/favicon.ico}" type="image/x-icon">
 
   <link href="https://fonts.googleapis.com/css?family=Open Sans" rel="stylesheet">
 
@@ -35,16 +35,16 @@
         <a th:href="@{/help#how-can-help}" class="main-link__subanchor">/ Як я можу допомогти?</a>
         <p class="main-link__submenu"> / Пожертвування</p>
       </div>
-      <h2 class="donation__title title">Як зробити пожертвування?</h2>
+      <h1 class="donation__title title">Як зробити пожертвування?</h1>
       <div class="donation__text text-parag">Благодійний Фонд «Врятувати Україну» – незалежна благодійна організація,
         яка перебуває на повному самозабезпеченні. У нас немає спонсорів та меценатів, які б щомісячно оплачували роботу
         наших співробітників, оренду складу, комунальні послуги, бензин та обслуговування авто, виготовлення скарбничок
         та інші потреби. Тож 13-15% кожного внеску йде на підтримку роботи фонду. Детальніше про нашу роботу тут.
       </div>
       <div class="donation__image">
-        <img class="image-responsive" th:src="@{/img/donation.png}" alt="Ukrane">
+        <img class="image-responsive" th:src="@{/img/donation.png}" alt="Україна">
       </div>
-      <h3 class="donation__subtitle subtitle" id="donation-now">Підтримай Україну</h3>
+      <h2 class="donation__subtitle subtitle" id="donation-now">Підтримай Україну</h2>
       <div class="donation__tabs tabs-donation">
         <ul class="tabs-donation__navigation nav-tabs">
           <li class="nav-tabs__item tabs-active" data-tab_id="page1">Оплатити на картку</li>
@@ -52,8 +52,7 @@
         </ul>
         <ul class="tabs-donation__pages">
           <li class="tabs-donation__page tabs-active" id="page1">
-            <h4 class="tabs-donation__title">№1 Введіть суму пожертвування або оберіть серед запропонованих
-              варіантів:</h4>
+            <h3 class="tabs-donation__title">№1 Введіть суму пожертвування або оберіть серед запропонованих варіантів:</h3>
             <ul class="tabs-donation__price price-donation">
               <li class="price-donation__item pay-card" data-sum="10" data-input_donate="pay-card">10</li>
               <li class="price-donation__item pay-card" data-sum="20" data-input_donate="pay-card">20</li>
@@ -81,8 +80,7 @@
             <button type="button" class="form__btn tabs-donation__btn _btn" disabled id="btn-card">Пожертвувати</button>
           </li>
           <li class="tabs-donation__page" id="page2">
-            <h4 class="tabs-donation__title">№2 Введіть суму пожертвування або оберіть серед запропонованих
-              варіантів:</h4>
+            <h3 class="tabs-donation__title">№2 Введіть суму пожертвування або оберіть серед запропонованих варіантів:</h3>
             <ul class="tabs-donation__price price-donation">
               <li class="price-donation__item pay-requisites" data-sum="10" data-input_donate="pay-requisites">10</li>
               <li class="price-donation__item pay-requisites" data-sum="20" data-input_donate="pay-requisites">20</li>
