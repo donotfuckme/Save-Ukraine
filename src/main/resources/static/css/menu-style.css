@@ -76,7 +76,7 @@
     z-index: 7;
     align-items: start;
     justify-content: space-between;
-    padding: 125px 8px 0 8px;
+    padding: 145px 8px 0 8px;
     background: #F5F5F5;
     transition: all .8s ease;
     flex-direction: column;
@@ -93,7 +93,7 @@
     width: 95%;
     height: 1px;
     left: 2.5%;
-    top: 52px;
+    top: 70px;
     background: #FFD500;
   }
 

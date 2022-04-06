@@ -21,7 +21,7 @@
     position: fixed;
     left: 0;
     top: 0;
-    max-height: 50px;
+    max-height: 70px;
   }
 
   .header:before{
@@ -78,7 +78,7 @@
 
 @media (max-width: 768px) {
   .header__content {
-    padding: 4px 0 2px;
+    padding: 0 0 2px 0;
   }
 
   .content-header__contacts {
@@ -92,29 +92,11 @@
   }
 }
 
-@media (max-width: 420px) {
-  .header__content>div {
-    padding: 4px 0 0 0;
-  }
-}
-
-.logo__link img {
-  max-width: 100%;
-  object-fit: cover;
-}
-
-@media (max-width: 550px) {
-  .logo__link img {
-    max-width: 80%;
-  }
-}
-
 /*Contacs + menu active*/
 
 @media (max-width: 768px) {
   .header__content.active-contacts {
     flex-wrap: wrap;
-    padding: 4px 0 0 0;
   }
 
   .active-contacts.content-header__contacts {
@@ -201,12 +183,6 @@
   }
 }
 
-@media (max-width: 420px) {
-  .language__link:before {
-    top: 4px;
-  }
-}
-
 /*BURGER------------------------------------------------------------*/
 
 #burger-menu {
@@ -228,7 +204,7 @@
 
   #burger-menu.open {
     align-self: flex-start;
-    margin: 16px 0 0 0;
+    margin: 22px 0 0 0;
   }
 
   #burger-menu span {
