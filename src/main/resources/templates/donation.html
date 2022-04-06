@@ -47,66 +47,60 @@
       <h2 class="donation__subtitle subtitle" id="donation-now">Підтримай Україну</h2>
       <div class="donation__tabs tabs-donation">
         <ul class="tabs-donation__navigation nav-tabs">
-          <li class="nav-tabs__item tabs-active" data-tab_id="page1">Оплатити на картку</li>
+          <li class="nav-tabs__item tabs-active" data-tab_id="page1">Оплатити карткою або інші засоби оплати</li>
           <li class="nav-tabs__item" data-tab_id="page2">Оплатити за реквізитами</li>
+          <li class="nav-tabs__item" data-tab_id="page3">Оплатити Pay Pal</li>
         </ul>
         <ul class="tabs-donation__pages">
           <li class="tabs-donation__page tabs-active" id="page1">
-            <h3 class="tabs-donation__title">№1 Введіть суму пожертвування або оберіть серед запропонованих варіантів:</h3>
-            <ul class="tabs-donation__price price-donation">
-              <li class="price-donation__item pay-card" data-sum="10" data-input_donate="pay-card">10</li>
-              <li class="price-donation__item pay-card" data-sum="20" data-input_donate="pay-card">20</li>
-              <li class="price-donation__item pay-card" data-sum="50" data-input_donate="pay-card">50</li>
-              <li class="price-donation__item pay-card" data-sum="100" data-input_donate="pay-card">100</li>
-              <li class="price-donation__item pay-card" data-sum="200" data-input_donate="pay-card">200</li>
-              <li class="price-donation__item pay-card" data-sum="500" data-input_donate="pay-card">500</li>
-            </ul>
-            <form action="#" class="tabs-donation__form form-donation">
-              <div class="form-donation__item input-text">
-                <input type="text" class="input-text__donate input-text__custom" placeholder="Сума пожертвування" id="pay-card" data-btn_id="btn-card">
-                <p class="input-text__error"></p>
+            <h3 class="tabs-donation__title">Зробити пожертвування</h3>
+            <div class="tabs-donation__paysystems pay-systems">
+              <div class="pay-systems__item">
+                <img th:src="@{/img/donate-systems/visa-mastercard.png}" alt="visa mastercard"> <!-- class="image-responsive" -->
               </div>
-              <div class="form-donation__item input-radio">
-                <div class="input-radio__item">
-                  <input type="radio" name="currency" value="грн" class="input-radio__default" id="card-ukr" checked>
-                  <label for="card-ukr" class="input-radio__custom">грн</label>
-                </div>
-                <div class="input-radio__item">
-                  <input type="radio" name="currency" value="долл" class="input-radio__default" id="card-usa">
-                  <label for="card-usa" class="input-radio__custom">долл</label>
-                </div>
+              <div class="pay-systems__item">
+                <img th:src="@{/img/donate-systems/privat24.jpg}" alt="privat24">
               </div>
-            </form>
-            <button type="button" class="form__btn tabs-donation__btn _btn" disabled id="btn-card">Пожертвувати</button>
+              <div class="pay-systems__item">
+                <img th:src="@{/img/donate-systems/Masterpass-logo.jpg}" alt="masterpass">
+              </div>
+              <div class="pay-systems__item">
+                <img th:src="@{/img/donate-systems/visa-checkout.jpg}" alt="visa checkout">
+              </div>
+              <div class="pay-systems__item">
+                <img th:src="@{/img/donate-systems/apple-pay.png}" alt="apple pay">
+              </div>
+              <div class="pay-systems__item">
+                <img th:src="@{/img/donate-systems/google-pay.jpg}" alt="google pay">
+              </div>
+            </div>
+            <div class="tabs-donate__row">
+              <div class="tabs-donation__qr">
+                <img th:src="@{https://wayforpay.com/qr/img?token=bbc7c9cd98eab&type=b&size=160}" alt="QR-код">
+              </div>
+              <div class="tabs-donation__btn">
+                <button type="button" class="form__btn _btn" onclick="runWfpWdgt('https://secure.wayforpay.com/button/bbc7c9cd98eab')" onmouseover="this.style.opacity='0.8';" onmouseout="this.style.opacity='1';">ДОПОМОГТИ</button>
+                <p>* обов'язково заповныть поле "Коментарі"</p>
+              </div>
+            </div>
           </li>
           <li class="tabs-donation__page" id="page2">
-            <h3 class="tabs-donation__title">№2 Введіть суму пожертвування або оберіть серед запропонованих варіантів:</h3>
-            <ul class="tabs-donation__price price-donation">
-              <li class="price-donation__item pay-requisites" data-sum="10" data-input_donate="pay-requisites">10</li>
-              <li class="price-donation__item pay-requisites" data-sum="20" data-input_donate="pay-requisites">20</li>
-              <li class="price-donation__item pay-requisites" data-sum="50" data-input_donate="pay-requisites">50</li>
-              <li class="price-donation__item pay-requisites" data-sum="100" data-input_donate="pay-requisites">100</li>
-              <li class="price-donation__item pay-requisites" data-sum="200" data-input_donate="pay-requisites">200</li>
-              <li class="price-donation__item pay-requisites" data-sum="500" data-input_donate="pay-requisites">500</li>
-            </ul>
-            <form action="#" class="tabs-donation__form form-donation">
-              <div class="form-donation__item input-text">
-                <input type="text" class="input-text__donate input-text__custom" placeholder="Сума пожертвування" id="pay-requisites" data-btn_id="btn-requisites">
-                <p class="input-text__error"></p>
+            <h3 class="tabs-donation__title">Наші реквізити</h3>
+              <div class="tabs-donation__requisites">
+                <p>Підприємство: БЛАГОДІЙНА ОРГАНІЗАЦІЯ «МІЖНАРОДНИЙ БЛАГОДІЙНИЙ ФОНД «ВРЯТУВАТИ УКРАЇНУ»</p>
+                <p>ЄДРПОУ 44668535</p>
+                <p>Р/р, UA083020760000026008300940237</p>
+                <p>МФО 302076</p>
               </div>
-              <div class="form-donation__item input-radio">
-                <div class="input-radio__item">
-                  <input type="radio" name="currency" value="грн" class="input-radio__default" id="requisites-ukr" checked>
-                  <label for="requisites-ukr" class="input-radio__custom">грн</label>
-                </div>
-                <div class="input-radio__item">
-                  <input type="radio" name="currency" value="долл" class="input-radio__default" id="requisites-usa">
-                  <label for="requisites-usa" class="input-radio__custom">долл</label>
-                </div>
+          </li>
+          <li class="tabs-donation__page" id="page3">
+            <h3 class="tabs-donation__title">Рахунок Pay Pal</h3>
+            <div class="tabs-donation__paypal">
+              <div class="paypal__image">
+                <img th:src="@{/img/donate-systems//pay-pal.png}" alt="Pay Pal">
               </div>
-            </form>
-            <button type="button" class="form__btn tabs-donation__btn _btn" disabled id="btn-requisites">Пожертвувати
-            </button>
+              <p class="paypal__number">GMBWRTLVFLYCL</p>
+            </div>
           </li>
         </ul>
       </div>
@@ -115,6 +109,11 @@
 
   <!-- Footer -->
   <th:block th:replace="fragments/footer"/>
+
+  <a class="icon-arrow-right2" href="#" id="scrollToTop"></a>
+  <script th:src="@{/js/script.js}"></script>
+  <script type="text/javascript" id="widget-wfp-script" src="https://secure.wayforpay.com/server/pay-widget.js?ref=button"></script>
+  <script type="text/javascript">function runWfpWdgt(url){var wayforpay=new Wayforpay();wayforpay.invoice(url);}</script>
 
 </div>
 
