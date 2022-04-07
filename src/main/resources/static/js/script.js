@@ -169,6 +169,27 @@ if (document.querySelector('.statutory-documents__slider')) {
   }
 } //End Page about-us slider documents
 
+//Copy text
+const textCopy = document.querySelector('.copy-text')
+const numberPayPal = document.getElementById('paypal-number')
+
+textCopy.onclick= (event) => {
+  copyText(numberPayPal)
+}
+
+const copyText = (elem) => {
+  const inputText = document.body
+    .appendChild( document.createElement('input'))
+
+  Object.assign(inputText, {
+    value: elem.textContent
+  }).select()
+
+  document.execCommand("copy")
+
+  inputText.remove()
+}
+
 //Page donation change Tab
 const navTabLinks = document.querySelectorAll('.nav-tabs__item')
 
