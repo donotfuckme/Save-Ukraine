@@ -47,6 +47,11 @@
   margin: 0;
 }
 
+.about-fond__parag span {
+  font-style: italic;
+  font-weight: 400;
+}
+
 .about-fond__content {
   display: flex;
   flex-wrap: wrap;
