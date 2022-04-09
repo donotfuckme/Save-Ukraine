@@ -24,7 +24,6 @@ public class ReportServiceInnerStorage implements ReportService {
     testReport.setId(id);
     testReport.setTitle("Заголовок");
     testReport.setDescription("Ну не очень длинное описание, однако оно есть.");
-    testReport.setCity("Харьков");
     testReport.setDateTimeOf(LocalDateTime.now());
     reports.add(testReport);
   }
@@ -36,7 +35,7 @@ public class ReportServiceInnerStorage implements ReportService {
         .filter(reportInStorage -> reportInStorage.getId() == report.getId())
         .forEach(reportInStorage -> copyReportData(report, reportInStorage));
     } else {
-      long id = increment++;
+      long id = ++increment;
       report.setId(id);
       reports.add(report);
     }
@@ -45,7 +44,6 @@ public class ReportServiceInnerStorage implements ReportService {
   private void copyReportData(Report from, Report to) {
     to.setTitle(from.getTitle());
     to.setDateTimeOf(from.getDateTimeOf());
-    to.setCity(from.getCity());
     to.setDescription(from.getDescription());
     to.setImages(from.getImages());
   }

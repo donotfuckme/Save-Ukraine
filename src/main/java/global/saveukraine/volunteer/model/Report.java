@@ -17,8 +17,6 @@ public class Report {
 
   private LocalDateTime dateTimeOf;
 
-  private String city;
-
   private String description;
 
   private String[] images;

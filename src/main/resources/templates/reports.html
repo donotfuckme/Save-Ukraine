@@ -44,8 +44,8 @@
         <!--/*@thymesVar id="report" type="global.saveukraine.volunteer.model.Report"*/-->
         <div th:each="report : ${reports}" class="reports__item">
           <div class="item-reports">
-            <div class="item-reports__image">
-              <img class="image-responsive" src="#" th:src="@{/img/reports_01.png}" th:alt="${report.city}">
+            <div th:if="${report.images ne null}" class="item-reports__image">
+              <img class="image-responsive" src="#" th:src="'/image/' + ${report.images[0]}" alt="">
             </div>
             <div class="item-reports__content">
               <p class="item-reports__date" th:text="${#temporals.format(report.dateTimeOf, 'dd-MM-yyyy, HH:mm')}"></p>

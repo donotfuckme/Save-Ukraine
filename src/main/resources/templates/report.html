@@ -39,40 +39,12 @@
         <p class="main-link__submenu" th:text="' / Звіт від ' + ${#temporals.format(report.dateTimeOf, 'dd-MM-yyyy, HH:mm')}"></p>
       </div>
       <h1 class="reports__title title" th:text="'Звіт від ' + ${#temporals.format(report.dateTimeOf, 'dd-MM-yyyy, HH:mm')}"></h1>
-      <p class="report__city" th:text="${report.city}"></p>
       <p class="report__parag" th:text="${report.description}"></p>
-      <div class="report__slider slider-report">
+      <div th:if="${report.images ne null}" class="report__slider slider-report">
         <div class="swiper swiper-report__big">
           <div class="swiper-wrapper">
-            <div class="swiper-slide slide-report__big">
-              <img th:src="@{/img/reports_01.png}" alt="">
-            </div>
-            <div class="swiper-slide slide-report__big">
-              <img th:src="@{/img/reports_02.png}" alt="">
-            </div>
-            <div class="swiper-slide slide-report__big">
-              <img th:src="@{/img/reports_03.png}" alt="">
-            </div>
-            <div class="swiper-slide slide-report__big">
-              <img th:src="@{/img/reports_04.png}" alt="">
-            </div>
-            <div class="swiper-slide slide-report__big">
-              <img th:src="@{/img/reports_01.png}" alt="">
-            </div>
-            <div class="swiper-slide slide-report__big">
-              <img th:src="@{/img/reports_02.png}" alt="">
-            </div>
-            <div class="swiper-slide slide-report__big">
-              <img th:src="@{/img/reports_03.png}" alt="">
-            </div>
-            <div class="swiper-slide slide-report__big">
-              <img th:src="@{/img/reports_04.png}" alt="">
-            </div>
-            <div class="swiper-slide slide-report__big">
-              <img th:src="@{/img/reports_01.png}" alt="">
-            </div>
-            <div class="swiper-slide slide-report__big">
-              <img th:src="@{/img/reports_02.png}" alt="">
+            <div th:each="image : ${report.images}" class="swiper-slide slide-report__big">
+              <img th:src="'/reports/image/' + ${image}" alt="">
             </div>
           </div>
           <div class="swiper-report-arrows swiper-arrow__next icon-arrow-right2"></div>
@@ -80,35 +52,8 @@
         </div>
         <div thumbsSlider="" class="swiper swiper-report__small">
           <div class="swiper-wrapper">
-            <div class="swiper-slide slide-report__small">
-              <img th:src="@{/img/reports_01.png}" alt="">
-            </div>
-            <div class="swiper-slide slide-report__small">
-              <img th:src="@{/img/reports_02.png}" alt="">
-            </div>
-            <div class="swiper-slide slide-report__small">
-              <img th:src="@{/img/reports_03.png}" alt="">
-            </div>
-            <div class="swiper-slide slide-report__small">
-              <img th:src="@{/img/reports_04.png}" alt="">
-            </div>
-            <div class="swiper-slide slide-report__small">
-              <img th:src="@{/img/reports_01.png}" alt="">
-            </div>
-            <div class="swiper-slide slide-report__small">
-              <img th:src="@{/img/reports_02.png}" alt="">
-            </div>
-            <div class="swiper-slide slide-report__small">
-              <img th:src="@{/img/reports_03.png}" alt="">
-            </div>
-            <div class="swiper-slide slide-report__small">
-              <img th:src="@{/img/reports_04.png}" alt="">
-            </div>
-            <div class="swiper-slide slide-report__small">
-              <img th:src="@{/img/reports_01.png}" alt="">
-            </div>
-            <div class="swiper-slide slide-report__small">
-              <img th:src="@{/img/reports_02.png}" alt="">
+            <div th:each="image : ${report.images}" class="swiper-slide slide-report__small">
+              <img th:src="'/reports/image/' + ${image}" alt="">
             </div>
           </div>
         </div>

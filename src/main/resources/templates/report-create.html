@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Додавання звіту</title>
+</head>
+<body>
+<form name="report" th:action="@{/reports/create}" method="post" enctype="multipart/form-data">
+  <div class="form-group">
+    <label for="txtTitle">Заголовок</label>
+    <input type="text" id="txtTitle" name="title" placeholder="Щаголовок">
+  </div>
+
+  <div class="form-group">
+    <label for="txtImages">Зображення</label>
+    <input type="file" id="txtImages" accept="image/jpg images/png" name="images" multiple>
+  </div>
+
+  <div class="form-group">
+    <label for="txtDescription">Опис</label>
+    <input type="text" id="txtDescription" name="description" placeholder="Опис">
+  </div>
+
+  <div class="btn-group" role="group">
+    <div class="form-actions">
+      <button type="submit">Додати</button>
+    </div>
+  </div>
+</form>
+</body>
+</html>
