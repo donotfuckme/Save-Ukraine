@@ -6,7 +6,6 @@ import global.saveukraine.volunteer.service.ReportService;
 import global.saveukraine.volunteer.service.S3ImageStorage;
 import lombok.AllArgsConstructor;
 import lombok.extern.log4j.Log4j2;
-import org.springframework.http.MediaType;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -14,10 +13,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
 
-import javax.servlet.http.HttpServletResponse;
 import java.time.LocalDateTime;
 import java.util.Arrays;
 import java.util.List;
@@ -78,13 +75,5 @@ public class ReportController {
     reportService.save(report);
 
     return format("redirect:/reports/%s", report.getId());
-  }
-
-  @GetMapping(value = "image/{imageName}")
-  @ResponseBody
-  public byte[] getImage(@PathVariable(value = "imageName") String imageName,
-                         HttpServletResponse response) {
-    response.setContentType(MediaType.IMAGE_JPEG_VALUE);
-    return imageStorage.get(imageName);
   }
 }
