@@ -6,7 +6,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-  <title>БФ «Врятувати Україну»</title>
+  <title>БО «МБФ «ВРЯТУВАТИ УКРАЇНУ»</title>
+
+  <link rel="canonical" href="#"/>
+
+  <link rel="shortcut icon" th:href="@{/img/favicon-heart.ico}" type="image/x-icon">
 
   <link href="https://fonts.googleapis.com/css?family=Open Sans" rel="stylesheet">
 
@@ -30,26 +34,70 @@
         <a th:href="@{/index#main-page}" class="main-link__anchor">Головна</a>
         <p class="main-link__submenu"> / Як я можу допомогти?</p>
       </div>
-      <h2 class="how-help__title title">Як я можу допомогти?</h2>
+      <h1 class="how-help__title title">Як я можу допомогти?</h1>
+      <p class="how-help__parag text-parag">Усі виручені кошти Міжнародного Благодійного Фонду «Врятувати Україну» йдуть на реалізацію таких проєктів Фонду: допомога дітям, допомога тваринам, допомога дорослим та людям поилого віку, а також на відновлення міста-героя Харкова, зруйнованого війною. На цій сторінці ви можете самостійно обрати, на який із перелічених проєктів підуть ваші благодійні пожертвування.</p>
+      <p class="how-help__parag text-parag">Також у вас є можливість не обирати конкретний проєкт, обравши опцію “Допомогти всім”, тоді виручені кошти від вашого пожертвування підуть на фінансування тих проєктів, які будуть потребувати найбільшої уваги.</p>
       <div class="how-help__body">
         <div class="how-help__item">
           <div class="how-help__image">
-            <img th:src="@{/img/how-can-help/become-volunteer.png}" class="image-responsive" alt="Volunteer">
+            <img class="image-responsive" th:src="@{/img/how-can-help/help_01.png}" alt="Допомога.Благодыйнысть" loading="lazy">
           </div>
           <div class="how-help__row">
-            <h3 class="how-help__subtitle">Стати Волонтером</h3>
-            <a th:href="@{/help/become-volunteer#become-volunteer}" class="how-help__link icon-arrow-right2"></a>
-          </div>
-        </div>
-        <div class="how-help__item">
-          <div class="how-help__image">
-            <img th:src="@{/img/how-can-help/pay-money.png}" class="image-responsive" alt="Volunteer">
-          </div>
-          <div class="how-help__row">
-            <h3 class="how-help__subtitle">Пожертвувати Кошти</h3>
+            <h2 class="how-help__subtitle">Допомогти дітям</h2>
             <a th:href="@{/help/donation#donation-now}" class="how-help__link icon-arrow-right2"></a>
           </div>
-        </div>
+          <p class="how-help__text-hidden">На що спрямовуються кошти: медикаменти і медицинське обладнання для дітей та лікарень; продукти харчування, одяг і предмети першої необхідності</p>
+        </div> <!-- end item -->
+        <div class="how-help__item">
+          <div class="how-help__image">
+            <img class="image-responsive" th:src="@{/img/how-can-help/help_02.png}" alt="Допомога.Благодыйнысть" loading="lazy">
+          </div>
+          <div class="how-help__row">
+            <h2 class="how-help__subtitle">Допомогти тваринам</h2>
+            <a th:href="@{/help/donation#donation-now}" class="how-help__link icon-arrow-right2"></a>
+          </div>
+          <p class="how-help__text-hidden">Допомога включає: лікування тварин, закупівля корму для людей, що притулили кинутих тварин внаслідок евакуації або смерті господарів, утримання в притулку; відновлення зруйнованих притулків; будівництво нових притулків для тварин.</p>
+        </div> <!-- end item -->
+        <div class="how-help__item">
+          <div class="how-help__image">
+            <img class="image-responsive" th:src="@{/img/how-can-help/help_03.png}" alt="Допомога.Благодыйнысть" loading="lazy">
+          </div>
+          <div class="how-help__row">
+            <h2 class="how-help__subtitle">Відновлення города-героя Харкова</h2>
+            <a th:href="@{/help/donation#donation-now}" class="how-help__link icon-arrow-right2"></a>
+          </div>
+          <p class="how-help__text-hidden">Для відновлення міста фонд готовий приймати на себе будь-які логістичні та митні питання щодо доставки необхідної техніки, матеріалів та обладнання для відновлення розчищення наслідків від військових дій (посилання на галерею руйнувань Харкова), що передаються до фонду.</p>
+        </div> <!-- end item -->
+        <div class="how-help__item">
+          <div class="how-help__image">
+            <img class="image-responsive" th:src="@{/img/how-can-help/help_04.png}" alt="Допомога.Благодыйнысть" loading="lazy">
+          </div>
+          <div class="how-help__row">
+            <h2 class="how-help__subtitle">Допомога дорослим та людям похилого віку</h2>
+            <a th:href="@{/help/donation#donation-now}" class="how-help__link icon-arrow-right2"></a>
+          </div>
+          <p class="how-help__text-hidden">Що включає допомога: медикаменти і медицинське обладнання для людей похилого віку та лікарень; продукти харчування, одяг и предмети першої необхідності.</p>
+        </div> <!-- end item -->
+        <div class="how-help__item">
+          <div class="how-help__image">
+            <img class="image-responsive" th:src="@{/img/how-can-help/help_05.png}" alt="Допомога.Благодыйнысть" loading="lazy">
+          </div>
+          <div class="how-help__row">
+            <h2 class="how-help__subtitle">Допомогти всім</h2>
+            <a th:href="@{/help/donation#donation-now}" class="how-help__link icon-arrow-right2"></a>
+          </div>
+          <p class="how-help__text-hidden">Кошти будуть розподілені між проєктами на розсуд Фонду.</p>
+        </div> <!-- end item -->
+        <div class="how-help__item">
+          <div class="how-help__image">
+            <img class="image-responsive" th:src="@{/img/how-can-help/help_03.png}" alt="Стать волонтером" loading="lazy">
+          </div>
+          <div class="how-help__row">
+            <h2 class="how-help__subtitle">Стати Волонтером</h2>
+            <a th:href="@{/help/become-volunteer#become-volunteer}" class="how-help__link icon-arrow-right2"></a>
+          </div>
+          <p class="how-help__text-hidden">Бажаючі допомогти можуть долучитися до наших рядів.</p>
+        </div><!-- end item -->
       </div>
     </div>
   </section>
@@ -60,7 +108,7 @@
 </div>
 
 <a class="icon-arrow-right2" href="#" id="scrollToTop"></a>
-<script th:src="@{/js/style.js}"></script>
+<script th:src="@{/js/script.js}"></script>
 
 </body>
 

@@ -6,7 +6,11 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-  <title>БФ «Врятувати Україну»</title>
+  <title>БО «МБФ «ВРЯТУВАТИ УКРАЇНУ»</title>
+
+  <link rel="canonical" href="#"/>
+
+  <link rel="shortcut icon" th:href="@{/img/favicon-heart.ico}" type="image/x-icon">
 
   <link href="https://fonts.googleapis.com/css?family=Open Sans" rel="stylesheet">
 
@@ -32,7 +36,7 @@
         <a th:href="@{/index#main-page}" class="main-link__anchor">Головна</a>
         <p class="main-link__submenu"> / Про нас</p>
       </div>
-      <h2 class="about-us__title title">Про нас</h2>
+      <h1 class="about-us__title title">Про нас</h1>
       <div class="about-us__content">
         <p class="about-us__parag text-parag">Міжнародний Благодійний Фонд “Врятувати Україну” - це новий Благодійний
           фонд. </p>
@@ -40,21 +44,21 @@
           українських людей, у тому числі протидіяти гуманітарній катастрофі, яка може виникнути в українських містах та
           селах через військову агресію з боку Росії! </p>
         <div class="about-us__image about-us__image_big">
-          <img th:src="@{/img/about-us_01.png}" alt="" class="image-responsive">
+          <img th:src="@{/img/about-us_01.png}" alt="Харків руйнування" class="image-responsive">
         </div>
         <p class="about-us__parag text-parag">Фонд створений на бажанні допомогти тим, хто найбільш потребує допомоги
           під час війни і хто буде потребувати допомоги після її завершення, а також для відновлення, усунення наслідків
           страшних руйнувань інфраструктури <a href="#!" class="parag-link">міста-героя Харкова</a>. Зокрема для тих
           постраждалих від війни людей, хто не зможе фінансово дозволити собі це зробити.</p>
         <div class="about-us__image about-us__image_midle">
-          <img th:src="@{/img/about-us_02.png}" alt="" class="image-responsive">
+          <img th:src="@{/img/about-us_02.png}" alt="Волонтери. Допомога" class="image-responsive">
         </div>
         <p class="about-us__parag text-parag">
           Наш фонд був створений у 2022 році та наразі об'єднує чимало людей, що готові допомагати Україні чим можуть.
         </p>
       </div>
       <div class="about-us__purpose purpose">
-        <h3 class="subtitle purpose__title">Мета Фонду</h3>
+        <h2 class="subtitle purpose__title">Мета Фонду</h2>
         <div class="purpose__container">
           <div class="purpose__content">
             <p class="about-us__item-li">
@@ -80,10 +84,6 @@
               можливостей для здійснення благодійної діяльності в інтересах суспільства, а також надання допомоги тим,
               хто її потребує;
             </p>
-            <p class="about-us__item-li">
-              • сприяння обороноздатності та мобілізаційній готовності країни, захисту населення у надзвичайних
-              ситуаціях мирного і воєнного стану;
-            </p>
             <p class="about-us__item-li">• опіка і піклування, законне представництво та правова допомога;</p>
             <p class="about-us__item-li">
               • соціальний захист, соціальне забезпечення, соціальні послуги і подолання бідності;
@@ -94,12 +94,12 @@
             </p>
           </div>
           <div class="purpose__image">
-            <img th:src="@{/img/about-ua-vertical_03.png}" alt="" class="image-responsive">
+            <img th:src="@{/img/about-ua-vertical_03.png}" alt="Гуманітарна допомога" class="image-responsive">
           </div>
         </div>
       </div>
       <div class="about-us__tasks tasks">
-        <h3 class="about-us__subtitle subtitle">Завдання Фонду</h3>
+        <h2 class="about-us__subtitle subtitle">Завдання Фонду</h2>
         <div class="tasks__content">
           <p class="tasks__parag text-parag">
             Для здійснення статутної мети Фонд у встановленому законом порядку вирішує
@@ -126,10 +126,10 @@
       <div class="about-us__responsibilities responsibilities">
         <div class="responsibilities__container">
           <div class="responsibilities__image">
-            <img th:src="@{/img/about-us_04.png}" alt="" class="image-responsive">
+            <img th:src="@{/img/about-us_04.png}" alt="Волонтері. Допомога" class="image-responsive">
           </div>
           <div class="responsibilities__content">
-            <h3 class="subtitle responsibilities__title">Наші обов’язки</h3>
+            <h2 class="subtitle responsibilities__title">Наші обов’язки</h2>
             <p class="responsibilities__parag text-parag">Ми зобов’язуємось:</p>
             <ul class="responsibilities__list">
               <li class="about-us__item-li">• дотримуватися всіх вимог чинного законодавства;</li>
@@ -145,42 +145,42 @@
         </div>
       </div>
       <div class="about-us__documents statutory-documents">
-        <h3 class="subtitle statutory-documents__title">Уставні документи</h3>
+        <h3 class="subtitle statutory-documents__title" id="statutory-documents">Уставні документи</h3>
         <div class="statutory-documents__slider" id="documents-slider">
           <div class="swiper-wrapper statutory-documents__container">
             <div class="swiper-slide statutory-documents__image">
               <div class="swiper-zoom-container statutory-documents__bound">
-                <img th:src="@{/img/Rectangle 38.png}" alt="" class="image-responsive">
+                <img th:src="@{/img/Rectangle 38.png}" alt="Документи БО «МБФ «ВРЯТУВАТИ УКРАЇНУ»" class="image-responsive">
                 <p class="statutory-documents__num">1</p>
               </div>
             </div>
             <div class="swiper-slide statutory-documents__image">
               <div class="swiper-zoom-container statutory-documents__bound">
-                <img th:src="@{/img/Rectangle 38.png}" alt="" class="image-responsive">
+                <img th:src="@{/img/Rectangle 38.png}" alt="Документи БО «МБФ «ВРЯТУВАТИ УКРАЇНУ»" class="image-responsive">
                 <p class="statutory-documents__num">2</p>
               </div>
             </div>
             <div class="swiper-slide statutory-documents__image">
               <div class="swiper-zoom-container statutory-documents__bound">
-                <img th:src="@{/img/Rectangle 38.png}" alt="" class="image-responsive">
+                <img th:src="@{/img/Rectangle 38.png}" alt="Документи БО «МБФ «ВРЯТУВАТИ УКРАЇНУ»" class="image-responsive">
                 <p class="statutory-documents__num">3</p>
               </div>
             </div>
             <div class="swiper-slide statutory-documents__image">
               <div class="swiper-zoom-container statutory-documents__bound">
-                <img th:src="@{/img/Rectangle 38.png}" alt="" class="image-responsive">
+                <img th:src="@{/img/Rectangle 38.png}" alt="Документи БО «МБФ «ВРЯТУВАТИ УКРАЇНУ»" class="image-responsive">
                 <p class="statutory-documents__num">4</p>
               </div>
             </div>
             <div class="swiper-slide statutory-documents__image">
               <div class="swiper-zoom-container statutory-documents__bound">
-                <img th:src="@{/img/Rectangle 38.png}" alt="" class="image-responsive">
+                <img th:src="@{/img/Rectangle 38.png}" alt="Документи БО «МБФ «ВРЯТУВАТИ УКРАЇНУ»" class="image-responsive">
                 <p class="statutory-documents__num">5</p>
               </div>
             </div>
             <div class="swiper-slide statutory-documents__image">
               <div class="swiper-zoom-container statutory-documents__bound">
-                <img th:src="@{/img/Rectangle 38.png}" alt="" class="image-responsive">
+                <img th:src="@{/img/Rectangle 38.png}" alt="Документи БО «МБФ «ВРЯТУВАТИ УКРАЇНУ»" class="image-responsive">
                 <p class="statutory-documents__num">6</p>
               </div>
             </div>
@@ -201,16 +201,6 @@
 </div>
 
 <a class="icon-arrow-right2" href="#" id="scrollToTop"></a>
-<script>
-  let currentWidth = window.innerWidth
-  window.onresize = function () {
-    if (window.innerWidth <= 768 && currentWidth > 768) {
-      location.reload()
-    } else if (window.innerWidth > 768 && currentWidth <= 768) {
-      location.reload()
-    }
-  }
-</script>
 <script th:src="@{/js/script.js}"></script>
 
 </body>

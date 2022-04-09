@@ -6,7 +6,11 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-  <title>Врятувати Україну</title>
+  <title>БО «МБФ «ВРЯТУВАТИ УКРАЇНУ»</title>
+
+  <link rel="canonical" href="#"/>
+
+  <link rel="shortcut icon" th:href="@{/img/favicon-heart.ico}" type="image/x-icon">
 
   <link href="https://fonts.googleapis.com/css?family=Open Sans" rel="stylesheet">
 
@@ -43,26 +47,28 @@
         <div class="slider-main__body">
           <div class="slider-main__content slider-content">
             <p class="slider-main__parag">Міждународний Благодійний Фонд</p>
-            <h2 class="slider-main__title">Врятувати <span>Україну</span></h2>
+            <h1 class="slider-main__title">Врятувати <span>Україну</span></h1>
             <div class="slider-main__text">Ми - не прибуткова організація. Наша мета допомогти <span>уникнути гуманітарної катострофи в Україні</span>,
               викликаної військовою агресією Російської Федерації.
             </div>
-            <a th:href="@{/help/donation#donation-now}" class="slider-main__button _btn">Допомогти
-              Україні</a>
+            <div class="slider-main__buttons">
+                <a th:href="@{/help#how-can-help}" class="_btn slider-main__button">Наші проекти</a>
+                <a th:href="@{/help/donation#donation-now}" class="_btn slider-main__button">Допомогти Україні</a>
+              </div>
           </div>
           <div class="slider-main-ukrain swiper">
             <div class="slider-wrapper-ukrain swiper-wrapper">
               <div class="slide-main-ukrain swiper-slide">
-                <img th:src="@{/img/slider-ukrain/ukraine-slider_1.png}" alt="Харьков">
+                <img th:src="@{/img/slider-ukrain/ukraine-slider_1.png}" alt="Україна">
               </div>
               <div class="slide-main-ukrain swiper-slide">
-                <img th:src="@{/img/slider-ukrain/ukraine-slider_2.png}" alt="Харьков">
+                <img th:src="@{/img/slider-ukrain/ukraine-slider_2.png}" alt="Україна">
               </div>
               <div class="slide-main-ukrain swiper-slide">
-                <img th:src="@{/img/slider-ukrain/ukraine-slider_3.png}" alt="Харьков">
+                <img th:src="@{/img/slider-ukrain/ukraine-slider_3.png}" alt="Україна">
               </div>
               <div class="slide-main-ukrain swiper-slide">
-                <img th:src="@{/img/slider-ukrain/ukraine-slider_4.png}" alt="Харьков">
+                <img th:src="@{/img/slider-ukrain/ukraine-slider_4.png}" alt="Україна">
               </div>
             </div>
             <div class="swiper-pagination slider-dots-ukrain"></div>
@@ -80,52 +86,40 @@
         <h2 class="main__title title">Про Фонд</h2>
         <div class="about-fond__body">
           <div class="about-fond__text">
-            <p class="about-fond__parag">
-              Міжнародний Благодійний фонд «Врятувати Україну» - це не прибуткова
-              організація, яка має на меті уникнути гуманітарної катастрофи в Україні, викликаної військовою агресією з
-              боку Росії.
-            </p>
-            <p class="about-fond__parag">
-              Наш фонд надаватиме гуманітарну допомогу всім гостро нужденним лише через
-              перевірених волонтерів, або власними силами під час військових дій і після них.
-            </p>
-            <p class="about-fond__parag">
-              Після перемоги України фонд займеться відновленням найкрасивішого рідного міста
-              - героя Харкова.
-            </p>
+            <p class="about-fond__parag">Міжнародний благодійний фонд «Врятувати Україну» – це міжнародна неприбуткова організація, заснована у 2022 році у Харкові. Метою фонду є уникнення гуманітарної катастрофи в Україні, що виникла внаслідок військової агресії з боку Російської Федерації, та відновлення повноцінного життя громадян.</p>
+            <p class="about-fond__parag">Головне завдання фонду після перемоги України – відновлення найкрасивішого рідного міста-героя Харкова!</p>
+            <p class="about-fond__parag">Нині діяльність фонду спрямована на <span>надання гуманітарної допомоги</span> громадянам, що гостро мають в цьому потребу, через перевірених волонтерів та власноруч.</p>
+            <p class="about-fond__parag">НАША МІСІЯ – відновити в Україні умови для гідного життя кожного громадянина, який постраждав від Російської агресії.</p>
           </div>
           <div class="about-fond__content">
             <div class="about-fond__content-item">
               <div class="content-item__img">
-                <img th:src="@{/img/about-fond/humanitarian-aid.svg}" alt="">
+                <img th:src="@{/img/about-fond/humanitarian-aid.svg}" alt="Кейс допомоги">
               </div>
-              <p class="content-item__text">Не прибуткова організація, мета якої - уникнути гуманітарної катастрофи в
-                Україні</p>
+              <p class="content-item__text">Ми – неприбуткова організація. Наше завдання нині – уникнення гуманітарної катастрофи в Україні</p>
             </div>
             <div class="about-fond__content-item">
               <div class="content-item__img">
-                <img th:src="@{/img/about-fond/hand&heart.svg}" alt="">
+                <img th:src="@{/img/about-fond/hand&heart.svg}" alt="Рука допомоги">
               </div>
-              <p class="content-item__text">Перевірені волонтери та надання допомоги власними силами</p>
+              <p class="content-item__text">>Ми допомагаємо власноруч або через перевірених волонтерів</p>
             </div>
             <div class="about-fond__content-item">
               <div class="content-item__img">
-                <img th:src="@{/img/about-fond/location-city.svg}" alt="">
+                <img th:src="@{/img/about-fond/location-city.svg}" alt="Багатоповерхівка">
               </div>
-              <p class="content-item__text">Після перемоги - відновлення міста-героя Харкова</p>
+              <p class="content-item__text">Ми маємо головну мету після перемоги України – відновлення міста-героя Харкова!</p>
             </div>
           </div>
           <div class="about-fond__images">
             <div class="about-fond__images_bound">
               <div class="about-fond__image">
-                <img class="image-responsive" th:src="@{/img/about-fond/about-us__img1.png}"
-                     alt="Волонтери">
+                <img class="image-responsive" th:src="@{/img/about-fond/about-us__img1.png}" alt="Волонтери">
               </div>
             </div>
             <div class="about-fond__images_bound">
               <div class="about-fond__image">
-                <img class="image-responsive" th:src="@{/img/about-fond/about-us__img2.png}"
-                     alt="Волонтери">
+                <img class="image-responsive" th:src="@{/img/about-fond/about-us__img2.png}" alt="Волонтери">
               </div>
             </div>
           </div>
@@ -152,37 +146,37 @@
           <div class="slider-wrapper-building swiper-wrapper">
             <div class="slide-building swiper-slide">
               <div class="slide-building__image">
-                <img th:src="@{/img/slide-building/slide-building_01.png}" alt="" loading="lazy">
+                <img th:src="@{/img/slide-building/slide-building_01.png}" alt="Харківський двір" loading="lazy">
               </div>
               <div class="slide-building__text">Мирний харківський двір у центрі міста</div>
             </div>
             <div class="slide-building swiper-slide">
                 <div class="slide-building__image">
-                  <img th:src="@{/img/slide-building/slide-building_02.png}" alt="" loading="lazy">
+                  <img th:src="@{/img/slide-building/slide-building_02.png}" alt="Новосалтівський ринок" loading="lazy">
                 </div>
               <div class="slide-building__text">Новосалтівський ринок</div>
             </div>
             <div class="slide-building swiper-slide">
               <div class="slide-building__image">
-                <img th:src="@{/img/slide-building/slide-building_03.png}" alt="" loading="lazy">
+                <img th:src="@{/img/slide-building/slide-building_03.png}" alt="Харківський бізнес центр" loading="lazy">
               </div>
               <div class="slide-building__text">Харківський бізнес центр</div>
             </div>
             <div class="slide-building swiper-slide">
               <div class="slide-building__image">
-                <img th:src="@{/img/slide-building/slide-building_04.png}" alt="" loading="lazy">
+                <img th:src="@{/img/slide-building/slide-building_04.png}" alt="Київський ТРЦ" loading="lazy">
               </div>
               <div class="slide-building__text">Київський ТРЦ</div>
             </div>
             <div class="slide-building swiper-slide">
               <div class="slide-building__image">
-                <img th:src="@{/img/slide-building/slide-building_05.png}" alt="" loading="lazy">
+                <img th:src="@{/img/slide-building/slide-building_05.png}" alt="Харківська міська рада" loading="lazy">
               </div>
               <div class="slide-building__text">Харківська міська рада</div>
             </div>
             <div class="slide-building swiper-slide">
               <div class="slide-building__image">
-                <img th:src="@{/img/slide-building/slide-building_06.png}" alt="" loading="lazy">
+                <img th:src="@{/img/slide-building/slide-building_06.png}" alt="Дробицький яр" loading="lazy">
               </div>
               <div class="slide-building__text">Харків. Дробицький яр</div>
             </div>
@@ -205,16 +199,14 @@
         <div class="reports__body">
           <div class="reports__item item-reports">
             <div class="item-reports__image">
-              <img th:src="@{/img/reports_01.png}" class="image-responsive" alt="Харків">
+              <img th:src="@{/img/reports_01.png}" class="image-responsive" alt="Волонтери Харків">
             </div>
             <div class="item-reports__content">
               <div class="item-reports__subtitle">
                 <p>Харків</p>
                 <p>15-03-2022, 15:00</p>
               </div>
-              <div class="item-reports__text">
-                А это наш бусик. По нам попали когда мы на нем ехали. Немного кантузило, а так, ни царапины. Пацаны...
-              </div>
+              <div class="item-reports__text">А это наш бусик. По нам попали когда мы на нем ехали. Немного кантузило, а так, ни царапины. Пацаны...</div>
               <div class="item-reports__link">
                 <a href="" class="anchor__link icon-arrow-right2">Подивитись повністю</a>
               </div>
@@ -222,16 +214,14 @@
           </div>
           <div class="reports__item item-reports">
             <div class="item-reports__image">
-              <img th:src="@{/img/reports_02.png}" class="image-responsive" alt="Київ">
+              <img th:src="@{/img/reports_02.png}" class="image-responsive" alt="Волонтери">
             </div>
             <div class="item-reports__content">
               <div class="item-reports__subtitle">
                 <p>Київ</p>
                 <p>15-03-2022, 15:00</p>
               </div>
-              <div class="item-reports__text">
-                А это наш бусик. По нам попали когда мы на нем ехали. Немного кантузило, а так, ни царапины. Пацаны...
-              </div>
+              <div class="item-reports__text">А это наш бусик. По нам попали когда мы на нем ехали. Немного кантузило, а так, ни царапины. Пацаны...</div>
               <div class="item-reports__link">
                 <a href="" class="anchor__link icon-arrow-right2">Подивитись повністю</a>
               </div>

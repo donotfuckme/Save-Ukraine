@@ -8,6 +8,17 @@ document.getElementById('burger-menu').onclick = (event) => {
   document.getElementsByClassName('content-header__contacts')[0].classList.toggle('active-contacts')
 }
 
+//Resize width=768px
+let currentWidth = window.innerWidth
+
+window.onresize = function () {
+  if (window.innerWidth <= 768 && currentWidth > 768) {
+     location.reload()
+  } else if (window.innerWidth > 768 && currentWidth <= 768) {
+    location.reload()
+  }
+}
+
 //Scroll+fixed menu
 const nav = document.getElementById('menu-stiky')
 
@@ -169,6 +180,22 @@ if (document.querySelector('.statutory-documents__slider')) {
   }
 } //End Page about-us slider documents
 
+//Copy text
+const textCopy = document.querySelector('.copy-text')
+
+const copyText = (id) => {
+  const inputText = document.body
+    .appendChild( document.createElement('input'))
+
+  Object.assign(inputText, {
+    value: document.getElementById(id).textContent
+  }).select()
+
+  document.execCommand("copy")
+
+  inputText.remove()
+}
+
 //Page donation change Tab
 const navTabLinks = document.querySelectorAll('.nav-tabs__item')
 
@@ -198,91 +225,6 @@ const showTabPage = (propActive) => {
   document.getElementById(`${propActive.dataset.tab_id}`).classList.add('tabs-active')
 }
 //End change Tab
-
-//Page donation check Input
-const checkValue = (inputElem, value, btnId) => {
-  let inputValue = parseFloat(value.trim()) || 0
-
-  console.log(inputValue, '<===inputValue') //delete
-
-  if (inputValue > 0) {
-    Object.assign(inputElem.nextElementSibling, {
-      innerText: ''
-    })
-    inputElem.style = `
-      background: url(../img/donation-money-active.svg);
-      border: 1px solid #1BBAE1;
-      background-repeat: no-repeat;
-      background-position: 5%;
-    `
-  } else {
-    Object.assign(inputElem.nextElementSibling, {
-      innerText: 'Невірний формат суми'
-    })
-    inputElem.style = `
-      background: url(../img/donation-money.svg);
-      border: 1px solid #EAEAE;
-      background-repeat: no-repeat;
-      background-position: 5%;
-    `
-  }
-
-  (value === '') && (inputElem.nextElementSibling.innerText = '')
-
-  Object.assign(document.getElementById(`${btnId}`), {
-    disabled: !(inputValue > 0)
-  })
-} //End check input
-
-const inputsDonate = document.getElementsByClassName('input-text__donate')
-
-for (let inputDonate of inputsDonate) {
-  inputDonate.oninput = (event) => {
-    checkValue(event.target, event.target.value, inputDonate.dataset.btn_id)
-
-    removeClassActive(listSumDonate)
-  }
-}
-
-//Page donation Insert sum
-const listSumDonate = document.getElementsByClassName('price-donation__item')
-
-for (let itemSumDonate of listSumDonate) {
-  itemSumDonate.onclick = (event) => {
-    removeClassActive(listSumDonate)
-
-    addClassActive(event.target)
-
-    insertSum(event.target)
-  }
-}
-const insertSum = (property) => {
-
-  console.log(property.dataset.sum, '<===property.dataset.sum Card') //delete
-
-  const inputDonate = document.getElementById(`${property.dataset.input_donate}`)
-
-  Object.assign(inputDonate, {
-    value: property.dataset.sum,
-    style: `
-      background: url(../img/donation-money-active.svg);
-      border: 1px solid #1BBAE1;
-      background-repeat: no-repeat;
-      background-position: 5%;
-    `
-  })
-
-  checkValue(inputDonate, property.dataset.sum, inputDonate.dataset.btn_id)
-}
-
-const removeClassActive = (listSumDonate) => {
-  for (let sumItem of listSumDonate) {
-    sumItem.classList.remove('sum-active')
-  }
-}
-
-const addClassActive = (property) => property.classList.add('sum-active')
-//End page donation Insert value
 
 //Init map
 function initMap() {

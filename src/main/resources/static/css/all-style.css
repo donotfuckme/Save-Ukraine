@@ -63,10 +63,15 @@ button {
 .container {
   max-width: 1110px;
   margin: 0 auto;
-  padding: 0 16px;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 1130px) {
+  .container {
+    padding: 0 16px;
+  }
+}
+
+@media (max-width: 768px) {
   .container {
     padding: 0 8px;
   }
@@ -76,7 +81,7 @@ button {
   font-size: 56px;
   line-height: 76px;
   font-weight: 700;
-  padding: 30px 0 37px;
+  padding: 0 0 37px 0;
   color: #0786A5;
 }
 
@@ -90,7 +95,7 @@ button {
     font-size: 42px;
     line-height: 44px;
     font-weight: 700;
-    padding: 20px 0 25px;
+    padding: 12px 0 25px 0;
   }
 }
 
@@ -162,7 +167,8 @@ button {
 ._btn {
   display: inline-block;
   font-size: 16px;
-  padding: 8px 20px;
+  line-height: 22px;
+  padding: 9px 32px;
   border-radius: 20px;
   color: #fff;
   background: #1BBAE1;
@@ -171,7 +177,6 @@ button {
 }
 
 ._btn:hover {
-  /*color: #144652;*/
   background: linear-gradient(to bottom, #0786A5, rgba(255, 213, 0, 0.9));
   transition: all .6s ease;
 }
@@ -191,7 +196,7 @@ button {
   align-items: center;
   font-size: 16px;
   line-height: 22px;
-  padding: 30px 0;
+  padding: 30px 0 12px;
 }
 
 @media (max-width: 768px) {

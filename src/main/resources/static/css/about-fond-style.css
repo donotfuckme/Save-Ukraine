@@ -2,7 +2,7 @@
 .about-fond__text {
   position: relative;
   background: #FFD500;
-  padding: 65px 145px 40px;
+  padding: 55px 95px 30px;
 }
 
 @media (max-width: 768px) {
@@ -45,6 +45,11 @@
 
 .about-fond__parag:last-child {
   margin: 0;
+}
+
+.about-fond__parag span {
+  font-style: italic;
+  font-weight: 400;
 }
 
 .about-fond__content {
@@ -113,7 +118,7 @@
   color: #144652;
   padding: 45px 20%;
   margin: 0 auto;
-  text-align: left;
+  text-align: center;
 }
 
 @media (max-width: 992px) {
@@ -135,7 +140,6 @@
 
   .content-item__text {
     padding: 25px 30px 0 30px;
-    text-align: center;
     margin: 0;
   }
 }
@@ -160,7 +164,7 @@
 
 .about-fond__image {
   position: relative;
-  padding: 0 0 55% 0;
+  padding: 0 0 65% 0;
 }
 
 @media (max-width: 768px) {

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>БО «МБФ «ВРЯТУВАТИ УКРАЇНУ»</title>
+
+  <link rel="canonical" href="#"/>
+
+  <link rel="shortcut icon" th:href="@{/img/favicon-heart.ico}" type="image/x-icon">
+
+  <link href="https://fonts.googleapis.com/css?family=Open Sans" rel="stylesheet">
+
+  <link th:href="@{/css/style.css}" rel="stylesheet">
+
+</head>
+
+<body>
+
+<div class="wrapper" id="about-founder">
+
+  <!-- Header -->
+  <th:block th:replace="fragments/header"/>
+
+  <!-- Main menu -->
+  <th:block th:replace="fragments/main-menu"/>
+
+  <section class="about-founder">
+    <div class="about-founder__container container">
+      <div class="about-founder__main-link main-link">
+        <a th:href="@{/index#main-page}" class="main-link__anchor">Головна</a>
+        <p class="main-link__submenu"> / Про засновника Фонду</p>
+      </div>
+      <h1 class="about-founder__title title">Про засновника Фонду</h1>
+      <div class="about-founder__body">
+        <div class="about-founder__row">
+          <div class="about-founder__image">
+            <img th:src="@{/img/founder.png}" alt="Засновник фонду Зберегти Україну" loading="lazy">
+          </div>
+          <div class="about-founder__row-content">
+            <h2 class="about-founder__subtitle subtitle">Антон Сіверс засновник міжнародного благодійного фонду «Врятувати Україну»</h2>
+            <p class="text-parag">Трохи про себе та про ідею народження Благодійного фонду «Врятувати Україну».</p>
+          </div>
+        </div>
+        <div class="about-founder__content">
+          <p class="text-parag">Мене звати Антон Сіверс. Я громадянин України, народився і виріс у місті Харків, Україна. У 2003 році закінчив Національний технічний університет «Харківський політехнічний інститут» (Економічний факультет). Мій перший трудовий досвід пов'язаний із митною службою.</p>
+          <p class="text-parag">Проте бажання робити щось більш відчутне та значуще, приносити користь людям призвело до зміни сфери діяльності і в 31 рік я почав працювати у страховій компанії УСГ «Vienna Insurance Group».</p>
+          <p class="text-parag">Загалом у сфері страхування я пропрацював 15 років, де обіймав керівні посади в таких Європейських страхових компаніях, як Vienna Insurance Group, AXA, UNIQA, Euroins Ukraine. Робота у страхуванні навчила мене принципу нарощування клієнтської бази, простому й складному одночасно: «Якщо вам сподобалася якість обслуговування – порекомендуйте мене вашому другові!»</p>
+          <p class="text-parag">На даний момент у моїй телефонній книзі понад 5000 контактів. В основному це люди, які довіряють мені та цінують мої людські та ділові якості. Це ті люди, які рекомендували мене своїм друзям та знайомим, які згодом стали й моїми друзями також.</p>
+          <p class="text-parag">Рано вранці 24 лютого 2022 року мене, як і багатьох людей в Україні, розбудили жахливі звуки повітряної тривоги та снарядів, що розривалися. До моєї країни, до мого улюбленого міста прийшла війна…</p>
+          <p class="text-parag">З перших днів війни Українці згуртувалися та почали діяти! Одні пішли на фронт та у територіальну оборону, інші почали допомагати людям. Так, на нашому сайті можна побачити фото багатьох моїх знайомих, які на своїх автомобілях, потрапляючи під обстріли, почали доставляти <a th:href="@{/#}" class="about-founder__link">допомогу людям</a>, які потребували її внаслідок воєнних дій.</p>
+          <div class="about-founder__tesis">Я разом зі своїми друзями став співпрацювати з перевіреними групами волонтерів, де кожен з нас допомагав у міру своєї фізичної чи матеріальної спроможності.</div>
+          <p class="text-parag">Вже станом на 28.03.2022 р. у моєму рідному <a th:href="@{/#}" class="about-founder__link">Харкові було зруйновано,</a> понад 1200 житлових багатоповерхових будинків, 53 дитячі садки, 69 шкіл та 15 лікарень посилання на галерею руйнувань. Стрімко стали зростати щоденні запити про допомогу, які ми вже не мали змоги задовольняти самотужки у зв'язку з гострою нестачею матеріально-технічної бази та грошових коштів на закупівлю.</p>
+          <p class="text-parag">Таким чином й виникла ідея зареєструвати неприбуткову благодійну організацію «Міжнародний благодійний фонд «Врятувати Україну», де кожен небайдужий може зробити свій посильний внесок у наданні допомоги громадянам України, які постраждали від воєнних дій.</p>
+          <div class="about-founder__tesis">
+            <p>Дякую, всім небайдужим людям за підтримку!</p>
+            <p>З вірою у Перемогу!  <span>Слава Україні!</span></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <th:block th:replace="fragments/footer"/>
+
+</div>
+
+<a class="icon-arrow-right2" href="#" id="scrollToTop"></a>
+
+<script th:src="@{/js/script.js}"></script>
+
+</body>
+
+</html>
