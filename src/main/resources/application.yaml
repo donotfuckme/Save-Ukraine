@@ -1,9 +1,18 @@
+server:
+  port: 9090
+
 logging:
   level:
     "org.springframework": info
     "global.saveukraine": debug
 
 spring:
+  servlet:
+    multipart:
+      enabled: true
+      file-size-threshold: 2MB
+      max-file-size: 5MB
+      max-request-size: 10MB
   mail:
     host: smtp.gmail.com
     # sensitive data
@@ -25,3 +34,16 @@ mail:
   receiver: "antonxashow@gmail.com"
   subject: "Заявка на волонтера"
   text-placeholder: "Имя: %s%nПол: %s%nГород: %s%nТелефон:%s"
+
+cloud:
+  aws:
+    credentials:
+      # sensitive data
+      access-key:
+      # sensitive data
+      secret-key:
+    region:
+      static: eu-central-1
+    stack:
+      auto: false
+    bucket: "eu-saveukraine-image-storage"
