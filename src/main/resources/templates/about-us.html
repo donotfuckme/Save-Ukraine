@@ -201,16 +201,6 @@
 </div>
 
 <a class="icon-arrow-right2" href="#" id="scrollToTop"></a>
-<script>
-  let currentWidth = window.innerWidth
-  window.onresize = function () {
-    if (window.innerWidth <= 768 && currentWidth > 768) {
-      location.reload()
-    } else if (window.innerWidth > 768 && currentWidth <= 768) {
-      location.reload()
-    }
-  }
-</script>
 <script th:src="@{/js/script.js}"></script>
 
 </body>
