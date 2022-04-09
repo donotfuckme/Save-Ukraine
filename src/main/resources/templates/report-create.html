@@ -5,7 +5,7 @@
   <title>Додавання звіту</title>
 </head>
 <body>
-<form name="report" th:action="@{/reports/create}" method="post" enctype="multipart/form-data">
+<form name="reportDto" th:action="@{/reports/create}" method="post" enctype="multipart/form-data">
   <div class="form-group">
     <label for="txtTitle">Заголовок</label>
     <input type="text" id="txtTitle" name="title" placeholder="Щаголовок">

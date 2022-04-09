@@ -41,11 +41,11 @@
       <div class="reports__body" id="all-report">
 
         <!--/*@thymesVar id="reports" type="java.util.List"*/-->
-        <!--/*@thymesVar id="report" type="global.saveukraine.volunteer.model.Report"*/-->
+        <!--/*@thymesVar id="report" type="global.saveukraine.volunteer.entity.Report"*/-->
         <div th:each="report : ${reports}" class="reports__item">
           <div class="item-reports">
             <div th:if="${report.images ne null}" class="item-reports__image">
-              <img class="image-responsive" src="#" th:src="'/storage/' + ${report.images[0]}" alt="">
+              <img class="image-responsive" src="#" th:src="'/storage/' + ${report.images[0].name}" alt="">
             </div>
             <div class="item-reports__content">
               <p class="item-reports__date" th:text="${#temporals.format(report.dateTimeOf, 'dd-MM-yyyy, HH:mm')}"></p>

@@ -1,6 +1,6 @@
 package global.saveukraine.volunteer.controller;
 
-import global.saveukraine.volunteer.model.VolunteerUserOrder;
+import global.saveukraine.volunteer.model.VolunteerUserOrderDto;
 import global.saveukraine.volunteer.service.EmailService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
@@ -29,9 +29,7 @@ public class HelpController {
   }
 
   @PostMapping("become-volunteer")
-  public String becomeVolunteerUserOrder(@ModelAttribute VolunteerUserOrder volunteerUserOrder) {
-    log.debug("form data received");
-    log.debug("data = {}", volunteerUserOrder.toString());
+  public String becomeVolunteerUserOrder(@ModelAttribute VolunteerUserOrderDto volunteerUserOrder) {
     emailService.sendMessage(volunteerUserOrder);
     return "become-volunteer";
   }

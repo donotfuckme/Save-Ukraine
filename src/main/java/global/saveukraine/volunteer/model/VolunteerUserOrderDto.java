@@ -7,7 +7,7 @@ import lombok.ToString;
 @Getter
 @ToString
 @RequiredArgsConstructor
-public class VolunteerUserOrder {
+public class VolunteerUserOrderDto {
 
   private final String fullName;
 

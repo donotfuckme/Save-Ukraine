@@ -13,6 +13,20 @@ spring:
       file-size-threshold: 2MB
       max-file-size: 5MB
       max-request-size: 10MB
+  datasource:
+    url: "jdbc:postgresql://localhost:5432/saveukraine"
+    username:
+    password:
+    jpa:
+      properties:
+        hibernate:
+          jdbc:
+            lob:
+              non_contextual_creation: true
+          dialect: "org.hibernate.dialect.PostgreSQLDialect"
+      # Hibernate ddl auto (create, create-drop, validate, update)
+      hibernate:
+        ddl-auto: update
   mail:
     host: smtp.gmail.com
     # sensitive data

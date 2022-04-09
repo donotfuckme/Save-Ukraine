@@ -31,7 +31,7 @@
   <th:block th:replace="fragments/main-menu"/>
 
   <section class="report">
-    <!--/*@thymesVar id="report" type="global.saveukraine.volunteer.model.Report"*/-->
+    <!--/*@thymesVar id="report" type="global.saveukraine.volunteer.entity.Report"*/-->
     <div class="container__report container">
       <div class="how-help__main-link main-link">
         <a th:href="@{/index#main-page}" class="main-link__anchor">Головна</a>
@@ -40,11 +40,11 @@
       </div>
       <h1 class="reports__title title" th:text="'Звіт від ' + ${#temporals.format(report.dateTimeOf, 'dd-MM-yyyy, HH:mm')}"></h1>
       <p class="report__parag" th:text="${report.description}"></p>
-      <div th:if="${report.images ne null}" class="report__slider slider-report">
+      <div th:if="${report.images ne null}" class="report__slider slider-reportDto">
         <div class="swiper swiper-report__big">
           <div class="swiper-wrapper">
             <div th:each="image : ${report.images}" class="swiper-slide slide-report__big">
-              <img th:src="'/storage/' + ${image}" alt="">
+              <img th:src="'/storage/' + ${image.name}" alt="">
             </div>
           </div>
           <div class="swiper-report-arrows swiper-arrow__next icon-arrow-right2"></div>
@@ -53,7 +53,7 @@
         <div thumbsSlider="" class="swiper swiper-report__small">
           <div class="swiper-wrapper">
             <div th:each="image : ${report.images}" class="swiper-slide slide-report__small">
-              <img th:src="'/storage/' + ${image}" alt="">
+              <img th:src="'/storage/' + ${image.name}" alt="">
             </div>
           </div>
         </div>

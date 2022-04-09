@@ -1,6 +1,6 @@
 package global.saveukraine.volunteer.service;
 
-import global.saveukraine.volunteer.model.VolunteerUserOrder;
+import global.saveukraine.volunteer.model.VolunteerUserOrderDto;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.beans.factory.annotation.Value;
@@ -30,8 +30,7 @@ public class EmailService {
   @Value("${mail.text-placeholder}")
   private String mailTextPlaceholder;
 
-  public void sendMessage(VolunteerUserOrder volunteerUserOrder) {
-    log.debug("sender = '{}', mail subject = '{}'", sender, mailSubject);
+  public void sendMessage(VolunteerUserOrderDto volunteerUserOrder) {
     SimpleMailMessage message = new SimpleMailMessage();
     message.setFrom(sender);
     message.setTo(mailReceiver);

@@ -30,9 +30,13 @@ public class S3ImageStorage {
 
   public String save(MultipartFile multipartFile) {
     File file = convertMultiPartFileToFile(multipartFile);
-    String fileName = UUID.randomUUID().toString();
+    String fileName = UUID.randomUUID() + "-" + System.currentTimeMillis();
     s3Client.putObject(new PutObjectRequest(bucketName, fileName, file));
-    file.delete();
+    try {
+      file.delete();
+    } catch (SecurityException e) {
+      log.warn("Cannot delete file", e);
+    }
     return fileName;
   }
 
