@@ -14,9 +14,9 @@ spring:
       max-file-size: 5MB
       max-request-size: 10MB
   datasource:
-    url: "jdbc:postgresql://localhost:5432/saveukraine"
-    username:
-    password:
+    url: ${DATASOURCE_URL}
+    username: ${DATASOURCE_USERNAME}
+    password: ${DATASOURCE_PASSWORD}
     jpa:
       properties:
         hibernate:
@@ -30,9 +30,9 @@ spring:
   mail:
     host: smtp.gmail.com
     # sensitive data
-    username:
+    username: ${MAIL_USERNAME}
     # sensitive data
-    password:
+    password: ${MAIL_PASSWORD}
     properties:
       mail:
         transport:
@@ -53,9 +53,9 @@ cloud:
   aws:
     credentials:
       # sensitive data
-      access-key:
+      access-key: ${AMAZON_ACCESS_KEY}
       # sensitive data
-      secret-key:
+      secret-key: ${AMAZON_SECRET_KEY}
     region:
       static: eu-central-1
     stack:
