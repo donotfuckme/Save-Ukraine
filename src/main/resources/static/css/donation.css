@@ -16,6 +16,11 @@
 }
 
 @media (max-width: 768px) {
+  .donation__title {
+    font-size: 36px;
+    line-height: 36px;
+  }
+
   .donation__subtitle {
     padding: 20px 0 28px;
   }
@@ -51,7 +56,8 @@
 @media (max-width: 768px) {
   .nav-tabs__item {
     font-size: 14px;
-    padding: 4px 12px;
+    padding: 4px 6px;
+    line-height: 16px;
   }
 }
 
@@ -67,86 +73,159 @@
 .tabs-donation__pages {
   border: 1px solid #0786A5;
   box-sizing: border-box;
-  padding: 0 0 48px 95px;
+  padding: 0 0 48px 0;
 }
+
 @media (max-width: 768px) {
   .tabs-donation__pages {
-    padding: 0 0 24px 24px;
+    padding: 0 0 24px 0;
   }
 }
 
 .tabs-donation__page {
   display: none;
   color: #0786A5;
+  padding: 46px 30px 36px 50px;
+}
+
+@media (max-width: 768px) {
+  .tabs-donation__page {
+    padding: 28px 16px 0 16px;
+  }
 }
 
 .tabs-donation__page.tabs-active {
   display: block;
 }
 
+.tabs-donation__page.tabs-active:first-child {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 0 0 4px;
+}
+
 .tabs-donation__title {
   font-weight: 700;
   font-size: 18px;
   line-height: 25px;
-  padding: 50px 0 30px 0;
+  padding: 0 0 23px 0;
 }
 
-@media (max-width: 500px) {
-  .tabs-donation__title {
-    font-size: 18px;
-    padding: 20px 0 16px 0;
-  }
-}
-
-.pay-systems {
+/*Page card---------------------------*/
+.card-donate {
   display: flex;
-  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
 }
 
-.pay-systems__item {
-  position: relative;
-  margin: 0 30px 16px 0;
-}
-
-.pay-systems__item img {
-  max-width: 250px;
-  object-fit: cover;
-}
-
-@media (max-width: 550px) {
-  .pay-systems__item img {
-    max-width: 150px;
-  }
-}
-
-.tabs-donate__row {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-}
-
-@media (max-width: 550px) {
-  .tabs-donate__row {
+@media (max-width: 700px) {
+  .card-donate {
     flex-direction: column;
   }
 
-  .tabs-donation__qr {
-    margin: 0 0 16px 0;
+  .card-donate__qr {
+    order: 2;
+    margin: 16px 0 0 0;
   }
 }
 
-.tabs-donation__btn {
-  display: inline-flex;
+.card-donate__content {
+  flex: 0 0 50%;
+  display: flex;
   flex-direction: column;
+  padding: 17px 0 0 50px;
+}
+
+@media (max-width: 700px) {
+  .card-donate__content {
+    padding: 0;
+  }
+}
+
+@media (max-width: 400px) {
+  .card-donate__content h3 {
+    padding: 0 0 23px 16px;
+  }
+}
+
+/*SELECT----------------------------------------------------*/
+.select2-container--default .select2-selection--single {
+  border: 1px solid #0786A5;
+  padding: 0 0 0 17px;
+  border-radius: 20px;
+  height:44px;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__rendered {
+  color: #0786A5;
+  font-size: 16px;
+  line-height: 22px;
+  padding: 9px 20px 13px 0;
+}
+
+.select2-dropdown {
+  color: #0786A5;
+  border: 1px solid #0786A5;
+  border-radius: 20px;
+  padding: 0 0 0 12px;
+  line-height: 20px;
+}
+.select2-container--default .select2-search--dropdown .select2-search__field{
+  border: 1px solid #0786A5;
+  color: #144652;
+  border-radius: 16px;
+  margin: 0 0 0 -4px;
+  padding: 5px 0 5px 15px;
+  width: 98%;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__arrow {
+  width: 32px;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__arrow b {
+  border-color: #0786A5 transparent transparent transparent;
+  border-width: 12px 6px 0 6px;
+  margin-left: -6px;
+  margin-top: 3px;
+}
+
+.select2-container--default.select2-container--open .select2-selection--single .select2-selection__arrow b {
+  border-color: transparent transparent  #0786A5 transparent;
+  border-width: 0 6px 12px 6px;
+  margin-top: 1px;
+}
+
+/*Button-----------------------------------*/
+.card-donate__row {
+ display: inline-flex;
+ margin: 15px 0 0 0;
+}
+
+.card-donate__btn {
+  flex: 0 0 40%;
+  margin: 0 16px 0 0;
+}
+
+.pay-systems {
+  flex: 0 0 30%;
+  display: inline-flex;
   align-items: center;
 }
 
-.tabs-donation__btn p {
-  padding: 16px 0 0 0;
+.pay-systems__item {
+  position: relative;
+  display: inline-flex;
+  margin: 0 0 0 4px;
 }
 
+.card-donate__content p {
+  margin: 16px 0 0 0;
+  font-size: 12px;
+}
+
+/*requisites----------------------------*/
 .tabs-donation__requisites p {
   font-size: 24px;
   line-height: 28px;
@@ -160,6 +239,14 @@
   }
 }
 
+@media (max-width: 500px) {
+  .tabs-donation__title {
+    font-size: 18px;
+    padding: 20px 0 16px 0;
+  }
+}
+
+/*PAY PAL------------------------------------------*/
 .paypal__image {
   position: relative;
 }
@@ -167,7 +254,6 @@
 .paypal__image img {
   max-width: 300px;
 }
-
 @media (max-width: 450px) {
   .paypal__image img {
     max-width: 200px;
