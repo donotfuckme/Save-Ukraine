@@ -24,16 +24,8 @@
 /*ODA-----------------------------------------------------------------*/
 .oda__container {
   height: 742px;
+  background: url(../img/main-ODA.png) center / cover;
   position: relative;
-}
-
-.oda__image {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  padding: 0 0 50% 0;
 }
 
 .oda__content {
@@ -62,7 +54,7 @@
   }
 
   .oda__container {
-    height: 400px;
+    height: 350px;
   }
 
   .oda__content {
@@ -81,5 +73,11 @@
     left: 12%;
     font-size: 28px;
     line-height: 30px;
+  }
+}
+
+@media (max-width: 420px) {
+  .oda__container {
+    height: 193px;
   }
 }
