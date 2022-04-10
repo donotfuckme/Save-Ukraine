@@ -20,6 +20,11 @@ public class MainController {
     return "about-us";
   }
 
+  @GetMapping("about-founder")
+  public String aboutFounder() {
+    return "about-founder";
+  }
+
   @GetMapping("contacts")
   public String contacts() {
     return "contacts";
