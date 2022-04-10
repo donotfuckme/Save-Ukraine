@@ -188,42 +188,29 @@
         </div>
       </div>
     </div>
-    <section class="main__reports reports">
+    <!--/*@thymesVar id="reports" type="java.util.List"*/-->
+    <section th:if="${reports ne null}" class="main__reports reports">
       <div class="main__container container">
         <div class="reports__row">
           <h2 class="main__title title">Звіти</h2>
           <div class="reports__anchor anchor">
-            <a th:href="@{/reports#all-reportDto}" class="anchor__link icon-arrow-right2">Подивитись всі звіти</a>
+            <a th:href="@{/reports#all-report}" class="anchor__link icon-arrow-right2">Подивитись всі звіти</a>
           </div>
         </div>
         <div class="reports__body">
-          <div class="reports__item item-reports">
-            <div class="item-reports__image">
-              <img th:src="@{/img/reports_01.png}" class="image-responsive" alt="Волонтери Харків">
+          <!--/*@thymesVar id="reports" type="java.util.List"*/-->
+          <!--/*@thymesVar id="report" type="global.saveukraine.volunteer.entity.Report"*/-->
+          <div th:each="report : ${reports}" class="reports__item item-reports">
+            <div th:if="${report.images ne null}" class="item-reports__image">
+              <img class="image-responsive" src="#" th:src="'/storage/' + ${report.images[0].name}" alt="Волонтери Харків">
             </div>
             <div class="item-reports__content">
               <div class="item-reports__subtitle">
-                <p>Харків</p>
-                <p>15-03-2022, 15:00</p>
+                <p th:text="${#temporals.format(report.dateTimeOf, 'dd-MM-yyyy, HH:mm')}"></p>
               </div>
-              <div class="item-reports__text">А это наш бусик. По нам попали когда мы на нем ехали. Немного кантузило, а так, ни царапины. Пацаны...</div>
+              <div class="item-reports__text" th:text="${report.description}"></div>
               <div class="item-reports__link">
-                <a href="" class="anchor__link icon-arrow-right2">Подивитись повністю</a>
-              </div>
-            </div>
-          </div>
-          <div class="reports__item item-reports">
-            <div class="item-reports__image">
-              <img th:src="@{/img/reports_02.png}" class="image-responsive" alt="Волонтери">
-            </div>
-            <div class="item-reports__content">
-              <div class="item-reports__subtitle">
-                <p>Київ</p>
-                <p>15-03-2022, 15:00</p>
-              </div>
-              <div class="item-reports__text">А это наш бусик. По нам попали когда мы на нем ехали. Немного кантузило, а так, ни царапины. Пацаны...</div>
-              <div class="item-reports__link">
-                <a href="" class="anchor__link icon-arrow-right2">Подивитись повністю</a>
+                <a href="#" th:href="'/reports/' + ${report.id}" class="anchor__link icon-arrow-right2">Подивитись повністю</a>
               </div>
             </div>
           </div>
