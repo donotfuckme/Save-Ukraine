@@ -60,18 +60,32 @@
         <ul class="tabs-donation__pages">
           <li class="tabs-donation__page tabs-active" id="page1">
             <div class="tabs-donation__card card-donate">
-              <div class="card-donate__qr">
-                <img src="https://wayforpay.com/qr/img?token=bbc7c9cd98eab&type=b&size=160" alt="QR-код">
+              <div class="card-donate__qrs">
+                <div class="card-donate__qr qr-active" id="aid-all">
+                  <img th:src="@{/img/qr-code/qr-all.png}" alt="QR-код">
+                </div>
+                <div class="card-donate__qr" id="aid-children">
+                  <img th:src="@{/img/qr-code/qr-children.png}" alt="QR-код">
+                </div>
+                <div class="card-donate__qr" id="aid-animals">
+                  <img th:src="@{/img/qr-code/qr-animals.png}" alt="QR-код">
+                </div>
+                <div class="card-donate__qr" id="aid-kharkiv">
+                  <img th:src="@{/img/qr-code/qr-kharkiv.png}" alt="QR-код">
+                </div>
+                <div class="card-donate__qr" id="aid-aged">
+                  <img th:src="@{/img/qr-code/qr-aged.pngЪ" alt="QR-код">
+                </div>
               </div>
               <div class="card-donate__content">
                 <h3 class="tabs-donation__title">Зробити пожертвування:</h3>
                 <form action="#">
                   <select class="js-example-basic-single card-donate__select" name="state">
-                    <option value="aid all" data-option_id="aid-all">Допомогти всім</option>
-                    <option value="aid children" data-option_id="aid-children">Допомогти дітям</option>
-                    <option value="aid animals" data-option_id="aid-animals">Допомогти тваринам</option>
-                    <option value="aid kharkiv" data-option_id="aid-kharkiv">Відновлення города-героя Харкова</option>
-                    <option value="aid aged" data-option_id="aid-aged">Допомога дорослим та людям похилого віку</option>
+                    <option value="aid all" data-option_id="aid-all" class="card-donate__option">Допомогти всім</option>
+                    <option value="aid children" data-option_id="aid-children" class="card-donate__option">Допомогти дітям</option>
+                    <option value="aid animals" data-option_id="aid-animals" class="card-donate__option">Допомогти тваринам</option>
+                    <option value="aid kharkiv" data-option_id="aid-kharkiv" class="card-donate__option">Відновлення города-героя Харкова</option>
+                    <option value="aid aged" data-option_id="aid-aged" class="card-donate__option">Допомога дорослим та людям похилого віку</option>
                   </select>
                 </form>
                 <div class="card-donate__row">
@@ -125,11 +139,30 @@
 
 </div>
 
-<script th:src="@{/js/script.js}"></script>
   <script>
     $(document).ready(function() {
       $('.js-example-basic-single').select2();
     });
+
+    //Change QR-code
+    const showQrcode = (id) => {
+      const listQrcode = document.querySelectorAll('.card-donate__qr')
+
+      for (let item of listQrcode) {
+        item.classList.remove('qr-active')
+      }
+      document.getElementById(`${id}`).classList.add('qr-active')
+    }
+
+    const options = document.querySelectorAll('.card-donate__option')
+
+    Object.assign(document.querySelector('.card-donate__select'), {
+      onchange: event => {
+        for (let option of options) {
+          option.selected && showQrcode(option.dataset.option_id)
+        }
+      }
+    })
   </script>
 
 </body>
