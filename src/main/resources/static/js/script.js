@@ -76,7 +76,6 @@ if (document.querySelector('.slider-main-ukrain')) {
     loop: true,
     loopAdditionalSlides: 5,
     preloadImages: false,
-    // parallax: true,
     autoplay: true,
     pagination: {
       el: '.swiper-pagination'
@@ -94,7 +93,6 @@ if (document.querySelector('.slider-main-building')) {
     observer: true,
     observerParents: true,
     slidesPerView: 1,
-    // spaceBetween: 32,
     watchOverflow: true,
     speed: 1200,
     loop: true,
@@ -110,7 +108,6 @@ if (document.querySelector('.slider-main-building')) {
 //Report page slider big-small
 if (document.querySelector('.swiper-report__small')) {
   const swiperReportSmall = new Swiper(".swiper-report__small", {
-    loop: true,
     spaceBetween: 10,
     slidesPerView: 2,
     breakpoints: {

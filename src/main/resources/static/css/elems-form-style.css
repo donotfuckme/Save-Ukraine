@@ -1,14 +1,29 @@
 .input-text__custom {
-  background: #EAEAEA;
-  border: 1px solid #EAEAEA;
+  background: #fff;
+  border: 1px solid #1BBAE1;
   border-radius: 20px;
   padding: 10px 0 10px 50px;
   font-size: 18px;
   line-height: 25px;
-  color: #1BBAE1;
-  background: url(../img/donation-money.svg);
+  color:#1BBAE1;
+}
+
+#txtFullName {
+  background: url(../img/human.svg);
   background-repeat: no-repeat;
-  background-position: 5%;
+  background-position: 2%;
+}
+
+#txtCity {
+  background: url(../img/location.svg);
+  background-repeat: no-repeat;
+  background-position: 2%;
+}
+
+#txtPhone {
+  background: url(../img/phone.svg);
+  background-repeat: no-repeat;
+  background-position: 2%;
 }
 
 .input-text__custom {
@@ -18,18 +33,15 @@
 .input-text__custom:focus,
 .input-text__custom:focus-visible,
 .input-text__custom:active {
-  background: url(../img/donation-money-active.svg);
-  background-repeat: no-repeat;
-  background-position: 5%;
-  border: 1px solid #1BBAE1;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
 }
 
 .input-text__custom::-webkit-input-placeholder {
-  color: #C4C4C4;
+  color: #1BBAE1;
 }
 
 .input-text__custom::-moz-placeholder {
-  color: #C4C4C4;
+  color: #1BBAE1;
 }
 
 .input-text__error {
@@ -69,12 +81,12 @@
   transition: all .6s ease;
 }
 
-.input-radio__default:not(:disabled):not(:checked) + .input-radio__custom:hover {
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+.input-radio__default:not(:disabled):not(:checked)+.input-radio__custom:hover {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
   transition: all .6s ease;
 }
 
-.input-radio__default:checked + .input-radio__custom {
+.input-radio__default:checked+.input-radio__custom {
   border: 1px solid #1BBAE1;
   color: #1BBAE1;
   transition: all .6s ease;
