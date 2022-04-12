@@ -12,6 +12,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import static java.lang.String.format;
+
 @Log4j2
 @Controller
 @RequestMapping("help")
@@ -41,5 +43,31 @@ public class HelpController {
                          Model model) {
     model.addAttribute("selectedProject", project);
     return "donation";
+  }
+
+  @GetMapping("donation/redirect")
+  public String donationRedirect(@RequestParam(required = false) String project) {
+    final String redirectUrl;
+    switch (project) {
+      case "aid all":
+        redirectUrl = "sd948bd9510bf";
+        break;
+      case "aid children":
+        redirectUrl = "s22ec69b4128f";
+        break;
+      case "aid animals":
+        redirectUrl = "s32b628afc8e9";
+        break;
+      case "aid kharkiv":
+        redirectUrl = "s3a4c4e8b66a3";
+        break;
+      case "aid aged":
+        redirectUrl = "s75b9292b25d3";
+        break;
+      default:
+        redirectUrl = "/";
+    }
+
+    return format("redirect:https://secure.wayforpay.com/payment/%s", redirectUrl);
   }
 }
