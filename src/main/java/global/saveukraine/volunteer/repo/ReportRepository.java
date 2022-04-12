@@ -1,6 +1,8 @@
 package global.saveukraine.volunteer.repo;
 
 import global.saveukraine.volunteer.entity.Report;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
@@ -20,4 +22,6 @@ public interface ReportRepository extends JpaRepository<Report, Long> {
 
   @Query(value = "select * from reports r where r.dateTimeOf > :dateTimeOf order by r.dateTimeOf asc limit 1", nativeQuery = true)
   Optional<Report> findFirstWithDateTimeOfAfterOrderByDateTimeOfAsc(@Param("dateTimeOf") LocalDateTime dateTimeOf);
+
+  Page<Report> findByOrderByDateTimeOfAsc(Pageable pageable);
 }

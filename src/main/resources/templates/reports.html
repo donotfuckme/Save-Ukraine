@@ -40,9 +40,9 @@
       <p class="reports__parag text-parag">На цій сторінці ви можете побачити результати роботи Міжнародного Благодійного Фонду “Врятувати Україну”.</p>
       <div class="reports__body" id="all-report">
 
-        <!--/*@thymesVar id="reports" type="java.util.List"*/-->
+        <!--/*@thymesVar id="reportPage" type="org.springframework.data.domain.Page"*/-->
         <!--/*@thymesVar id="report" type="global.saveukraine.volunteer.entity.Report"*/-->
-        <div th:each="report : ${reports}" class="reports__item">
+        <div th:each="report : ${reportPage.content}" class="reports__item">
           <div class="item-reports">
             <div th:if="${report.images ne null}" class="item-reports__image">
               <img class="image-responsive" src="#" th:src="'/storage/' + ${report.images[0].name}" alt="">
@@ -56,18 +56,22 @@
               </div>
             </div>
           </div>
-          <div class="reports-pagination__body">
-            <a href="#" class="icon-arrow-right2 reports-pagination__link"></a>
-            <div class="reports-pagination__row">
-              <a href="#" class="bulit-active">1</a>
-              <a href="#">2</a>
-              <a href="#">3</a>
-              <a href="#">4</a>
-              <span>...</span>
-              <a href="#">20</a>
-            </div>
-            <a href="#" class="icon-arrow-right2 reports-pagination__link"></a>
+        </div>
+
+        <!--/*@thymesVar id="reportPage" type="org.springframework.data.domain.Page"*/-->
+        <div class="reports-pagination__body">
+          <a th:if="${reportPage.number ne 0}"
+             th:href="@{/reports(page=${reportPage.number})}"
+             class="icon-arrow-right2 reports-pagination__link" href="#"></a>
+          <div th:if="${reportPage.totalPages > 0}" class="reports-pagination__row">
+            <a th:each="pageNumber : ${pageNumbers}"
+               th:href="@{/reports(size=${reportPage.size}, page=${pageNumber})}"
+               th:text="${pageNumber}"
+               th:class="${pageNumber == reportPage.number + 1} ? 'bulit-active'"></a>
           </div>
+          <a th:if="${reportPage.number + 1 ne reportPage.totalPages}"
+             th:href="@{/reports(page=${reportPage.number + 2})}"
+             class="icon-arrow-right2 reports-pagination__link" href="#"></a>
         </div>
 
       </div>
