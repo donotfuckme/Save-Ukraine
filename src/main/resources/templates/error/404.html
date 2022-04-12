@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 
 <head>
 
@@ -42,7 +42,7 @@
           <p class="not-found404__parag">І пам’ятайте:</p>
           <p class="not-found404__parag"><span>Світло завжди перемагає темряву 💙💛</span></p>
           <p class="not-found404__parag"><span>Слава Україні!</span></p>
-          <a href="../index.html#main-page" class="_btn">Перейти на головну</a>
+          <a th:href="@{/index#main-page}" class="_btn">Перейти на головну</a>
         </div>
         <div class="not-found404__image">
           <div class="not-found404__bound">
