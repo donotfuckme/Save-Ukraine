@@ -64,12 +64,12 @@
   <div class="report-arrows">
     <div class="report-arrows__container container">
       <div class="report-arrows__body">
-        <div class="report-arrows__prev">
-          <a href="" class="report-arrows__link icon-arrow-right2"><span class="arrow-text__hidden">Подивитись наступний звіт</span></a>
+        <div th:if="${reportAfter ne null}" class="report-arrows__prev">
+          <a th:href="'/reports/' + ${reportAfter.id}" class="report-arrows__link icon-arrow-right2"><span class="arrow-text__hidden">Подивитись наступний звіт</span></a>
         </div>
         <div class="text-report__show">Звіти</div>
-        <div class="report-arrows__next">
-          <a href="" class="report-arrows__link icon-arrow-right2"><span class="arrow-text__hidden">Подивитись попередній звіт</span></a>
+        <div th:if="${reportBefore ne null}" class="report-arrows__next">
+          <a th:href="'/reports/' + ${reportBefore.id}" class="report-arrows__link icon-arrow-right2"><span class="arrow-text__hidden">Подивитись попередній звіт</span></a>
         </div>
       </div>
     </div>

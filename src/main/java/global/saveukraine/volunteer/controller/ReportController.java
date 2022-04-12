@@ -21,6 +21,7 @@ import javax.transaction.Transactional;
 import java.time.LocalDateTime;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Objects;
 import java.util.Set;
 import java.util.stream.Collectors;
 
@@ -48,7 +49,18 @@ public class ReportController {
   public String report(@PathVariable long id,
                        Model model) {
     reportRepository.findById(id)
-      .map(report -> model.addAttribute("report", report))
+      .map(report -> {
+        model.addAttribute("report", report);
+        LocalDateTime dateTimeOf = report.getDateTimeOf();
+        reportRepository.findFirstWithDateTimeOfBeforeOrderByDateTimeOfDesc(dateTimeOf)
+          .ifPresent(reportBefore -> model.addAttribute("reportBefore", reportBefore));
+
+        reportRepository.findFirstWithDateTimeOfAfterOrderByDateTimeOfAsc(dateTimeOf)
+          .filter(reportAfter -> !Objects.equals(reportAfter.getId(), report.getId()))
+          .ifPresent(reportAfter -> model.addAttribute("reportAfter", reportAfter));
+
+        return report;
+      })
       .orElseThrow(() -> new ReportNotFoundException("Cannot found report by id"));
 
     return "report";
