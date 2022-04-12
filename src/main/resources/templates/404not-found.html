@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>БО «МБФ «ВРЯТУВАТИ УКРАЇНУ»</title>
+
+  <link rel="canonical" href="#"/>
+
+  <link rel="shortcut icon" th:href="@{/img/favicon-heart.ico}" type="image/x-icon">
+
+  <link href="https://fonts.googleapis.com/css?family=Open Sans" rel="stylesheet">
+
+  <link th:href="@{/css/style.css}" rel="stylesheet">
+
+</head>
+
+<body>
+
+<div class="wrapper">
+
+  <!-- Header -->
+  <th:block th:replace="fragments/header"/>
+
+  <!-- Main menu -->
+  <th:block th:replace="fragments/main-menu"/>
+
+  <section class="not-found404">
+    <div class="container">
+      <div class="about-founder__main-link main-link">
+        <a th:href="@{/index#main-page}" class="main-link__anchor">Головна</a>
+        <p class="main-link__submenu"> / 404</p>
+      </div>
+      <div class="not-found404__body">
+        <div class="not-found404__content">
+          <p class="not-found404__parag">Ой-йой! Сторінка не знайдена.</p>
+          <h1 class="not-found404n__title title">404</h1>
+          <p class="not-found404__parag">Схоже, такої сторінки не існує. Перевірте правильність адреси або скористайтесь меню для пошуку необхідної сторінки.</p>
+          <p class="not-found404__parag">І пам’ятайте:</p>
+          <p class="not-found404__parag"><span>Світло завжди перемагає темряву 💙💛</span></p>
+          <p class="not-found404__parag"><span>Слава Україні!</span></p>
+          <a href="../index.html#main-page" class="_btn">Перейти на головну</a>
+        </div>
+        <div class="not-found404__image">
+          <div class="not-found404__bound">
+            <img th:src="@{/img/ukraine404.png}" alt="Ukraine" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <th:block th:replace="fragments/footer"/>
+
+</div>
+
+<a class="icon-arrow-right2" href="#" id="scrollToTop"></a>
+
+<script th:src="@{/js/script.js}"></script>
+
+</body>
+
+</html>
