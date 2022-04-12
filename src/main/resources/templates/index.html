@@ -180,7 +180,7 @@
       </div>
     </div>
     <!--/*@thymesVar id="reports" type="java.util.List"*/-->
-    <section th:if="${reports ne null or reports.isEmpty() ne true}" class="main__reports reports">
+    <section th:if="${reports ne null and reports.isEmpty() ne true}" class="main__reports reports">
       <div class="main__container container">
         <div class="reports__row">
           <h2 class="main__title title">Звіти</h2>
