@@ -46,7 +46,7 @@ public class HelpController {
   }
 
   @GetMapping("donation/redirect")
-  public String donationRedirect(@RequestParam(required = false) String project) {
+  public String donationRedirect(@RequestParam String project) {
     final String redirectUrl;
     switch (project) {
       case "aid all":
