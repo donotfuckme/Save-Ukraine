@@ -9,19 +9,19 @@
 }
 
 #txtFullName {
-  background: url(../image/human.svg);
+  background: url(../img/human.svg);
   background-repeat: no-repeat;
   background-position: 2%;
 }
 
 #txtCity {
-  background: url(../image/location.svg);
+  background: url(../img/location.svg);
   background-repeat: no-repeat;
   background-position: 2%;
 }
 
 #txtPhone {
-  background: url(../image/phone.svg);
+  background: url(../img/phone.svg);
   background-repeat: no-repeat;
   background-position: 2%;
 }
