@@ -79,13 +79,13 @@
               </div>
               <div class="card-donate__content">
                 <h3 class="tabs-donation__title">Зробити пожертвування:</h3>
-                <form action="#">
+                <form action="#" th:action="@{/help/donation/redirect}" method="get">
                   <select class="js-example-basic-single card-donate__select" name="state">
-                    <option value="aid all" data-option_id="aid-all" class="card-donate__option">Допомогти всім</option>
-                    <option value="aid children" data-option_id="aid-children" class="card-donate__option">Допомогти дітям</option>
-                    <option value="aid animals" data-option_id="aid-animals" class="card-donate__option">Допомогти тваринам</option>
-                    <option value="aid kharkiv" data-option_id="aid-kharkiv" class="card-donate__option">Відновлення города-героя Харкова</option>
-                    <option value="aid aged" data-option_id="aid-aged" class="card-donate__option">Допомога дорослим та людям похилого віку</option>
+                    <option value="aid all" data-option_id="aid-all" class="card-donate__option" th:selected="${selectedProject eq 'all'}">Допомогти всім</option>
+                    <option value="aid children" data-option_id="aid-children" class="card-donate__option" th:selected="${selectedProject eq 'children'}">Допомогти дітям</option>
+                    <option value="aid animals" data-option_id="aid-animals" class="card-donate__option" th:selected="${selectedProject eq 'animals'}">Допомогти тваринам</option>
+                    <option value="aid kharkiv" data-option_id="aid-kharkiv" class="card-donate__option" th:selected="${selectedProject eq 'kharkiv'}">Відновлення города-героя Харкова</option>
+                    <option value="aid aged" data-option_id="aid-aged" class="card-donate__option" th:selected="${selectedProject eq 'aged'}">Допомога дорослим та людям похилого віку</option>
                   </select>
                 </form>
                 <div class="card-donate__row">
