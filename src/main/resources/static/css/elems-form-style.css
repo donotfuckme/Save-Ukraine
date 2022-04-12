@@ -8,19 +8,19 @@
   color:#1BBAE1;
 }
 
-#input-name {
+#txtFullName {
   background: url(../image/human.svg);
   background-repeat: no-repeat;
   background-position: 2%;
 }
 
-#input-city {
+#txtCity {
   background: url(../image/location.svg);
   background-repeat: no-repeat;
   background-position: 2%;
 }
 
-#input-tel {
+#txtPhone {
   background: url(../image/phone.svg);
   background-repeat: no-repeat;
   background-position: 2%;
