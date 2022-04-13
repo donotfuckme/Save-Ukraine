@@ -14,7 +14,13 @@
 
   <link href="https://fonts.googleapis.com/css?family=Open Sans" rel="stylesheet">
 
+  <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet"/>
+
   <link th:href="@{/css/style.css}" rel="stylesheet">
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
 
 </head>
 
@@ -56,20 +62,19 @@
               </div>
             </div>
           </div>
-          <div class="reports-pagination__body">
-            <a href="#" class="icon-arrow-right2 reports-pagination__link"></a>
-            <div class="reports-pagination__row">
-              <a href="#" class="bulit-active">1</a>
-              <a href="#">2</a>
-              <a href="#">3</a>
-              <a href="#">4</a>
-              <span>...</span>
-              <a href="#">20</a>
-            </div>
-            <a href="#" class="icon-arrow-right2 reports-pagination__link"></a>
-          </div>
         </div>
-
+      </div>
+      <div class="reports-pagination__body">
+        <a href="#" class="icon-arrow-right2 reports-pagination__link"></a>
+        <div class="reports-pagination__row">
+          <a href="#" class="bulit-active">1</a>
+          <a href="#">2</a>
+          <a href="#">3</a>
+          <a href="#">4</a>
+          <span>...</span>
+          <a href="#">20</a>
+        </div>
+        <a href="#" class="icon-arrow-right2 reports-pagination__link"></a>
       </div>
     </div>
   </section>

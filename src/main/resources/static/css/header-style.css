@@ -28,11 +28,13 @@
     background: #F5F5F5;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
   }
+
   header.transperent:before {
     background: transparent;
     box-shadow: none;
     transition: all .8s ease;
   }
+
   .header__container {
     padding: 0 16px;
   }
@@ -56,7 +58,6 @@
 }
 
 /*CONTACTS-LOGO-----------------------------------------------------------*/
-
 .content-header__tel {
   margin: 0 0 4px 0;
 }
@@ -92,8 +93,13 @@
   }
 }
 
-/*Contacs + menu active*/
+@media (max-width: 550px) {
+    .content-header__logo {
+      flex: 0 0 45%;
+    }
+}
 
+/*Contacs + menu active*/
 @media (max-width: 768px) {
   .header__content.active-contacts {
     flex-wrap: wrap;
@@ -107,84 +113,99 @@
 }
 
 /*LANGUAGE---------------------------------------------------------*/
-
 .content-header__language {
   position: relative;
-}
-
-.language__text {
-  position: relative;
-  z-index: 2;
-  color: #0786A5;
-}
-
-.language__link {
-  line-height: 19px;
-  color: #0786A5;
-  display: block;
-  padding: 0 0 15px 0;
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 24px;
   z-index: 10;
-  transition: all .6s ease;
-}
-
-.content-header__language:hover .language__text {
-  color: #144652;
-  font-weight: 700;
-  transition: all .6s ease;
-}
-
-.language__link:before {
-  content: '';
-  position: absolute;
-  left: -27px;
-  top: 0;
-  width: 22px;
-  height: 13px;
-  background: url(../img/england.png);
-}
-
-.language__text_short {
-  display: none;
+  display: flex;
+  align-items: center;
 }
 
 @media (max-width: 768px) {
   .content-header__language {
-    padding: 0 0 0 40px;
-    align-self: center;
-    flex: 0 0 22%;
+    flex: 0 0 23%;
     order: 2;
-  }
-
-  .language__text {
-    display: none;
-  }
-
-  .language__text_short {
-    display: block;
-  }
-
-  .language__link:before {
-    left: 10px;
   }
 }
 
 @media (max-width: 550px) {
   .content-header__language {
     padding: 0;
-    flex: 0 0 12%;
-  }
-
-  .language__link:before {
-    left: -30px;
+    margin: 0 10px 0 0;
   }
 }
 
-/*BURGER------------------------------------------------------------*/
+.icons-language {
+  margin: 0 12px 0 0;
+}
 
+.icon-language {
+  display: none;
+}
+
+.icon-language.img-active{
+  display: block;
+}
+
+.language-option{
+  text-transform: uppercase;
+  font-size: 14px;
+  line-height: 19px;
+}
+
+/*Select language--------------------------------*/
+#form-language span.select2-selection--single {
+ text-transform: uppercase;
+  border: none;
+  padding: 0;
+  height: 36px;
+}
+
+@media (max-width: 768px) {
+  #form-language span.select2-selection--single {
+    background: transparent;
+    text-transform: none;
+  }
+}
+
+#form-language span.select2-container--default .select2-selection--single .select2-selection__rendered {
+  padding: 6px 20px 8px 0;
+}
+
+#form-language span.select2-container--default.select2-container--open.select2-container--below .select2-selection--single, .select2-container--default.select2-container--open.select2-container--below {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  border-bottom: .5px solid #0786A5;
+}
+
+#form-language span.select2-container--default.select2-container--open .select2-dropdown {
+  text-transform: uppercase;
+  border-radius: 5px;
+  padding: 0
+  line-height: 20px;
+}
+
+#form-language span.select2-container--default .select2-search--dropdown .select2-search__field {
+  display: none;
+}
+#form-language span.select2-container--default .select2-dropdown {
+  padding: 0;
+}
+
+#form-language span.select2-container--default .selection .select2-selection--single .select2-selection__arrow {
+  width: 10px;
+}
+
+#form-language span.select2-container--default .select2-selection--single .select2-selection__arrow b {
+  border-width: 8px 4px 0 4px;
+  margin-top: -1px;
+}
+
+#form-language span.select2-container--default.select2-container--open .select2-selection--single .select2-selection__arrow b {
+  border-width: 0 4px 8px 4px;
+  margin-top: -1px;
+}
+
+/*BURGER------------------------------------------------------------*/
 #burger-menu {
   display: none;
 }
@@ -223,7 +244,6 @@
   #burger-menu span:nth-child(2){
     top: 9px;
   }
-
   #burger-menu span:last-child {
     bottom: 0;
   }
