@@ -141,25 +141,21 @@
 
   <script>
     $(document).ready(function() {
-      $('.js-example-basic-single').select2();
+      $('.language-select').select2({
+        minimumResultsForSearch : Infinity,
+        width: 'style',
+        selectOnClose: true
+      });
+      $('.card-donate__select').select2();
     });
 
-    //Change QR-code
-    const showQrcode = (id) => {
-      const listQrcode = document.querySelectorAll('.card-donate__qr')
-
-      for (let item of listQrcode) {
-        item.classList.remove('qr-active')
-      }
-      document.getElementById(`${id}`).classList.add('qr-active')
-    }
-
-    const options = document.querySelectorAll('.card-donate__option')
+    const listQrcode = document.querySelectorAll('.card-donate__qr')
+    const optionsCard = document.querySelectorAll('.card-donate__option')
 
     Object.assign(document.querySelector('.card-donate__select'), {
       onchange: event => {
-        for (let option of options) {
-          option.selected && showQrcode(option.dataset.option_id)
+        for (let option of optionsCard) {
+          option.selected && showImgWhenSelected(option.dataset.option_id, listQrcode)
         }
       }
     })

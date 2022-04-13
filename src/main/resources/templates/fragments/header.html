@@ -18,10 +18,25 @@
             <img th:src="@{/img/logo.png}" alt="БО «МБФ «ВРЯТУВАТИ УКРАЇНУ»">
           </a>
         </div>
-        <div class="content-header__language language">
-          <a href="#!" class="language__link"></a>
-          <p class="language__text">English version</p>
-          <p class="language__text_short">En</p>
+        <div class="content-header__language">
+          <div class="icons-language">
+            <div class="icon-language img-active" id="flag-ukr">
+              <img th:src="@{/img/ukraine.png}" alt="український прапор">
+            </div>
+            <div class="icon-language" id="flag-en">
+              <img th:src="@{/img/england.png}" alt="england flag">
+            </div>
+            <div class="icon-language" id="flag-ru">
+              <img th:src="@{/img/ru-ship.jpg}" alt="русский тонущий корабль">
+            </div>
+          </div>
+          <form action="#" id="form-language">
+            <select class="js-example-basic-single language-select" name="state">
+              <option value="ukr language" data-option_flag="flag-ukr" class="language-option">Укр</option>
+              <option value="en language" data-option_flag="flag-en" class="language-option">En</option>
+              <option value="ru language" data-option_flag="flag-ru" class="language-option">Ру</option>
+            </select>
+          </form>
         </div>
       </div>
       <button type="button" id="burger-menu">

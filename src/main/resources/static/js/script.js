@@ -19,6 +19,34 @@ window.onresize = function () {
   }
 }
 
+//Change img language
+$(document).ready(function() {
+  $('.language-select').select2({
+    minimumResultsForSearch : Infinity,
+    width: 'style',
+    selectOnClose: true
+  });
+});
+
+const showImgWhenSelected = (id, collection) => {
+  for (let item of collection) {
+    item.classList.remove('img-active')
+  }
+
+  document.getElementById(`${id}`).classList.add('img-active')
+}
+
+const listImgFlag = document.querySelectorAll('.icon-language')
+const optionsLanguage = document.querySelectorAll('.language-option')
+
+Object.assign(document.querySelector('.language-select'), {
+  onchange: event => {
+    for (let option of optionsLanguage) {
+      option.selected && showImgWhenSelected(option.dataset.option_flag, listImgFlag)
+    }
+  }
+}) //End Change img language
+
 //Scroll+fixed menu
 const nav = document.getElementById('menu-stiky')
 
