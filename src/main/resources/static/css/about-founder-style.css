@@ -148,7 +148,7 @@
   height: 22px;
   top: 50%;
   transform: translateY(-50%);
-  background: url('../../about-us/image/quotes.svg');
+  background: url('../img/quotes.svg');
 }
 
 .about-founder__tesis:before {
