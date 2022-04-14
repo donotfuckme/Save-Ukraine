@@ -204,6 +204,26 @@ if (document.querySelector('.statutory-documents__slider')) {
   }
 } //End Page about-us slider documents
 
+//Slide Kharkiv
+if (document.querySelector('.swiper-kharkiv')) {
+  const swiperImgKharkiv = new Swiper('.swiper-kharkiv', {
+    effect: "coverflow",
+    loop: true,
+    autoplay: true,
+    speed: 800,
+    grabCursor: true,
+    centeredSlides: true,
+    slidesPerView: "auto",
+    coverflowEffect: {
+      rotate: 50,
+      stretch: 0,
+      depth: 100,
+      modifier: 1,
+      slideShadows: true,
+    }
+  })
+}
+
 //Copy text
 const textCopy = document.querySelector('.copy-text')
 
