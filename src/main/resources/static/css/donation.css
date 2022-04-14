@@ -139,7 +139,7 @@
   object-fit: cover;
 }
 
-.card-donate__qr .img-active {
+.card-donate__qr.img-active {
   display: block;
 }
 
