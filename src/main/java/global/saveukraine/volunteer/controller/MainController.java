@@ -44,6 +44,11 @@ public class MainController {
     return "about-founder";
   }
 
+  @GetMapping("about-kharkiv")
+  public String aboutKharkiv() {
+    return "about-kharkiv";
+  }
+
   @GetMapping("contacts")
   public String contacts() {
     return "contacts";
