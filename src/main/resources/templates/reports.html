@@ -66,22 +66,22 @@
             </div>
           </div>
         </div>
+      </div>
 
-        <!--/*@thymesVar id="reportPage" type="org.springframework.data.domain.Page"*/-->
-        <div class="reports-pagination__body">
-          <a th:if="${reportPage.number ne 0}"
-             th:href="@{/reports(page=${reportPage.number})}"
-             class="icon-arrow-right2 reports-pagination__link" href="#"></a>
-          <div th:if="${reportPage.totalPages > 0}" class="reports-pagination__row">
-            <a th:each="pageNumber : ${pageNumbers}"
-               th:href="@{/reports(size=${reportPage.size}, page=${pageNumber})}"
-               th:text="${pageNumber}"
-               th:class="${pageNumber == reportPage.number + 1} ? 'bulit-active'"></a>
-          </div>
+              <!--/*@thymesVar id="reportPage" type="org.springframework.data.domain.Page"*/-->
+      <div class="reports-pagination__body">
+        <a th:if="${reportPage.number ne 0}"
+           th:href="@{/reports(page=${reportPage.number})}"
+           class="icon-arrow-right2 reports-pagination__link" href="#"></a>
+        <div th:if="${reportPage.totalPages > 0}" class="reports-pagination__row">
+          <a th:each="pageNumber : ${pageNumbers}"
+             th:href="@{/reports(size=${reportPage.size}, page=${pageNumber})}"
+             th:text="${pageNumber}"
+             th:class="${pageNumber == reportPage.number + 1} ? 'bulit-active'"></a>
+        </div>
           <a th:if="${reportPage.number + 1 ne reportPage.totalPages}"
              th:href="@{/reports(page=${reportPage.number + 2})}"
              class="icon-arrow-right2 reports-pagination__link" href="#"></a>
-        </div>
       </div>
     </div>
   </section>
