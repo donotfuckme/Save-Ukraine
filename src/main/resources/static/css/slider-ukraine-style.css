@@ -102,14 +102,22 @@
   }
 }
 
-@media (max-width: 450px) {
+@media (max-width: 650px) {
   .slider-main__buttons {
+    display: flex;
     align-items: center;
     flex-direction: column;
+    width: 90%;
   }
 
-.slider-main__button:first-child {
-    margin: 0 0 20px 0;
+  .slider-main__button {
+    width: 90%;
+    text-align: center;
+  }
+
+  .slider-main__button:first-child {
+    margin: 20px 0 10px;
+    order: 2;
   }
 }
 

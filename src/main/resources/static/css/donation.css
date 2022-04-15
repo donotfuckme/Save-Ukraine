@@ -138,7 +138,6 @@
   max-width: 200px;
   object-fit: cover;
 }
-
 .card-donate__qr.img-active {
   display: block;
 }
