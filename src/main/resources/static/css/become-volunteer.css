@@ -130,6 +130,9 @@ input.form-volunteer__input {
 .sending-form {
   display: none;
 }
+.sending-form.form-sent {
+  display: block;
+}
 
 .sending-form__content {
   color: #00AD64;
