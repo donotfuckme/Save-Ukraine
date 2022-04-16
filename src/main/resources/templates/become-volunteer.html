@@ -129,6 +129,14 @@
 <script th:src="@{/js/script.js}"></script>
 
 <script>
+    //Show form
+    const sendingForm = document.querySelector('.sending-form')
+    sendingForm.onclick = (event) => {
+      sendingForm.classList.remove('form-sent')
+
+      document.querySelector('.form-volunteer').classList.remove('form-hidden')
+    }
+
 //Chech field input
 const checkFieldsPresence = (itemInput) => {
   (!itemInput.value) && Object.assign(itemInput.nextElementSibling, {
