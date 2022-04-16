@@ -108,12 +108,14 @@ input.form-volunteer__input {
 .form-volunteer__input:focus-visible {
   background-position: 2%;
 }
-
-/*FORM after sendin----------------------------------------*/
-.form-volunteer {
-  /*display: none;*/
+@media (max-width: 650px) {
+  .form__btn {
+    display: block;
+    width: 90%;
+    margin: 0 auto;
+  }
 }
-
+/*FORM after sendin----------------------------------------*/
 .form-volunteer.form-hidden {
   display: none;
 }
