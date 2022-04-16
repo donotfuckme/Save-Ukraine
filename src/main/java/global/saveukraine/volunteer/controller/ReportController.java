@@ -11,6 +11,7 @@ import lombok.extern.log4j.Log4j2;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -47,7 +48,7 @@ public class ReportController {
   public String reports(@RequestParam(defaultValue = "1") int page,
                         @RequestParam(defaultValue = "8") int size,
                         Model model) {
-    Pageable paging = PageRequest.of(page - 1, size);
+    Pageable paging = PageRequest.of(page - 1, size, Sort.by(Sort.Direction.ASC, "dateTimeOf"));
 
     Page<Report> reportPage = reportRepository.findByOrderByDateTimeOfAsc(paging);
     model.addAttribute("reportPage", reportPage);
