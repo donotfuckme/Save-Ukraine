@@ -48,13 +48,12 @@
       <h1 class="reports__title title">Блог БФ «Врятувати <span>Україну»</span></h1>
       <p class="reports__parag text-parag">На цій сторінці ви можете побачити результати роботи Міжнародного Благодійного Фонду “Врятувати Україну”.</p>
       <div class="reports__body" id="all-report">
-
         <!--/*@thymesVar id="reportPage" type="org.springframework.data.domain.Page"*/-->
         <!--/*@thymesVar id="report" type="global.saveukraine.volunteer.entity.Report"*/-->
         <div th:each="report : ${reportPage.content}" class="reports__item">
           <div class="item-reports">
             <div th:if="${report.images ne null}" class="item-reports__image">
-              <img class="image-responsive" src="#" th:src="'/storage/' + ${report.images[0].name}" alt="">
+              <img class="image-responsive" th:src="'/storage/' + ${report.images[0].name}" alt="">
             </div>
             <div class="item-reports__content">
               <p class="item-reports__date" th:text="${#temporals.format(report.dateTimeOf, 'dd-MM-yyyy, HH:mm')}"></p>
@@ -67,7 +66,6 @@
           </div>
         </div>
       </div>
-
               <!--/*@thymesVar id="reportPage" type="org.springframework.data.domain.Page"*/-->
       <div class="reports-pagination__body">
         <a th:if="${reportPage.number ne 0}"
