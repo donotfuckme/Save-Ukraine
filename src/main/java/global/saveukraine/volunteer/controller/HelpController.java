@@ -35,7 +35,7 @@ public class HelpController {
   @PostMapping("become-volunteer")
   public String becomeVolunteerUserOrder(@ModelAttribute VolunteerUserOrderDto volunteerUserOrder) {
     emailService.sendMessage(volunteerUserOrder);
-    return "become-volunteer";
+    return "redirect:become-volunteer?sent=true";
   }
 
   @GetMapping("donation")

@@ -168,3 +168,7 @@ input.form-volunteer__input {
   text-decoration-line: underline;
   color: #00AD64;
 }
+
+.sending-form.form-sent {
+  display: block;
+}

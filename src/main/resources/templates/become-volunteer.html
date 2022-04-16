@@ -75,7 +75,7 @@
         </div>
         <div class="volunteer-form__body">
           <h2 class="subtitle">Анкета для волонтерів</h2>
-          <form class="volunteer-form__form form-volunteer" action="#" th:action="@{/help/become-volunteer}"
+          <form class="volunteer-form__form form-volunteer" th:classappend="${param.sent} ? 'form-hidden'" action="#" th:action="@{/help/become-volunteer}"
                 method="post" name="a">
             <div class="form-volunteer__item">
               <label for="txtFullName" class="form-volunteer__title">Ваші ПІБ</label>
@@ -108,7 +108,7 @@
             </div>
             <button type="submit" class="form__btn _btn" id="volunter-btn">Стати волонтером</button>
           </form>
-          <div class="volunteer-form__sending sending-form">
+          <div class="volunteer-form__sending sending-form" th:classappend="${param.sent} ? 'form-sent'">
             <div class="sending-form__content">
               <p class="sending-form__text">Дякуємо! Ваша анкета прийнята.</p>
               <p class="sending-form__text">Незабаром ми зв’яжемось з Вами.</p>
