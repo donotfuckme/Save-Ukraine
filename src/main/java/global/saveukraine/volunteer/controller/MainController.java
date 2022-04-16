@@ -20,7 +20,7 @@ public class MainController {
 
   @GetMapping
   public String index(Model model) {
-    List<Report> latestReports = reportRepository.findByOrderByDateTimeOfAsc()
+    List<Report> latestReports = reportRepository.findByOrderByDateTimeOfDesc()
       .stream()
       .limit(2)
       .collect(Collectors.toList());

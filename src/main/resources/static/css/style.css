@@ -38,3 +38,6 @@
 
 /*404 not found style*/
 @import url('404not-found-style.css');
+
+/* management style*/
+@import url('management.css');

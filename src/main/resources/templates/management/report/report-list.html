@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+
+  <meta charset="utf-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>Звіти</title>
+
+  <meta name="description"
+        content="Волонтерська робота фонду «Врятувати Україну» | Звіти фонду гуманітарної допомоги по всій країні | Яку роботу проводить фонд «Save Ukraine»"/>
+
+  <link rel="canonical" href="#"/>
+
+  <link rel="shortcut icon" th:href="@{/img/favicon-heart.ico}" type="image/x-icon">
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open Sans">
+
+  <link th:href="@{/css/style.css}" rel="stylesheet">
+
+</head>
+
+<body>
+
+<div class="wrapper">
+
+  <!-- Header -->
+  <th:block th:replace="fragments/header"/>
+
+  <!-- Main menu -->
+  <th:block th:replace="fragments/main-menu"/>
+
+  <table>
+    <tr>
+      <th>ID</th>
+      <th>Title</th>
+      <th>Posting Date</th>
+      <th>Description</th>
+      <th>Images</th>
+      <th>Edit</th>
+      <th>Remove</th>
+    </tr>
+    <!--/*@thymesVar id="report" type="global.saveukraine.volunteer.entity.Report"*/-->
+    <tr th:each="report : ${reportList}">
+      <td th:text="${report.id}"></td>
+      <td th:text="${report.title}"></td>
+      <td th:text="${#temporals.format(report.dateTimeOf, 'dd-MM-yyyy, HH:mm')}"></td>
+      <td th:text="${report.description}"></td>
+      <td>
+        <th:block th:each="image : ${report.images}">
+          <a th:href="'/storage/' + ${image.name}" th:text="${image.name}"></a>
+          <br>
+        </th:block>
+<!--        <img th:each="image : ${report.images}" th:src="'/storage/' + ${image.name}" width="128px" height="74px">-->
+      </td>
+
+      <td>
+        <a th:href="'/management/reports/edit/'+ ${report.id}" class="btn btn-danger btn-block">Edit</a>
+      </td>
+
+      <td>
+        <form name="a" action="#" th:action="@{/management/reports/delete}" method="post">
+          <input type="hidden" id="aid" name="id" th:value="${report.id}">
+          <button type="submit" class="btn btn-danger">Delete</button>
+        </form>
+      </td>
+
+    </tr>
+  </table>
+
+</div>
+
+<a class="icon-arrow-right2" href="#" id="scrollToTop"></a>
+<script th:src="@{/js/script.js}"></script>
+
+</body>
+
+</html>

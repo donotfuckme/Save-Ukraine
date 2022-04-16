@@ -15,7 +15,7 @@ import java.util.Optional;
 @Repository
 public interface ReportRepository extends JpaRepository<Report, Long> {
 
-  List<Report> findByOrderByDateTimeOfAsc();
+  List<Report> findByOrderByDateTimeOfDesc();
 
   @Query(value = "select * from reports r where r.dateTimeOf < :dateTimeOf order by r.dateTimeOf desc limit 1", nativeQuery = true)
   Optional<Report> findFirstWithDateTimeOfBeforeOrderByDateTimeOfDesc(@Param("dateTimeOf") LocalDateTime dateTimeOf);
@@ -23,5 +23,5 @@ public interface ReportRepository extends JpaRepository<Report, Long> {
   @Query(value = "select * from reports r where r.dateTimeOf > :dateTimeOf order by r.dateTimeOf asc limit 1", nativeQuery = true)
   Optional<Report> findFirstWithDateTimeOfAfterOrderByDateTimeOfAsc(@Param("dateTimeOf") LocalDateTime dateTimeOf);
 
-  Page<Report> findByOrderByDateTimeOfAsc(Pageable pageable);
+  Page<Report> findByOrderByDateTimeOfDesc(Pageable pageable);
 }
