@@ -31,33 +31,35 @@
 
   <!-- Main menu -->
   <th:block th:replace="fragments/main-menu"/>
-
-  <form name="reportEditDto" th:action="@{/management/reports/edit}" method="post">
+  <div class="container">
+    <h1 class="title">Форма редагування звітів</h1>
+    <form name="reportEditDto" th:action="@{/management/reports/edit}" method="post">
 <!--  <form name="reportDto" th:action="@{/reports/edit}" method="post" enctype="multipart/form-data">-->
 
-    <input type="hidden" id="aid" name="id" th:value="${report.id}">
+      <input type="hidden" id="aid" name="id" th:value="${report.id}">
 
-    <div class="form-group">
-      <label for="txtTitle">Заголовок</label>
-      <input type="text" id="txtTitle" th:value="${report.title}" name="title" placeholder="Заголовок">
-    </div>
+      <div class="form-group">
+        <label for="txtTitle">Заголовок</label>
+        <input type="text" id="txtTitle" th:value="${report.title}" name="title" placeholder="Заголовок" class="input-text__custom">
+      </div>
 
 <!--    <div class="form-group">-->
 <!--      <label for="txtImages">Зображення</label>-->
 <!--      <input type="file" id="txtImages" accept="image/jpg images/png" name="images" multiple>-->
 <!--    </div>-->
 
-    <div class="form-group">
-      <label for="txtDescription">Опис</label>
-      <input type="text" id="txtDescription" th:value="${report.description}" name="description" placeholder="Опис">
-    </div>
-
-    <div class="btn-group" role="group">
-      <div class="form-actions">
-        <button type="submit">Редагувати</button>
+      <div class="form-group">
+        <label for="txtDescription">Опис</label>
+        <input type="text" id="txtDescription" th:value="${report.description}" name="description" placeholder="Опис" class="input-text__custom">
       </div>
-    </div>
-  </form>
+
+      <div class="btn-group" role="group">
+        <div class="form-actions">
+          <button type="submit" class="_btn">Редагувати</button>
+        </div>
+      </div>
+    </form>
+  </div>
 
 </div>
 

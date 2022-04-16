@@ -174,18 +174,6 @@ const inputs = document.querySelectorAll('.field-input')
 inputs.forEach((input, index) => Object.assign(input, {
     oninput: (event) => validateInputValue(event.target, inputRules[index])
   }))
-
-formVolunteer.addEventListener('submit', function (event) {
-  event.preventDefault()
-
-  inputs.forEach((input, index) => {
-    validateInputValue(input, inputRules[index])
-    checkFieldsPresence(input)
-  })
-
-console.log('clicked on validate')
-})
-  //End Check form volunteer
 </script>
 
 </body>

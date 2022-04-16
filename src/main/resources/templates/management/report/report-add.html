@@ -30,29 +30,32 @@
 
   <!-- Main menu -->
   <th:block th:replace="fragments/main-menu"/>
+  <div class="container">
+    <h1 class="title">Форма створення звіту</h1>
 
-  <form name="reportDto" th:action="@{/management/reports/add}" method="post" enctype="multipart/form-data">
-    <div class="form-group">
-      <label for="txtTitle">Заголовок</label>
-      <input type="text" id="txtTitle" name="title" placeholder="Щаголовок">
-    </div>
-
-    <div class="form-group">
-      <label for="txtImages">Зображення</label>
-      <input type="file" id="txtImages" accept="image/jpg images/png" name="images" multiple>
-    </div>
-
-    <div class="form-group">
-      <label for="txtDescription">Опис</label>
-      <input type="text" id="txtDescription" name="description" placeholder="Опис">
-    </div>
-
-    <div class="btn-group" role="group">
-      <div class="form-actions">
-        <button type="submit">Додати</button>
+    <form name="reportDto" th:action="@{/management/reports/add}" method="post" enctype="multipart/form-data">
+      <div class="form-group">
+        <label for="txtTitle">Заголовок</label>
+        <input type="text" id="txtTitle" name="title" placeholder="Заголовок" class="input-text__custom">
       </div>
-    </div>
-  </form>
+
+      <div class="form-group">
+        <label for="txtImages">Зображення</label>
+        <input type="file" id="txtImages" accept="image/jpg images/png" name="images" multiple>
+      </div>
+
+      <div class="form-group">
+        <label for="txtDescription">Опис</label>
+        <input type="text" id="txtDescription" name="description" placeholder="Опис" class="input-text__custom">
+      </div>
+
+      <div class="btn-group" role="group">
+        <div class="form-actions">
+          <button type="submit" class="_btn">Додати</button>
+        </div>
+      </div>
+    </form>
+  </div>
 
 </div>
 
