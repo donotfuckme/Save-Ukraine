@@ -33,7 +33,7 @@
 .input-text__custom:focus,
 .input-text__custom:focus-visible,
 .input-text__custom:active {
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
 }
 
 .input-text__custom::-webkit-input-placeholder {
