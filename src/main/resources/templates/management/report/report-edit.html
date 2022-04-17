@@ -7,18 +7,17 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-  <title>Звіти</title>
-
-  <meta name="description"
-        content="Волонтерська робота фонду «Врятувати Україну» | Звіти фонду гуманітарної допомоги по всій країні | Яку роботу проводить фонд «Save Ukraine»"/>
-
-  <link rel="canonical" href="#"/>
+  <title>Редагування звіти</title>
 
   <link rel="shortcut icon" th:href="@{/img/favicon-heart.ico}" type="image/x-icon">
 
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open Sans">
 
   <link th:href="@{/css/style.css}" rel="stylesheet">
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+  <script src="node_modules/blueimp-file-upload/js/jquery.fileupload.js"></script>
 
 </head>
 
@@ -63,7 +62,9 @@
 
 </div>
 
-<a class="icon-arrow-right2" href="#" id="scrollToTop"></a>
+<script>
+  $('#fileupload').fileupload();
+</script>
 <script th:src="@{/js/script.js}"></script>
 
 </body>

@@ -32,43 +32,46 @@
   <!-- Main menu -->
   <th:block th:replace="fragments/main-menu"/>
 
-  <table>
-    <tr>
-      <th>ID</th>
-      <th>Title</th>
-      <th>Posting Date</th>
-      <th>Description</th>
-      <th>Images</th>
-      <th>Edit</th>
-      <th>Remove</th>
-    </tr>
+  <div class="container">
+    <h1 class="title">Список звітів</h1>
+    <table>
+      <tr>
+        <th>ID</th>
+        <th>Title</th>
+        <th>Posting Date</th>
+        <th>Description</th>
+        <th>Images</th>
+        <th>Edit</th>
+        <th>Remove</th>
+      </tr>
     <!--/*@thymesVar id="report" type="global.saveukraine.volunteer.entity.Report"*/-->
-    <tr th:each="report : ${reportList}">
-      <td th:text="${report.id}"></td>
-      <td th:text="${report.title}"></td>
-      <td th:text="${#temporals.format(report.dateTimeOf, 'dd-MM-yyyy, HH:mm')}"></td>
-      <td th:text="${report.description}"></td>
-      <td>
-        <th:block th:each="image : ${report.images}">
-          <a th:href="'/storage/' + ${image.name}" th:text="${image.name}"></a>
-          <br>
-        </th:block>
+      <tr th:each="report : ${reportList}">
+        <td th:text="${report.id}"></td>
+        <td th:text="${report.title}"></td>
+        <td th:text="${#temporals.format(report.dateTimeOf, 'dd-MM-yyyy, HH:mm')}"></td>
+        <td th:text="${report.description}"></td>
+        <td>
+          <th:block th:each="image : ${report.images}">
+            <a th:href="'/storage/' + ${image.name}" th:text="${image.name}"></a>
+            <br>
+          </th:block>
 <!--        <img th:each="image : ${report.images}" th:src="'/storage/' + ${image.name}" width="128px" height="74px">-->
-      </td>
+        </td>
 
-      <td>
-        <a th:href="'/management/reports/edit/'+ ${report.id}" class="btn btn-danger btn-block">Edit</a>
-      </td>
+        <td>
+          <a th:href="'/management/reports/edit/'+ ${report.id}" class="btn btn-danger btn-block">Edit</a>
+        </td>
 
-      <td>
-        <form name="a" action="#" th:action="@{/management/reports/delete}" method="post">
-          <input type="hidden" id="aid" name="id" th:value="${report.id}">
-          <button type="submit" class="btn btn-danger">Delete</button>
-        </form>
+        <td>
+          <form name="a" action="#" th:action="@{/management/reports/delete}" method="post">
+            <input type="hidden" id="aid" name="id" th:value="${report.id}">
+            <button type="submit" class="btn btn-danger _btn">Delete</button>
+          </form>
       </td>
 
     </tr>
   </table>
+  </div>
 
 </div>
 
