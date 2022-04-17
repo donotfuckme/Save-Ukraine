@@ -7,7 +7,7 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-  <title>Редагування звіти</title>
+  <title>Редагування звітів</title>
 
   <link rel="shortcut icon" th:href="@{/img/favicon-heart.ico}" type="image/x-icon">
 
@@ -15,23 +15,19 @@
 
   <link th:href="@{/css/style.css}" rel="stylesheet">
 
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-
-  <script src="node_modules/blueimp-file-upload/js/jquery.fileupload.js"></script>
-
 </head>
 
 <body>
 
 <div class="wrapper">
 
-  <!-- Header -->
-  <th:block th:replace="fragments/header"/>
-
-  <!-- Main menu -->
-  <th:block th:replace="fragments/main-menu"/>
   <div class="container">
-    <h1 class="title">Форма редагування звітів</h1>
+    <div class="container__row">
+      <h1 class="managmet__title">Форма редагування звітів</h1>
+      <div>
+        <img th:src="@{/img/logo.png}" alt="БО «МБФ «ВРЯТУВАТИ УКРАЇНУ»">
+      </div>
+    </div>
     <form name="reportEditDto" th:action="@{/management/reports/edit}" method="post">
 <!--  <form name="reportDto" th:action="@{/reports/edit}" method="post" enctype="multipart/form-data">-->
 
@@ -61,11 +57,6 @@
   </div>
 
 </div>
-
-<script>
-  $('#fileupload').fileupload();
-</script>
-<script th:src="@{/js/script.js}"></script>
 
 </body>
 

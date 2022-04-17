@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 
 <head>
 
@@ -17,27 +17,24 @@
 
   <link th:href="@{/css/style.css}" rel="stylesheet">
 
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-
 </head>
 
 <body>
 
 <div class="wrapper">
 
-  <!-- Header -->
-  <th:block th:replace="fragments/header"/>
-
-  <!-- Main menu -->
-  <th:block th:replace="fragments/main-menu"/>
   <div class="container">
-    <h1 class="title">Форма створення звіту</h1>
-
+    <div class="container__row">
+      <h1 class="managmet__title">Форма створення звіту</h1>
+      <div>
+        <img th:src="@{/img/logo.png}" alt="БО «МБФ «ВРЯТУВАТИ УКРАЇНУ»">
+      </div>
+    </div>
     <form name="reportDto" th:action="@{/management/reports/add}" method="post" enctype="multipart/form-data">
       <div class="form-group">
         <label for="txtTitle">Заголовок</label>
         <input type="text" id="txtTitle" name="title" placeholder="Заголовок" class="input-text__custom">
-      <!-- </div> -->
+      </div>
 
       <div class="form-group">
         <p class="label-style">Зображення:</p>
@@ -94,7 +91,6 @@
     })
   }
 </script>
-<script th:src="@{/js/script.js}"></script>
 
 </body>
 
