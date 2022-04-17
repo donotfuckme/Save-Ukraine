@@ -57,17 +57,9 @@ tr:nth-child(even) {
   display: flex;
   flex-direction: column;
 }
+
 .form-group:nth-child(2) {
   margin: 0 0 14px 0;
-}
-
-.form-group label {
-  margin: 0 0 16px 0;
-  padding: 0 0 0 20px;
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 25px;
-  color: #0786A5;
 }
 
 .label-style {
@@ -84,7 +76,6 @@ tr:nth-child(even) {
   padding:0;
   line-height:40px;
   width:300px;
-  margin:auto;
   display:block;
   border:1px solid #1BBAE1;
 }
@@ -107,7 +98,10 @@ tr:nth-child(even) {
   padding: 0 0 0 16px;
 }
 
-.input-file + .label-file {
+.label-file {
+  font-size: 18px;
+  line-height: 25px;
+  color: #0786A5;
   overflow:hidden;
   text-overflow:ellipsis;
   white-space:nowrap;
@@ -115,8 +109,8 @@ tr:nth-child(even) {
   cursor:pointer;
 }
 
-.input-file + .label-file .icon:before {
-  content:"\f093"
+.label-file .icon:before {
+  content:"\f093";
 }
 
 .container-item {

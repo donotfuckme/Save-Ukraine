@@ -32,24 +32,27 @@
     </div>
     <form name="reportDto" th:action="@{/management/reports/add}" method="post" enctype="multipart/form-data">
       <div class="form-group">
-        <label for="txtTitle">Заголовок</label>
+        <label for="txtTitle" class="label-style">Заголовок</label>
         <input type="text" id="txtTitle" name="title" placeholder="Заголовок" class="input-text__custom">
+        <p class="input-text__error"></p>
       </div>
 
       <div class="form-group">
         <p class="label-style">Зображення:</p>
-        <input type="file" id="txtImages" accept="image/jpg images/png" name="images" multiple>
         <label for="txtImages" class="btn btn-tertiary label-file">
           <i class="icon fa fa-check"></i>
           <span class="file-name">Завантажити зображення</span>
         </label>
+        <input type="file" id="txtImages" accept="image/jpg images/png" name="images" multiple>
+        <p class="input-text__error"></p>
       </div>
 
       <div id="file-container"></div>
 
       <div class="form-group">
-        <label for="txtDescription">Опис</label>
+        <label for="txtDescription" class="label-style">Опис</label>
         <input type="text" id="txtDescription" name="description" placeholder="Опис" class="input-text__custom">
+        <p class="input-text__error"></p>
       </div>
 
       <div class="btn-group" role="group">
@@ -63,33 +66,70 @@
 </div>
 
 <script>
-  const inputFile = document.getElementById('txtImages')
-  const containerFiles = document.getElementById('file-container')
+const messages = [
+  'Не може бути порожнім',
+  'Невірний формат зображення',
+  'Розміз зображення вище 1МВ',
+  ''
+]
 
-  inputFile.onchange = (event) => {
-    const listFiles = event.target.files
+const showMessage = (elem, index) => Object.assign(elem.nextElementSibling, {
+  textContent: messages[index]
+})
 
-    for (let file of listFiles) {
-      let elemContainer = document.createElement('div')
+const inputs = document.querySelectorAll('.input-text__custom')
 
-      elemContainer.innerHTML = `
-        <div class="container-item">
-          <p class="file-item">${file.name} <span>${Math.round(file.size/1000)}kB</span></p>
-           <p class="delete-file"></p>
-        </div>
-      `
-      containerFiles.appendChild(elemContainer)
-    }
+for (let input of inputs) {
 
-    const buttonsDeleteFile = document.querySelectorAll('.delete-file')
-    const itemsContainer = document.querySelectorAll('.container-item')
+  input.oninput = (event) => {
 
-    buttonsDeleteFile.forEach((item, index) => {
-      item.onclick = (event) => {
-        itemsContainer[index].remove()
-      }
-    })
+    !input.value ? showMessage(input, 0) : showMessage(input, 3)
   }
+}
+const inputFile = document.getElementById('txtImages')
+
+inputFile.onchange = (event) => {
+
+  const listFiles = event.target.files
+
+  for (let file of listFiles) {
+
+    if (file.type.indexOf('image')) {
+
+      showMessage(event.target, 1)
+
+    } else {
+
+      showMessage(event.target, 3)
+
+      if (file.size > 1000000) {
+
+        showMessage(event.target, 2)
+      } else {
+
+        let elemContainer = document.createElement('div')
+
+        elemContainer.innerHTML = `
+          <div class="container-item">
+            <p class="file-item">${file.name} <span>${Math.round(file.size/1000)}kB</span></p>
+            <p class="delete-file"></p>
+          </div>
+        `
+        document.getElementById('file-container')
+          .appendChild(elemContainer)
+      }
+    }
+  }
+
+  const buttonsDeleteFile = document.querySelectorAll('.delete-file')
+  const itemsContainer = document.querySelectorAll('.container-item')
+
+  buttonsDeleteFile.forEach((item, index) => {
+    item.onclick = (event) => {
+      itemsContainer[index].remove()
+    }
+  })
+}
 </script>
 
 </body>
