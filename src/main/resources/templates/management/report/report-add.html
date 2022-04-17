@@ -69,7 +69,7 @@
 const messages = [
   'Не може бути порожнім',
   'Невірний формат зображення',
-  'Розміз зображення вище 1МВ',
+  'Розміз зображення вище 500кБ',
   ''
 ]
 
@@ -111,7 +111,7 @@ inputFile.onchange = (event) => {
 
         elemContainer.innerHTML = `
           <div class="container-item">
-            <p class="file-item">${file.name} <span>${Math.round(file.size/1000)}kB</span></p>
+            <p class="file-item">${file.name} <span>${Math.round(file.size/1000)}кБ</span></p>
             <p class="delete-file"></p>
           </div>
         `
