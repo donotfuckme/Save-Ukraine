@@ -45,7 +45,7 @@ spring:
             required: true
 
 mail:
-  receiver: "antonxashow@gmail.com"
+  receiver: ${MAIL_RECEIVER}
   subject: "Заявка на волонтера"
   text-placeholder: "Имя: %s%nПол: %s%nГород: %s%nТелефон:%s"
 
@@ -60,4 +60,4 @@ cloud:
       static: eu-central-1
     stack:
       auto: false
-    bucket: "eu-saveukraine-image-storage"
+    bucket: ${AMAZON_BUCKET_NAME}
