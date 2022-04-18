@@ -90,10 +90,10 @@
 .tasks__list{
   padding: 20px 0 0 0;
 }
+
 .tasks__content{
   padding: 0 0 54px 0;
 }
-
 @media (max-width: 768px) {
   .tasks__content{
     padding: 0 0 24px 0;
@@ -132,7 +132,6 @@
 .responsibilities__title {
   padding: 0 0 50px 0;
 }
-
 @media (max-width: 768px) {
   .responsibilities__content {
     padding: 0;
@@ -151,7 +150,6 @@
     display: flex;
     flex-wrap: wrap;
   }
-
   .statutory-documents__image {
     flex: 0 1 50%;
     margin: 0 0 20px 0;
@@ -195,7 +193,7 @@
 
 .statutory-documents__bound {
   position: relative;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.05);
+  box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.1);
 }
 
 .statutory-documents__num {
@@ -207,9 +205,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  bottom: 15px;
-  right: 15px;
-  background: #0786A5;
+  bottom: 10px;
+  right: 10px;
+  background: #C4C4C4;
   color: #fff;
 }
 
