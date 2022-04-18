@@ -112,12 +112,38 @@
           </li>
           <li class="tabs-donation__page" id="page2">
             <h3 class="tabs-donation__title" id="requisites">Наші реквізити</h3>
-              <div class="tabs-donation__requisites">
-                <p>Підприємство: БЛАГОДІЙНА ОРГАНІЗАЦІЯ «МІЖНАРОДНИЙ БЛАГОДІЙНИЙ ФОНД «ВРЯТУВАТИ УКРАЇНУ»</p>
-                <p>ЄДРПОУ 44668535</p>
-                <p>Р/р, UA083020760000026008300940237</p>
-                <p>МФО 302076</p>
+            <div class="tabs-donation__requisites requisites">
+              <div class="requisites__body">
+                <h4>В гривнях (UAH)</h4>
+                <p><span>Назва організації:</span>БЛАГОДІЙНА ОРГАНІЗАЦІЯ "МІЖНАРОДНИЙ БЛАГОДІЙНИЙ ФОНД «ВРЯТУВАТИ УКРАЇНУ"</p>
+                <div class="iban__row">
+                  <span>Р/р:</span><p id="iban-uah">UA083020760000026008300940237</p>
+                  <p class="copy-text" onclick="copyText('iban-uah')">Скопіювати</p>
+                </div>
+                <p><span>Банк отримувач:</span>у АТ "Ощадбанк" МФО 302076</p>
+                <p>код ЄДРПОУ 44668535</p>
               </div>
+              <div class="requisites__body">
+                <h4>В доларах США (USD)</h4>
+                <p><span>Beneficiary:</span>CHARITABLE ORGANIZATION "INTERNATIONAL CHARITABLE FUND "SAVE UKRAINE"</p>
+                <div class="iban__row">
+                  <span>IBAN:</span><p id="iban-usd">UA083020760000026008300940237</p>
+                  <p class="copy-text" onclick="copyText('iban-usd')">Скопіювати</p>
+                </div>
+                <p><span>Bank of beneficiary:</span>JOINT STOCK COMPANY "STATE SAVINGS BANK OF UKRAINE" Branch-Vinnytsia regional administration, TVBV 10001/0179 UKRAINE, Vinnitsa. 69. str .Soborna</p>
+                <p><span>SWIFT code:</span>COSBUAUKVIN</p>
+              </div>
+              <div class="requisites__body">
+                <h4>В евро (EUR)</h4>
+                <p><span>Beneficiary:</span>CHARITABLE ORGANIZATION "INTERNATIONAL CHARITABLE FUND "SAVE UKRAINE"</p>
+                <div class="iban__row">
+                  <span>IBAN:</span><p id="iban-euro">UA083020760000026008300940237</p>
+                  <p class="copy-text" onclick="copyText('iban-euro')">Скопіювати</p>
+                </div>
+                <p><span>Bank of beneficiary:</span>JOINT STOCK COMPANY "STATE SAVINGS BANK OF UKRAINE" Branch-Vinnytsia regional administration, TVBV 10001/0179 UKRAINE, Vinnitsa. 69. str .Soborna</p>
+                <p><span>SWIFT code:</span>COSBUAUKVIN</p>
+              </div>
+            </div>
           </li>
           <li class="tabs-donation__page" id="page3">
             <h3 class="tabs-donation__title">Рахунок Pay Pal</h3>
