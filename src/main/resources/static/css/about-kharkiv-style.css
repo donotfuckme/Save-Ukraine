@@ -224,3 +224,11 @@
     height: 200px;
   }
 }
+
+.about-kharkiv__link {
+  font-weight: 700;
+  display: block;
+  text-decoration: underline;
+  text-align: center;
+  margin: 20px 0 50px;
+}
