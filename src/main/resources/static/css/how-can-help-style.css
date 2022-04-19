@@ -6,6 +6,11 @@
   font-style: italic;
   font-weight: 700;
 }
+@media (max-width: 768px) {
+  .how-help__attention {
+    margin: 0 0 20px 0;
+  }
+}
 
 .how-help__attention span {
   text-transform: uppercase;
