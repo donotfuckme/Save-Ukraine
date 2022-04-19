@@ -2,6 +2,16 @@
   padding: 0 0 30px 0;
 }
 
+.how-help__attention {
+  font-style: italic;
+  font-weight: 700;
+}
+
+.how-help__attention span {
+  text-transform: uppercase;
+  color: #E32828;
+  padding: 0 20px 0 0;
+}
 .how-help__body {
   display: flex;
   justify-content: space-between;
