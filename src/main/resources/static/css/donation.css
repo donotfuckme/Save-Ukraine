@@ -73,8 +73,8 @@
 .tabs-donation__pages {
   border: 1px solid #0786A5;
   box-sizing: border-box;
-  padding: 0 0 48px 0;
 }
+
 @media (max-width: 768px) {
   .tabs-donation__pages {
     padding: 0 0 24px 0;
@@ -89,7 +89,7 @@
 
 @media (max-width: 768px) {
   .tabs-donation__page {
-    padding: 28px 16px 0 16px;
+    padding: 0 16px;
   }
 }
 
@@ -101,14 +101,21 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0 0 0 4px;
+  margin: 0 4px;
 }
 
 .tabs-donation__title {
   font-weight: 700;
-  font-size: 18px;
-  line-height: 25px;
+  font-size: 28px;
+  line-height: 30px;
   padding: 0 0 23px 0;
+}
+
+@media (max-width: 768px) {
+  .tabs-donation__title {
+    font-size: 22px;
+    padding: 20px 0 16px;
+  }
 }
 
 /*Page card---------------------------*/
@@ -118,12 +125,11 @@
   justify-content: center;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 768px) {
   .card-donate {
     flex-direction: column;
     text-align: center;
   }
-
   .card-donate__qrs {
     order: 2;
     margin: 16px 0 0 0;
@@ -138,6 +144,7 @@
   max-width: 200px;
   object-fit: cover;
 }
+
 .card-donate__qr.img-active {
   display: block;
 }
@@ -148,16 +155,9 @@
   flex-direction: column;
   padding: 17px 0 0 50px;
 }
-
-@media (max-width: 700px) {
+@media (max-width: 768px) {
   .card-donate__content {
     padding: 0;
-  }
-}
-
-@media (max-width: 400px) {
-  .card-donate__content h3 {
-    padding: 0 0 23px 16px;
   }
 }
 
@@ -183,31 +183,72 @@
   display: inline-flex;
   margin: 0 0 0 4px;
 }
-
 .card-donate__content p {
   margin: 16px 0 0 0;
   font-size: 12px;
 }
 
 /*requisites----------------------------*/
-.tabs-donation__requisites p {
-  font-size: 24px;
-  line-height: 28px;
+.requisites__body {
+    font-size: 18px;
+  line-height: 25px;
+}
+
+.requisites__body p {
   margin: 0 0 20px;
 }
 
 @media (max-width: 550px) {
-  .tabs-donation__requisites p {
+  .requisites__body {
     font-size: 16px;
     line-height: 25px;
   }
+
+  .requisites__body p {
+    margin: 0 0 12px;
+  }
 }
 
-@media (max-width: 500px) {
-  .tabs-donation__title {
-    font-size: 18px;
-    padding: 20px 0 16px 0;
+@media (max-width: 450px) {
+  .requisites__body {
+    font-size: 14px;
+    line-height: 22px;
   }
+}
+
+.requisites__body h4{
+  font-size: 20px;
+  line-height: 25px;
+  font-weight: 700;
+  color: #144652;
+  padding: 12px 0 16px;
+}
+
+.requisites__body span {
+  color: #C4C4C4;
+  text-decoration: underline;
+  padding: 0 10px 0 0;
+}
+
+.iban__row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 0 16px 0;
+}
+
+@media (max-width: 550px) {
+  .iban__row {
+    margin: 0 0 8px 0;
+  }
+}
+
+.iban__row p {
+  margin: 0 20px 4px 0;
+}
+
+.iban__row p:last-child {
+  font-size: 14px;
+  margin: 0 0 4px 0;
 }
 
 /*PAY PAL------------------------------------------*/
@@ -218,7 +259,6 @@
 .paypal__image img {
   max-width: 300px;
 }
-
 @media (max-width: 450px) {
   .paypal__image img {
     max-width: 200px;
@@ -238,11 +278,11 @@
   line-height: 22px;
   font-weight: 700;
   display: inline-block;
+  margin: 0 0 12px 0;
 }
 
 .copy-text {
   color: #144652;
   text-decoration: underline;
-  padding: 12px 0 0 0;
   cursor: pointer;
 }

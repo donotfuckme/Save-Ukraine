@@ -150,3 +150,7 @@ tr:nth-child(even) {
   height: 2px;
   background: #fff;
 }
+
+textarea {
+  min-height: 200px;
+}

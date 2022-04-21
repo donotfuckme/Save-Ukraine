@@ -46,11 +46,7 @@
         <p class="main-link__submenu"> / Пожертвування</p>
       </div>
       <h1 class="donation__title title">Як зробити пожертвування?</h1>
-      <div class="donation__text text-parag">Благодійний Фонд «Врятувати Україну» – незалежна благодійна організація,
-        яка перебуває на повному самозабезпеченні. У нас немає спонсорів та меценатів, які б щомісячно оплачували роботу
-        наших співробітників, оренду складу, комунальні послуги, бензин та обслуговування авто, виготовлення скарбничок
-        та інші потреби. Тож 13-15% кожного внеску йде на підтримку роботи фонду. Детальніше про нашу роботу тут.
-      </div>
+      <div class="donation__text text-parag">Благодійний Фонд «Врятувати Україну» – незалежна благодійна організація, яка перебуває на повному самозабезпеченні. У нас немає спонсорів та меценатів, які б щомісячно оплачували роботу наших співробітників, оренду складу, комунальні послуги, бензин та обслуговування авто, виготовлення печатної продукції та інші потреби. Тож від 5 до 15% кожного внеску йде на підтримку роботи фонду. Детальніше про нашу роботу тут.</div>
       <div class="donation__image">
         <img class="image-responsive" th:src="@{/img/donation.png}" alt="Україна" loading="lazy">
       </div>
@@ -88,8 +84,8 @@
                     <option value="aid all" data-option_id="aid-all" class="card-donate__option" th:selected="${selectedProject eq 'all'}">Допомогти всім</option>
                     <option value="aid children" data-option_id="aid-children" class="card-donate__option" th:selected="${selectedProject eq 'children'}">Допомогти дітям</option>
                     <option value="aid animals" data-option_id="aid-animals" class="card-donate__option" th:selected="${selectedProject eq 'animals'}">Допомогти тваринам</option>
-                    <option value="aid kharkiv" data-option_id="aid-kharkiv" class="card-donate__option" th:selected="${selectedProject eq 'kharkiv'}">Відновлення города-героя Харкова</option>
-                    <option value="aid aged" data-option_id="aid-aged" class="card-donate__option" th:selected="${selectedProject eq 'aged'}">Допомога дорослим та людям похилого віку</option>
+                    <option value="aid kharkiv" data-option_id="aid-kharkiv" class="card-donate__option" th:selected="${selectedProject eq 'kharkiv'}">Відновлення міста-героя Харкова</option>
+                    <option value="aid aged" data-option_id="aid-aged" class="card-donate__option" th:selected="${selectedProject eq 'aged'}">Допомога жінкам, літнім людям та біженцям, переселенцям</option>
                   </select>
                   <div class="card-donate__row">
                     <button type="submit" class="card-donate__btn _btn">Пожертвувати</button>
@@ -106,18 +102,44 @@
                     </div>
                   </div>
                 </form>
-                <p>* обов'язково заповныть поле "Коментарі"</p>
+                <p>* обов'язково заповніть поле "Коментарі"</p>
               </div>
             </div>
           </li>
           <li class="tabs-donation__page" id="page2">
             <h3 class="tabs-donation__title" id="requisites">Наші реквізити</h3>
-              <div class="tabs-donation__requisites">
-                <p>Підприємство: БЛАГОДІЙНА ОРГАНІЗАЦІЯ «МІЖНАРОДНИЙ БЛАГОДІЙНИЙ ФОНД «ВРЯТУВАТИ УКРАЇНУ»</p>
-                <p>ЄДРПОУ 44668535</p>
-                <p>Р/р, UA083020760000026008300940237</p>
-                <p>МФО 302076</p>
+            <div class="tabs-donation__requisites requisites">
+              <div class="requisites__body">
+                <h4>В гривнях (UAH)</h4>
+                <p><span>Назва організації:</span>БЛАГОДІЙНА ОРГАНІЗАЦІЯ "МІЖНАРОДНИЙ БЛАГОДІЙНИЙ ФОНД «ВРЯТУВАТИ УКРАЇНУ"</p>
+                <div class="iban__row">
+                  <span>Р/р:</span><p id="iban-uah">UA083020760000026008300940237</p>
+                  <p class="copy-text" onclick="copyText('iban-uah')">Скопіювати</p>
+                </div>
+                <p><span>Банк отримувач:</span>у АТ "Ощадбанк" МФО 302076</p>
+                <p>код ЄДРПОУ 44668535</p>
               </div>
+              <div class="requisites__body">
+                <h4>В доларах США (USD)</h4>
+                <p><span>Beneficiary:</span>CHARITABLE ORGANIZATION "INTERNATIONAL CHARITABLE FUND "SAVE UKRAINE"</p>
+                <div class="iban__row">
+                  <span>IBAN:</span><p id="iban-usd">UA083020760000026008300940237</p>
+                  <p class="copy-text" onclick="copyText('iban-usd')">Скопіювати</p>
+                </div>
+                <p><span>Bank of beneficiary:</span>JOINT STOCK COMPANY "STATE SAVINGS BANK OF UKRAINE" Branch-Vinnytsia regional administration, TVBV 10001/0179 UKRAINE, Vinnitsa. 69. str .Soborna</p>
+                <p><span>SWIFT code:</span>COSBUAUKVIN</p>
+              </div>
+              <div class="requisites__body">
+                <h4>В евро (EUR)</h4>
+                <p><span>Beneficiary:</span>CHARITABLE ORGANIZATION "INTERNATIONAL CHARITABLE FUND "SAVE UKRAINE"</p>
+                <div class="iban__row">
+                  <span>IBAN:</span><p id="iban-euro">UA083020760000026008300940237</p>
+                  <p class="copy-text" onclick="copyText('iban-euro')">Скопіювати</p>
+                </div>
+                <p><span>Bank of beneficiary:</span>JOINT STOCK COMPANY "STATE SAVINGS BANK OF UKRAINE" Branch-Vinnytsia regional administration, TVBV 10001/0179 UKRAINE, Vinnitsa. 69. str .Soborna</p>
+                <p><span>SWIFT code:</span>COSBUAUKVIN</p>
+              </div>
+            </div>
           </li>
           <li class="tabs-donation__page" id="page3">
             <h3 class="tabs-donation__title">Рахунок Pay Pal</h3>
