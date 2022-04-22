@@ -7,9 +7,9 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-  <title>Волонтерство та гуманітарна допомога | Фонд "Врятувати Україну"</title>
+  <title th:text="#{index.head.title}"></title>
 
-  <meta name="description" content="Волонтерська організація «Save Ukraine» | Неприбуткове волонтерство в Україні | Гуманітарна допомога регіонам країни та відновлення Харкова"/>
+  <meta name="description" th:content="#{index.head.meta.description}"/>
 
   <link rel="canonical" href="http://www.saveukraine.global"/>
 
@@ -37,10 +37,10 @@
 
   <div class="flag-gifs">
     <div class="gif-ukraine gif-ukraine-left">
-      <img th:src="@{/img/flag-ukraine.gif}" alt="Прапор України" class="image-responsive" loading="lazy">
+      <img th:src="@{/img/flag-ukraine.gif}" th:alt="#{index.flags.alt}" class="image-responsive" loading="lazy">
     </div>
     <div class="gif-ukraine gif-ukraine-right">
-      <img th:src="@{/img/flag-ukraine.gif}" alt="Прапор України" class="image-responsive" loading="lazy">
+      <img th:src="@{/img/flag-ukraine.gif}" th:alt="#{index.flags.alt}" class="image-responsive" loading="lazy">
     </div>
   </div>
 
@@ -56,27 +56,34 @@
       <div class="main__container container">
         <div class="slider-main__body">
           <div class="slider-main__content slider-content">
-            <p class="slider-main__parag">Міждународний Благодійний Фонд</p>
-            <h1 class="slider-main__title">Врятувати <span>Україну</span></h1>
-            <div class="slider-main__text">"Ми - міжнародна неприбуткова організація. Наша мета - <span>уникнення гуманітарної катастрофи в Україні</span>, що виникла внаслідок військової агресії з боку Російської Федерації."</div>
+            <p class="slider-main__parag" th:text="#{index.slider-main-paragraph}"></p>
+            <h1 class="slider-main__title">
+              <span th:text="#{index.slider-main-title1}" th:remove="tag"></span>
+              <span th:text="#{index.slider-main-title2}"></span>
+            </h1>
+            <div class="slider-main__text">
+              <span th:text="#{index.slider-main-text1}" th:remove="tag"></span>
+              <span th:text="#{index.slider-main-text2}"></span>
+              <span th:text="#{index.slider-main-text3}" th:remove="tag"></span>
+            </div>
             <div class="slider-main__buttons">
-                <a th:href="@{/help#how-can-help}" class="_btn slider-main__button">Наші проекти</a>
-                <a th:href="@{/help/donation#donation-now}" class="_btn slider-main__button">Допомогти Україні</a>
+                <a th:href="@{/help#how-can-help}" class="_btn slider-main__button" th:text="#{index.slider.projects}"></a>
+                <a th:href="@{/help/donation#donation-now}" class="_btn slider-main__button" th:text="#{index.slider.donation}"></a>
               </div>
           </div>
           <div class="slider-main-ukrain swiper">
             <div class="slider-wrapper-ukrain swiper-wrapper">
               <div class="slide-main-ukrain swiper-slide">
-                <img th:src="@{/img/slider-ukrain/ukraine-slider_1.png}" alt="Україна" class="image-responsive">
+                <img th:src="@{/img/slider-ukrain/ukraine-slider_1.png}" th:alt="#{index.slider.image.alt}" class="image-responsive">
               </div>
               <div class="slide-main-ukrain swiper-slide">
-                <img th:src="@{/img/slider-ukrain/ukraine-slider_2.png}" alt="Україна" class="image-responsive">
+                <img th:src="@{/img/slider-ukrain/ukraine-slider_2.png}" th:alt="#{index.slider.image.alt}" class="image-responsive">
               </div>
               <div class="slide-main-ukrain swiper-slide">
-                <img th:src="@{/img/slider-ukrain/ukraine-slider_3.png}" alt="Україна" class="image-responsive">
+                <img th:src="@{/img/slider-ukrain/ukraine-slider_3.png}" th:alt="#{index.slider.image.alt}" class="image-responsive">
               </div>
               <div class="slide-main-ukrain swiper-slide">
-                <img th:src="@{/img/slider-ukrain/ukraine-slider_4.png}" alt="Україна" class="image-responsive">
+                <img th:src="@{/img/slider-ukrain/ukraine-slider_4.png}" th:alt="#{index.slider.image.alt}" class="image-responsive">
               </div>
             </div>
             <div class="swiper-pagination slider-dots-ukrain"></div>
@@ -91,32 +98,32 @@
     <div class="main__picture"></div>
     <section class="main__about-us about-us">
       <div class="main__container container">
-        <h2 class="main__title title">Про Фонд</h2>
+        <h2 class="main__title title" th:text="#{index.about-us.title}"></h2>
         <div class="about-fond__body">
           <div class="about-fond__text">
-            <p class="about-fond__parag">Міжнародний благодійний фонд «Врятувати Україну» – це міжнародна неприбуткова організація, заснована у 2022 році у Харкові. Метою фонду є уникнення гуманітарної катастрофи в Україні, що виникла внаслідок військової агресії з боку Російської Федерації, та відновлення повноцінного життя громадян.</p>
-            <p class="about-fond__parag">Головне завдання фонду після перемоги України – відновлення найкрасивішого рідного міста-героя Харкова!</p>
-            <p class="about-fond__parag">Нині діяльність фонду спрямована на <span>надання гуманітарної допомоги</span> громадянам, що гостро мають в цьому потребу, через перевірених волонтерів та власноруч.</p>
-            <p class="about-fond__parag">НАША МІСІЯ – відновити в Україні умови для гідного життя кожного громадянина, який постраждав від Російської агресії.</p>
+            <p class="about-fond__parag" th:text="#{index.about-us.paragraph1}"></p>
+            <p class="about-fond__parag" th:text="#{index.about-us.paragraph2}"></p>
+            <p class="about-fond__parag" th:text="#{index.about-us.paragraph3}"></p>
+            <p class="about-fond__parag" th:text="#{index.about-us.paragraph4}"></p>
           </div>
           <div class="about-fond__content">
             <div class="about-fond__content-item">
               <div class="content-item__img">
-                <img th:src="@{/img/about-fond/humanitarian-aid.svg}" alt="Кейс допомоги" loading="lazy">
+                <img th:src="@{/img/about-fond/humanitarian-aid.svg}" th:alt="#{index.humanitarian-aid.alt}" loading="lazy">
               </div>
-              <p class="content-item__text">Ми – неприбуткова організація. Наше завдання нині – уникнення гуманітарної катастрофи в Україні</p>
+              <p class="content-item__text" th:text="#{index.block1}"></p>
             </div>
             <div class="about-fond__content-item">
               <div class="content-item__img">
-                <img th:src="@{/img/about-fond/hand&heart.svg}" alt="Рука допомоги" loading="lazy">
+                <img th:src="@{/img/about-fond/hand&heart.svg}" th:alt="#{index.hand-heart.alt}" loading="lazy">
               </div>
-              <p class="content-item__text">Ми допомагаємо власноруч або через перевірених волонтерів</p>
+              <p class="content-item__text" th:text="#{index.block2}"></p>
             </div>
             <div class="about-fond__content-item">
               <div class="content-item__img">
-                <img th:src="@{/img/about-fond/location-city.svg}" alt="Багатоповерхівка" loading="lazy">
+                <img th:src="@{/img/about-fond/location-city.svg}" th:alt="#{index.location-city.alt}" loading="lazy">
               </div>
-              <p class="content-item__text">Ми маємо головну мету після перемоги України – відновлення міста-героя Харкова!</p>
+              <p class="content-item__text" th:text="#{index.block3}"></p>
             </div>
           </div>
         </div>
@@ -126,9 +133,12 @@
       <div class="oda__wrapper">
         <div class="oda__container">
           <div class="oda__content">
-            <p>Наша місія</p>
-            <p><span class="oda__color-blue">або</span></p>
-            <p>Україна До та <span class="oda__color-red">Після</span></p>
+            <p th:text="#{index.mission.block1}"></p>
+            <p><span class="oda__color-blue" th:text="#{index.mission.block2}"></span></p>
+            <p>
+              <span th:text="#{index.mission.block3}" th:remove="tag"></span>
+              <span class="oda__color-red" th:text="#{index.mission.block4}"></span>
+            </p>
           </div>
         </div>
       </div>
@@ -139,33 +149,33 @@
           <div class="slider-wrapper-building swiper-wrapper">
             <div class="slide-building swiper-slide">
               <div class="slide-building__image">
-                <img th:src="@{/img/slide-building/slide-building_01.png}" alt="Харківський двір">
+                <img th:src="@{/img/slide-building/slide-building_01.png}" th:alt="#{index.slider.building1.alt}">
               </div>
-              <div class="slide-building__text">Мирний харківський двір у центрі міста</div>
+              <div class="slide-building__text" th:text="#{index.slider.building1.text}"></div>
             </div>
             <div class="slide-building swiper-slide">
                 <div class="slide-building__image">
-                  <img th:src="@{/img/slide-building/slide-building_02.png}" alt="Новосалтівський ринок">
+                  <img th:src="@{/img/slide-building/slide-building_02.png}" th:alt="#{index.slider.building2.alt}">
                 </div>
-              <div class="slide-building__text">Новосалтівський ринок</div>
+              <div class="slide-building__text" th:text="#{index.slider.building2.text}"></div>
             </div>
             <div class="slide-building swiper-slide">
               <div class="slide-building__image">
-                <img th:src="@{/img/slide-building/slide-building_03.png}" alt="Харківський бізнес центр">
+                <img th:src="@{/img/slide-building/slide-building_03.png}" th:alt="#{index.slider.building3.alt}">
               </div>
-              <div class="slide-building__text">Харківський бізнес центр</div>
+              <div class="slide-building__text" th:text="#{index.slider.building3.text}"></div>
             </div>
             <div class="slide-building swiper-slide">
               <div class="slide-building__image">
-                <img th:src="@{/img/slide-building/slide-building_04.png}" alt="Київський ТРЦ">
+                <img th:src="@{/img/slide-building/slide-building_04.png}" th:alt="#{index.slider.building4.alt}">
               </div>
-              <div class="slide-building__text">Київський ТРЦ</div>
+              <div class="slide-building__text" th:text="#{index.slider.building4.text}"></div>
             </div>
             <div class="slide-building swiper-slide">
               <div class="slide-building__image">
-                <img th:src="@{/img/slide-building/slide-building_05.png}" alt="Харківська міська рада">
+                <img th:src="@{/img/slide-building/slide-building_05.png}" th:alt="#{index.slider.building5.alt}">
               </div>
-              <div class="slide-building__text">Харківська міська рада</div>
+              <div class="slide-building__text" th:text="#{index.slider.building5.text}"></div>
             </div>
           </div>
           <div class="slider-building__arrows building-arrows">
@@ -179,9 +189,9 @@
     <section th:if="${reports ne null and reports.isEmpty() ne true}" class="main__reports reports">
       <div class="main__container container">
         <div class="reports__row">
-          <h2 class="main__title title">Звіти</h2>
+          <h2 class="main__title title" th:text="#{index.reports.title}"></h2>
           <div class="reports__anchor anchor">
-            <a th:href="@{/reports#all-report}" class="anchor__link icon-arrow-right2">Подивитись всі звіти</a>
+            <a th:href="@{/reports#all-report}" class="anchor__link icon-arrow-right2" th:text="#{index.reports.all-reports}"></a>
           </div>
         </div>
         <div class="reports__body">
@@ -190,7 +200,7 @@
           <!--/*@thymesVar id="report" type="global.saveukraine.volunteer.entity.Report"*/-->
           <div th:each="report : ${reports}" class="reports__item item-reports">
             <div th:if="${report.images ne null}" class="item-reports__image">
-              <img class="image-responsive" src="#" th:src="'/storage/' + ${report.images[0].name}" alt="Волонтери Харків">
+              <img class="image-responsive" src="#" th:src="'/storage/' + ${report.images[0].name}" th:alt="#{index.reports.report-img.alt}">
             </div>
             <div class="item-reports__content">
               <div class="item-reports__subtitle">
@@ -198,7 +208,7 @@
               </div>
               <div class="item-reports__text" th:text="${report.description}"></div>
               <div class="item-reports__link">
-                <a href="#" th:href="'/reports/' + ${report.id}" class="anchor__link icon-arrow-right2">Подивитись повністю</a>
+                <a href="#" th:href="'/reports/' + ${report.id}" class="anchor__link icon-arrow-right2" th:text="#{index.reports.open}"></a>
               </div>
             </div>
           </div>
