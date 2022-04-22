@@ -155,8 +155,8 @@ if (document.querySelector('.swiper-report__small')) {
   const swiperReportBig = new Swiper('.swiper-report__big', {
     spaceBetween: 10,
     navigation: {
-      nextEl: ".report-arrow__next",
-      prevEl: ".report-arrow__prev",
+      nextEl: ".swiper-arrow__next",
+      prevEl: ".swiper-arrow__prev",
     },
     thumbs: {
       swiper: swiperReportSmall,
