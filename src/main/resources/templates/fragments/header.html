@@ -15,26 +15,26 @@
         </div>
         <div class="content-header__logo logo">
           <a href="/" class="logo__link">
-            <img th:src="@{/img/logo.png}" alt="БО «МБФ «ВРЯТУВАТИ УКРАЇНУ»">
+            <img th:src="@{/img/logo.png}" th:alt="#{header.logo.alt}">
           </a>
         </div>
         <div class="content-header__language">
           <div class="icons-language">
             <div class="icon-language img-active" id="flag-ukr">
-              <img th:src="@{/img/ukraine.png}" alt="український прапор">
+              <img th:src="@{/img/ukraine.png}" th:alt="#{header.flag.ukraine.alt}">
             </div>
             <div class="icon-language" id="flag-en">
-              <img th:src="@{/img/england.png}" alt="england flag">
+              <img th:src="@{/img/england.png}" th:alt="#{header.flag.english.alt}">
             </div>
             <div class="icon-language" id="flag-ru">
-              <img th:src="@{/img/ru-ship.jpg}" alt="русский тонущий корабль">
+              <img th:src="@{/img/ru-ship.jpg}" th:alt="#{header.flag.russian.alt}">
             </div>
           </div>
-          <form action="#" id="form-language">
-            <select class="js-example-basic-single language-select" name="state">
-              <option value="ukr language" data-option_flag="flag-ukr" class="language-option">Укр</option>
-              <option value="en language" data-option_flag="flag-en" class="language-option">En</option>
-              <option value="ru language" data-option_flag="flag-ru" class="language-option">Ру</option>
+          <form th:action="@{/language}" method="get" action="#" id="form-language">
+            <select class="js-example-basic-single language-select" name="lang">
+              <option value="ua" data-option_flag="flag-ukr" class="language-option" th:text="#{header.language.selector.ukr.text}"></option>
+              <option value="en" data-option_flag="flag-en" class="language-option" th:text="#{header.language.selector.eng.text}"></option>
+              <option value="ru" data-option_flag="flag-ru" class="language-option" th:text="#{header.language.selector.rus.text}"></option>
             </select>
           </form>
         </div>
