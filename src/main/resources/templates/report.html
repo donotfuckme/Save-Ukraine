@@ -54,11 +54,9 @@
       <div th:if="${report.images ne null}" class="report__slider slider-reportDto">
         <div class="swiper swiper-report__big">
           <div class="swiper-wrapper">
-<<<<<<< HEAD
             <div th:each="image : ${report.images}" class="swiper-slide slide-report__big">
               <img th:src="'/storage/' + ${image.name}" alt="">
-=======
-            <div class="swiper-slide slide-report__big">
+<!--             <div class="swiper-slide slide-report__big">
               <img th:src="@{/img/reports_01.png}" alt="">
             </div>
             <div class="swiper-slide slide-report__big">
@@ -87,7 +85,7 @@
             </div>
             <div class="swiper-slide slide-report__big">
               <img th:src="@{/img/reports_02.png}" alt="">
->>>>>>> frontend
+>>>>>>> frontend -->
             </div>
           </div>
           <div class="swiper-report-arrows swiper-arrow__next icon-arrow-right2"></div>
@@ -95,10 +93,9 @@
         </div>
         <div thumbsSlider="" class="swiper swiper-report__small">
           <div class="swiper-wrapper">
-<<<<<<< HEAD
             <div th:each="image : ${report.images}" class="swiper-slide slide-report__small">
               <img th:src="'/storage/' + ${image.name}" alt="">
-=======
+<!-- =======
             <div class="swiper-slide slide-report__small">
               <img th:src="@{/img/reports_01.png}" alt="">
             </div>
@@ -128,7 +125,7 @@
             </div>
             <div class="swiper-slide slide-report__small">
               <img th:src="@{/img/reports_02.png}" alt="">
->>>>>>> frontend
+>>>>>>> frontend -->
             </div>
           </div>
         </div>
