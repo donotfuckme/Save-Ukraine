@@ -7,9 +7,9 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-  <title>Як стати волонтером в Україні у 2022?</title>
+  <title th:text="#{volunteer.head.title}"></title>
 
-  <meta name="description" content="Волонтерська допомога через організацію «Save Ukraine» | Як стати волонтером під час війни в Україні 2022? | Що робити якщо хочеш допомогти під час війни?"/>
+  <meta name="description" th:content="#{volunteer.head.meta.description}"/>
 
   <link rel="canonical" href="http://www.saveukraine.global/help/become-volunteer#become-volunteer"/>
 
@@ -40,68 +40,69 @@
   <section class="become-volunteer">
     <div class="become-volunteer__container container">
       <div class="become-volunteer__main-link main-link">
-        <a th:href="@{/index#main-page}" class="main-link__anchor">Головна</a>
-        <a th:href="@{/help#how-can-help}" class="main-link__subanchor">/ Наші Проєкти</a>
-        <p class="main-link__submenu"> / Стати волонтером</p>
+        <a th:href="@{/index#main-page}" class="main-link__anchor" th:text="#{volunteer.link.main}"></a>
+        <a th:href="@{/help#how-can-help}" class="main-link__subanchor" th:text="#{volunteer.link.projects}"></a>
+        <p class="main-link__submenu" th:text="#{volunteer.link.volunteer}"></p>
       </div>
-      <h1 class="how-help__title title">Стати волонтером в Україні?</h1>
+      <h1 class="how-help__title title" th:text="#{volunteer.volunteer.title}"></h1>
       <div class="become-volunteer__content volunteer-content">
-        <p class="volunteer-content__text text-parag">Наша мрія - жити у мирній, щасливій країні. А країна - це, перш за все, люди. Тільки об’єднавшись, допомагаючи один одному ми зможемо приблизити день, коли небо над Україною знову буде тихим і мирним.</p>
-        <p class="volunteer-content__text text-parag">Волонтери — це надзвичайні люди. Люди, які за власним бажанням інвестують свій час, ресурси та вміння у втілення соціально значимих проєктів: гуманітарна допомога людям, тваринам, що постраждали від війни; допомога у відбудові міст.</p>
-        <h2 class="subtitle">Завдання волонтера:</h2>
+        <p class="volunteer-content__text text-parag" th:text="#{volunteer.volunteer.paragraph1}"></p>
+        <p class="volunteer-content__text text-parag" th:text="#{volunteer.volunteer.paragraph2}"></p>
+        <h2 class="subtitle" th:text="#{volunteer.volunteer.mission.title}"></h2>
         <ul class="volunteer-content__list">
-          <li class="volunteer-content__item">- збір інформації про тих, хто потребує допомоги;</li>
-          <li class="volunteer-content__item">- складання списку необхідного;</li>
-          <li class="volunteer-content__item">- організація доставки;</li>
-          <li class="volunteer-content__item">- надання фото-звіту про виконану роботу.</li>
+          <li class="volunteer-content__item" th:text="#{volunteer.volunteer.mission.item1}"></li>
+          <li class="volunteer-content__item" th:text="#{volunteer.volunteer.mission.item2}"></li>
+          <li class="volunteer-content__item" th:text="#{volunteer.volunteer.mission.item3}"></li>
+          <li class="volunteer-content__item" th:text="#{volunteer.volunteer.mission.item4}"></li>
         </ul>
-        <p class="volunteer-content__text text-parag">Долучитись до лав волонтерів можуть усі бажаючі. Щоб стати частиною волонтерського штабу БФ "Врятувати Україну", заповніть коротку анкету нижче і ми зв’яжемось з Вами найближчим часом.</p>
+        <p class="volunteer-content__text text-parag" th:text="#{volunteer.volunteer.paragraph3}"></p>
       </div>
       <div class="become-volunteer__form volunteer-form">
         <div class="volunteer-form__image">
           <img src="#" th:src="@{/img/become-volunteer.png}" alt="aid" class="image-responsive" loading="lazy">
         </div>
         <div class="volunteer-form__body">
-          <h2 class="subtitle">Анкета для волонтерів</h2>
+          <h2 class="subtitle" th:text="#{volunteer.volunteer.form.title}"></h2>
           <form class="volunteer-form__form form-volunteer" th:classappend="${param.sent} ? 'form-hidden'" action="#" th:action="@{/help/become-volunteer}"
                 method="post" name="a">
             <div class="form-volunteer__item">
-              <label for="txtFullName" class="form-volunteer__title">Ваші ПІБ</label>
-              <input id="txtFullName" type="text" name="fullName" class="input-text__custom form-volunteer__input field-input" placeholder="ПІБ">
+              <label for="txtFullName" class="form-volunteer__title" th:text="#{volunteer.volunteer.form.full-name}"></label>
+              <input id="txtFullName" type="text" name="fullName" class="input-text__custom form-volunteer__input field-input" th:placeholder="#{volunteer.volunteer.form.full-name.placeholder}">
               <p class="input-text__error"></p>
             </div>
             <div class="form-volunteer__item">
-              <div class="form-volunteer__title">Ваша стать</div>
+              <div class="form-volunteer__title" th:text="#{volunteer.volunteer.form.gender}"></div>
               <div class="input-radio">
                 <div class="input-radio__item">
                   <input id="boolWoman" type="radio" name="female" value="жін" class="input-radio__default">
-                  <label for="boolWoman" class="input-radio__custom">жін</label>
+                  <label for="boolWoman" class="input-radio__custom" th:text="#{volunteer.volunteer.form.gender.female}"></label>
                 </div>
                 <div class="input-radio__item">
                   <input id="boolMan" type="radio" name="male" value="чол" class="input-radio__default">
-                  <label for="boolMan" class="input-radio__custom">чол</label>
+                  <label for="boolMan" class="input-radio__custom" th:text="#{volunteer.volunteer.form.gender.male}"></label>
                 </div>
               </div>
             </div>
             <div class="form-volunteer__item">
-              <label for="txtCity" class="form-volunteer__title">Населенний пункт</label>
-              <input id="txtCity" type="text" name="city" class="input-text__custom form-volunteer__input field-input" placeholder="Населений пункт">
+              <label for="txtCity" class="form-volunteer__title" th:text="#{volunteer.volunteer.form.city}"></label>
+              <input id="txtCity" type="text" name="city" class="input-text__custom form-volunteer__input field-input"
+                     th:placeholder="#{volunteer.volunteer.form.city.placeholder}">
               <p class="input-text__error"></p>
             </div>
             <div class="form-volunteer__item">
-              <label for="txtPhone" class="form-volunteer__title">Телефон для зв’язку</label>
+              <label for="txtPhone" class="form-volunteer__title" th:text="#{volunteer.volunteer.form.phone}"></label>
               <input id="txtPhone" type="tel" name="phone" class="input-text__custom form-volunteer__input field-input"
-                     placeholder="+ХХ(ХXX)XXX XX XX">
+                     th:placeholder="#{volunteer.volunteer.form.phone.placeholder}">
               <p class="input-text__error"></p>
             </div>
-            <button type="submit" class="form__btn _btn" id="volunter-btn">Стати волонтером</button>
+            <button type="submit" class="form__btn _btn" id="volunter-btn" th:text="#{volunteer.volunteer.form.button}"></button>
           </form>
           <div class="volunteer-form__sending sending-form" th:classappend="${param.sent} ? 'form-sent'">
             <div class="sending-form__content">
-              <p class="sending-form__text">Дякуємо! Ваша анкета прийнята.</p>
-              <p class="sending-form__text">Незабаром ми зв’яжемось з Вами.</p>
+              <p class="sending-form__text" th:text="#{volunteer.volunteer.form.send.paragraph1}"></p>
+              <p class="sending-form__text" th:text="#{volunteer.volunteer.form.send.paragraph2}"></p>
             </div>
-            <a th:href="@{/help/become-volunteer}" class="sending-form__link">Заповнити анкету ще раз</a>
+            <a th:href="@{/help/become-volunteer}" class="sending-form__link" th:text="#{volunteer.volunteer.form.send.button}"></a>
           </div>
         </div>
       </div>
