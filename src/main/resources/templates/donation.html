@@ -7,10 +7,9 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-  <title>Як зробити пожертвування? | Благодійний Фонд "Save Ukraine"</title>
+  <title th:text="#{donation.head.title}"></title>
 
-  <meta name="description" content="Як зробити пожертвування у фонд | Переказати кошти на картку, за реквізитами або через PayPal | Допомогти біженцям та переселенцям | Гуманітарна допомога"/>
-
+  <meta name="description" th:content="#{donation.head.meta.description}"/>
 
   <link rel="canonical" href="http://www.saveukraine.global/help/donation#donation"/>
 
@@ -41,54 +40,54 @@
   <section class="donation">
     <div class="donation__container container">
       <div class="donation__main-link main-link">
-        <a th:href="@{/index#main-page}" class="main-link__anchor">Головна</a>
-        <a th:href="@{/help#how-can-help}" class="main-link__subanchor">/ Наші Проєкти</a>
-        <p class="main-link__submenu"> / Пожертвування</p>
+        <a th:href="@{/index#main-page}" class="main-link__anchor" th:text="#{donation.link.main}"></a>
+        <a th:href="@{/help#how-can-help}" class="main-link__subanchor" th:text="#{donation.link.projects}"></a>
+        <p class="main-link__submenu" th:text="#{donation.link.donation}"></p>
       </div>
-      <h1 class="donation__title title">Як зробити пожертвування?</h1>
-      <div class="donation__text text-parag">Благодійний Фонд «Врятувати Україну» – незалежна благодійна організація, яка перебуває на повному самозабезпеченні. У нас немає спонсорів та меценатів, які б щомісячно оплачували роботу наших співробітників, оренду складу, комунальні послуги, бензин та обслуговування авто, виготовлення печатної продукції та інші потреби. Тож від 5 до 15% кожного внеску йде на підтримку роботи фонду. Детальніше про нашу роботу тут.</div>
+      <h1 class="donation__title title" th:text="#{donation.donation.title}"></h1>
+      <div class="donation__text text-parag" th:text="#{donation.donation.paragraph}"></div>
       <div class="donation__image">
-        <img class="image-responsive" th:src="@{/img/donation.png}" alt="Україна" loading="lazy">
+        <img class="image-responsive" th:src="@{/img/donation.png}" th:alt="#{donation.donation.alt}" loading="lazy">
       </div>
-      <h2 class="donation__subtitle subtitle" id="donation-now">Підтримай Україну</h2>
+      <h2 class="donation__subtitle subtitle" id="donation-now" th:text="#{donation.donation.subtitle}"></h2>
       <div class="donation__tabs tabs-donation">
         <ul class="tabs-donation__navigation nav-tabs">
-          <li class="nav-tabs__item tabs-active" data-tab_id="page1">Оплатити карткою</li>
-          <li class="nav-tabs__item" data-tab_id="page2">Оплатити за реквізитами</li>
-          <li class="nav-tabs__item" data-tab_id="page3">Оплатити Pay Pal</li>
+          <li class="nav-tabs__item tabs-active" data-tab_id="page1" th:text="#{donation.donation.tab.card}"></li>
+          <li class="nav-tabs__item" data-tab_id="page2" th:text="#{donation.donation.tab.requisites}"></li>
+          <li class="nav-tabs__item" data-tab_id="page3" th:text="#{donation.donation.tab.paypal}"></li>
         </ul>
         <ul class="tabs-donation__pages">
           <li class="tabs-donation__page tabs-active" id="page1">
             <div class="tabs-donation__card card-donate">
               <div class="card-donate__qrs">
                 <div class="card-donate__qr img-active" id="aid-all">
-                  <img th:src="@{/img/qr-code/qr-all.png}" alt="QR-код">
+                  <img th:src="@{/img/qr-code/qr-all.png}" th:alt="#{donation.donation.tab.card.qr-code.alt}">
                 </div>
                 <div class="card-donate__qr" id="aid-children">
-                  <img th:src="@{/img/qr-code/qr-children.png}" alt="QR-код">
+                  <img th:src="@{/img/qr-code/qr-children.png}" th:alt="#{donation.donation.tab.card.qr-code.alt}">
                 </div>
                 <div class="card-donate__qr" id="aid-animals">
-                  <img th:src="@{/img/qr-code/qr-animals.png}" alt="QR-код">
+                  <img th:src="@{/img/qr-code/qr-animals.png}" th:alt="#{donation.donation.tab.card.qr-code.alt}">
                 </div>
                 <div class="card-donate__qr" id="aid-kharkiv">
-                  <img th:src="@{/img/qr-code/qr-kharkiv.png}" alt="QR-код">
+                  <img th:src="@{/img/qr-code/qr-kharkiv.png}" th:alt="#{donation.donation.tab.card.qr-code.alt}">
                 </div>
                 <div class="card-donate__qr" id="aid-aged">
-                  <img th:src="@{/img/qr-code/qr-aged.png}" alt="QR-код">
+                  <img th:src="@{/img/qr-code/qr-aged.png}" th:alt="#{donation.donation.tab.card.qr-code.alt}">
                 </div>
               </div>
               <div class="card-donate__content">
-                <h3 class="tabs-donation__title">Зробити пожертвування:</h3>
+                <h3 class="tabs-donation__title" th:text="#{donation.donation.tab.card.content.title}"></h3>
                 <form action="#" th:action="@{/help/donation/redirect}" method="get">
                   <select class="js-example-basic-single card-donate__select" name="project">
-                    <option value="aid all" data-option_id="aid-all" class="card-donate__option" th:selected="${selectedProject eq 'all'}">Допомогти всім</option>
-                    <option value="aid children" data-option_id="aid-children" class="card-donate__option" th:selected="${selectedProject eq 'children'}">Допомогти дітям</option>
-                    <option value="aid animals" data-option_id="aid-animals" class="card-donate__option" th:selected="${selectedProject eq 'animals'}">Допомогти тваринам</option>
-                    <option value="aid kharkiv" data-option_id="aid-kharkiv" class="card-donate__option" th:selected="${selectedProject eq 'kharkiv'}">Відновлення міста-героя Харкова</option>
-                    <option value="aid aged" data-option_id="aid-aged" class="card-donate__option" th:selected="${selectedProject eq 'aged'}">Допомога жінкам, літнім людям та біженцям, переселенцям</option>
+                    <option value="aid all" data-option_id="aid-all" class="card-donate__option" th:selected="${selectedProject eq 'all'}" th:text="#{donation.donation.tab.card.content.select.all}"></option>
+                    <option value="aid children" data-option_id="aid-children" class="card-donate__option" th:selected="${selectedProject eq 'children'}" th:text="#{donation.donation.tab.card.content.select.children}"></option>
+                    <option value="aid animals" data-option_id="aid-animals" class="card-donate__option" th:selected="${selectedProject eq 'animals'}" th:text="#{donation.donation.tab.card.content.select.animals}"></option>
+                    <option value="aid kharkiv" data-option_id="aid-kharkiv" class="card-donate__option" th:selected="${selectedProject eq 'kharkiv'}" th:text="#{donation.donation.tab.card.content.select.kharkiv}"></option>
+                    <option value="aid aged" data-option_id="aid-aged" class="card-donate__option" th:selected="${selectedProject eq 'aged'}" th:text="#{donation.donation.tab.card.content.select.aged}"></option>
                   </select>
                   <div class="card-donate__row">
-                    <button type="submit" class="card-donate__btn _btn">Пожертвувати</button>
+                    <button type="submit" class="card-donate__btn _btn" th:text="#{donation.donation.tab.card.content.button}"></button>
                     <div class="card-donate__paysystems pay-systems">
                       <div class="pay-systems__item">
                         <img th:src="@{/img/donate-systems/visa.png}" alt="visa">
@@ -102,19 +101,19 @@
                     </div>
                   </div>
                 </form>
-                <p>* обов'язково заповніть поле "Коментарі"</p>
+                <p th:text="#{donation.donation.tab.card.content.tip}"></p>
               </div>
             </div>
           </li>
           <li class="tabs-donation__page" id="page2">
-            <h3 class="tabs-donation__title" id="requisites">Наші реквізити</h3>
+            <h3 class="tabs-donation__title" id="requisites" th:text="#{donation.donation.tab.requisites.content.title}"></h3>
             <div class="tabs-donation__requisites requisites">
               <div class="requisites__body">
                 <h4>В гривнях (UAH)</h4>
                 <p><span>Назва організації:</span>БЛАГОДІЙНА ОРГАНІЗАЦІЯ "МІЖНАРОДНИЙ БЛАГОДІЙНИЙ ФОНД «ВРЯТУВАТИ УКРАЇНУ"</p>
                 <div class="iban__row">
                   <span>Р/р:</span><p id="iban-uah">UA083020760000026008300940237</p>
-                  <p class="copy-text" onclick="copyText('iban-uah')">Скопіювати</p>
+                  <p class="copy-text" onclick="copyText('iban-uah')" th:text="#{donation.donation.tab.content.copy-button}"></p>
                 </div>
                 <p><span>Банк отримувач:</span>у АТ "Ощадбанк" МФО 302076</p>
                 <p>код ЄДРПОУ 44668535</p>
@@ -124,7 +123,7 @@
                 <p><span>Beneficiary:</span>CHARITABLE ORGANIZATION "INTERNATIONAL CHARITABLE FUND "SAVE UKRAINE"</p>
                 <div class="iban__row">
                   <span>IBAN:</span><p id="iban-usd">UA083020760000026008300940237</p>
-                  <p class="copy-text" onclick="copyText('iban-usd')">Скопіювати</p>
+                  <p class="copy-text" onclick="copyText('iban-usd')" th:text="#{donation.donation.tab.content.copy-button}"></p>
                 </div>
                 <p><span>Bank of beneficiary:</span>JOINT STOCK COMPANY "STATE SAVINGS BANK OF UKRAINE" Branch-Vinnytsia regional administration, TVBV 10001/0179 UKRAINE, Vinnitsa. 69. str .Soborna</p>
                 <p><span>SWIFT code:</span>COSBUAUKVIN</p>
@@ -134,7 +133,7 @@
                 <p><span>Beneficiary:</span>CHARITABLE ORGANIZATION "INTERNATIONAL CHARITABLE FUND "SAVE UKRAINE"</p>
                 <div class="iban__row">
                   <span>IBAN:</span><p id="iban-euro">UA083020760000026008300940237</p>
-                  <p class="copy-text" onclick="copyText('iban-euro')">Скопіювати</p>
+                  <p class="copy-text" onclick="copyText('iban-euro')" th:text="#{donation.donation.tab.content.copy-button}"></p>
                 </div>
                 <p><span>Bank of beneficiary:</span>JOINT STOCK COMPANY "STATE SAVINGS BANK OF UKRAINE" Branch-Vinnytsia regional administration, TVBV 10001/0179 UKRAINE, Vinnitsa. 69. str .Soborna</p>
                 <p><span>SWIFT code:</span>COSBUAUKVIN</p>
@@ -142,15 +141,15 @@
             </div>
           </li>
           <li class="tabs-donation__page" id="page3">
-            <h3 class="tabs-donation__title">Рахунок Pay Pal</h3>
+            <h3 class="tabs-donation__title" th:text="#{donation.donation.tab.paypal.content.title}"></h3>
             <div class="tabs-donation__paypal">
               <div class="paypal__image">
                 <img th:src="@{/img/donate-systems/pay-pal.png}" alt="Pay Pal">
               </div>
               <div class="paypal__row">
-                  <p class="paypal__number" id="paypal-number">GMBWRTLVFLYCL</p>
-                  <p class="copy-text" onclick="copyText('paypal-number')">Скопіювати</p>
-                </div>
+                <p class="paypal__number" id="paypal-number">GMBWRTLVFLYCL</p>
+                <p class="copy-text" onclick="copyText('paypal-number')" th:text="#{donation.donation.tab.content.copy-button}"></p>
+              </div>
             </div>
           </li>
         </ul>
