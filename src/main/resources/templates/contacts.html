@@ -7,9 +7,9 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-  <title>Контакти волонтерського фонду "Врятувати Україну"</title>
+  <title th:text="#{contacts.head.title}"></title>
 
-  <meta name="description" content="Телефон, E-mail та соціальні мережі гуманітарного благодійного фонду «Save Ukraine» | Офіційна адреса та месенджери організації «Врятувати Україну»"/>
+  <meta name="description" th:content="#{contacts.head.meta.description}"/>
 
   <link rel="canonical" href="http://www.saveukraine.global/contacts#contacts"/>
 
@@ -40,13 +40,13 @@
   <section class="contacts">
     <div class="contacts__container container">
       <div class="main-link">
-        <a th:href="@{/index#main-page}" class="main-link__anchor">Головна</a>
-        <p class="main-link__submenu"> / Контакти</p>
+        <a th:href="@{/index#main-page}" class="main-link__anchor" th:text="#{contacts.link.main}"></a>
+        <p class="main-link__submenu" th:text="#{contacts.link.contacts}"></p>
       </div>
-      <h1 class="contacts__title title">Контакти</h1>
+      <h1 class="contacts__title title" th:text="#{contacts.contacts.title}"></h1>
       <div class="contacts__body">
         <div class="contacts__elem">
-          <h2 class="contacts__subtitle">Телефон</h2>
+          <h2 class="contacts__subtitle" th:text="#{contacts.contacts.subtitle.phone}"></h2>
           <div class="contacts__item icon-phone">
             <a href="tel:+380502845065">+380 50 284 50 65</a>
           </div>
@@ -56,7 +56,7 @@
           </div>
         </div>
         <div class="contacts__elem">
-          <h2 class="contacts__subtitle">Мессенджери</h2>
+          <h2 class="contacts__subtitle" th:text="#{contacts.contacts.subtitle.messengers}"></h2>
           <div class="messengers__items">
             <div class="messengers__item contacts__item">
               <a title="Viber" href="viber://chat?number=380502845065">+380 50 284 50 65</a>
@@ -70,7 +70,7 @@
           </div>
         </div>
         <div class="contacts__elem">
-          <h2 class="contacts__subtitle">Соціальні мережі</h2>
+          <h2 class="contacts__subtitle" th:text="#{contacts.contacts.subtitle.social-media}"></h2>
           <div class="social-media__items">
             <div class="social-media__item">
               <a th:href="@{https://www.instagram.com/save_ukraine_fund/?igshid=YmMyMTA2M2Y=}" class="icon-instagram" target="blank"></a>
@@ -85,9 +85,9 @@
         </div>
       </div>
       <div class="contacts__adress">
-        <h2 class="contacts__subtitle">Адреса</h2>
+        <h2 class="contacts__subtitle" th:text="#{contacts.contacts.subtitle.address}"></h2>
         <div class="contacts__icon icon-location2">
-          <p>Україна, 21030, Вінницька область, м.Вінниця, вул.Келецька, 103 офіс 4</p>
+          <p th:text="#{contacts.contacts.subtitle.address-full}"></p>
         </div>
       </div>
       <div id="map"></div>
