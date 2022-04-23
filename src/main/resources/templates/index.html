@@ -202,7 +202,7 @@
           <!--/*@thymesVar id="report" type="global.saveukraine.volunteer.entity.Report"*/-->
           <div th:each="report : ${reports}" class="reports__item item-reports">
             <div th:if="${report.images ne null}" class="item-reports__image">
-              <img class="image-responsive" src="#" th:src="'/storage/' + ${report.images[0].name}" th:alt="#{index.reports.report-img.alt}" class="lozad">
+              <img class="image-responsive" src="#" th:src="'/storage/' + ${report.images[0].name}" th:alt="#{index.reports.report-img.alt}">
             </div>
             <div class="item-reports__content">
               <div class="item-reports__subtitle">
