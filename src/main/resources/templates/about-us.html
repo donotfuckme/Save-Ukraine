@@ -4,29 +4,21 @@
 <head>
 
   <meta charset="utf-8">
-
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" th:content="#{about-us.head.meta.description}"/>
 
-  <title>Про нас | Міжнародний Благодійний Фонд “Врятувати Україну”</title>
-
-  <meta name="description" content="Міжнародний Благодійний Фонд «Врятувати Україну» - це новий Благодійний фонд | Ми - неприбуткова організація, наша мета - допомогти врятувати Україну"/>
+  <title th:text="#{about-us.head.title}"></title>
 
   <link rel="canonical" href="http://www.saveukraine.global/about-us#about-us"/>
+  <link rel="shortcut icon" href="#" th:href="@{/img/favicon-heart.ico}" type="image/x-icon">
 
-  <link rel="shortcut icon" th:href="@{/img/favicon-heart.ico}" type="image/x-icon">
-
-  <link href="https://fonts.googleapis.com/css?family=Open Sans" rel="stylesheet">
-
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open Sans">
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
-
-  <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet"/>
-
-  <link th:href="@{/css/style.css}" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css"/>
+  <link rel="stylesheet" href="#" th:href="@{/css/style.css}">
 
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-
   <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-
   <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
 
 </head>
@@ -44,250 +36,253 @@
   <section class="about-us">
     <div class="about-us__container container">
       <div class="about-us__main-link main-link">
-        <a th:href="@{/index#main-page}" class="main-link__anchor">Головна</a>
-        <p class="main-link__submenu"> / Oсновна інформація</p>
-        <p class="main-link__submenu"> / Про Фонд</p>
+        <a th:href="@{/index#main-page}" class="main-link__anchor" th:text="#{about-us.link.main}"></a>
+        <p class="main-link__submenu" th:text="#{about-us.link.main-info}"></p>
+        <p class="main-link__submenu" th:text="#{about-us.link.about-fond}"></p>
       </div>
-      <h1 class="about-us__title title">Про Фонд</h1>
+      <h1 class="about-us__title title" th:text="#{about-us.about-us.title}"></h1>
       <div class="about-us__content">
-        <p class="about-us__parag text-parag">Фонд «Врятувати Україну» створено 27 березня 2022 року на бажанні небайдужих людей допомогти тим громадянам та притулкам для тварин, які найбільш потребують допомоги під час війни і тим, які будуть потребувати допомоги після її завершення, а також для усунення наслідків від страшних руйнувань та відновлення інфраструктури <a th:href="@{/about-kharkiv#swiper-kharkiv}" class="parag-link">міста-героя Харкова</a></p>
+        <p class="about-us__parag text-parag">
+          <span th:text="#{about-us.about-us.paragraph1}" th:remove="tag"></span>
+          <a th:href="@{/about-kharkiv#swiper-kharkiv}" class="parag-link" th:text="#{about-us.about-us.paragraph2}"></a>
+        </p>
         <div class="about-us__image about-us__image_big">
-          <img th:src="@{/img/about-us_01.png}" alt="Харків руйнування" class="image-responsive" loading="lazy">
+          <img th:src="@{/img/about-us_01.png}" th:alt="#{about-us.about-us.alt}" class="image-responsive" loading="lazy">
         </div>
       </div>
       <div class="about-us__purpose purpose">
-        <h2 class="subtitle purpose__title">Основні цілі Фонду</h2>
+        <h2 class="subtitle purpose__title" th:text="#{about-us.about-us.purpose.title}"></h2>
         <div class="purpose__container">
           <div class="purpose__content">
-            <p class="about-us__item-li">• об’єднання добровільних зусиль, майнових і фінансових внесків, пожертвувань, інших ресурсів й можливостей для здійснення благодійної діяльності в інтересах суспільства, а також надання допомоги громадянам та притулкам для тварин, які постраждали внаслідок війни Росії проти України;</p>
-            <p class="about-us__item-li">• впровадження та всебічна підтримка програм гуманітарної допомоги, гуманітарних акцій, цільова допомога для рятування населення, біженців та внутрішньо переміщених осіб в Україні та за кордоном внаслідок військової агресії Росії проти України;</p>
-            <p class="about-us__item-li">• поширення доступу до українських інформаційних ресурсів за кордоном;</p>
-            <p class="about-us__item-li">• опіка і піклування, законне представництво та правова допомога, надання соціального захисту, соціального забезпечення, соціальних послуг постраждалому населенню від військової агресії Росії проти України;</p>
-            <p class="about-us__item-li">• сприяння здійсненню державних, регіональних, місцевих та міжнародних програм, спрямованих на поліпшення соціально-економічного становища в місті-герої Харкові та всієї Україні.</p>
+            <p class="about-us__item-li" th:text="#{about-us.about-us.purpose.item1}"></p>
+            <p class="about-us__item-li" th:text="#{about-us.about-us.purpose.item2}"></p>
+            <p class="about-us__item-li" th:text="#{about-us.about-us.purpose.item3}"></p>
+            <p class="about-us__item-li" th:text="#{about-us.about-us.purpose.item4}"></p>
+            <p class="about-us__item-li" th:text="#{about-us.about-us.purpose.item5}"></p>
           </div>
           <div class="purpose__image">
-            <img th:src="@{/img/about-ua-vertical_03.png}" alt="Гуманітарна допомога" class="image-responsive" loading="lazy">
+            <img th:src="@{/img/about-ua-vertical_03.png}" th:alt="#{about-us.about-us.purpose.alt}" class="image-responsive" loading="lazy">
           </div>
         </div>
       </div>
       <div class="about-us__tasks tasks">
-        <h2 class="about-us__subtitle subtitle">Завдання Фонду</h2>
+        <h2 class="about-us__subtitle subtitle" th:text="#{about-us.about-us.tasks.title}"></h2>
         <div class="tasks__content">
-          <p class="tasks__parag text-parag">Фонд у встановленому законом порядку, задля здійснення своїх цілей, виконує такі завдання:</p>
+          <p class="tasks__parag text-parag" th:text="#{about-us.about-us.tasks.paragraph}"></p>
           <ul class="tasks__list">
-            <li class="about-us__item-li">• залучає кошти від благодійників – фізичних осіб (резидентів та нерезидентів), юридичних осіб, інших благодійних організацій, у тому числі міжнародних;</li>
-            <li class="about-us__item-li">• організовує управління зібраними коштами (благодійними ендаументами) з метою збереження та збільшення обсягу коштів, що використовуються для надання допомоги;</li>
-            <li class="about-us__item-li">• надає допомогу, розробляє та реалізує програми, що спрямовані на реалізацію цілей Фонду;</li>
-            <li class="about-us__item-li">• інші завдання, спрямовані на реалізацію мети Фонду.</li>
+            <li class="about-us__item-li" th:text="#{about-us.about-us.tasks.item1}"></li>
+            <li class="about-us__item-li" th:text="#{about-us.about-us.tasks.item2}"></li>
+            <li class="about-us__item-li" th:text="#{about-us.about-us.tasks.item3}"></li>
+            <li class="about-us__item-li" th:text="#{about-us.about-us.tasks.item4}"></li>
           </ul>
         </div>
       </div>
       <div class="about-us__responsibilities responsibilities">
         <div class="responsibilities__container">
           <div class="responsibilities__image">
-            <img th:src="@{/img/about-us_04.png}" alt="Волонтері. Допомога" class="image-responsive" loading="lazy">
+            <img th:src="@{/img/about-us_04.png}" th:alt="#{about-us.about-us.responsibilities.alt}" class="image-responsive" loading="lazy">
           </div>
           <div class="responsibilities__content">
-            <h2 class="subtitle responsibilities__title">Обов’язки Фонду</h2>
+            <h2 class="subtitle responsibilities__title" th:text="#{about-us.about-us.responsibilities.title}"></h2>
             <ul class="responsibilities__list">
-              <li class="about-us__item-li">• дотримання всіх вимог чинного законодавства;</li>
-              <li class="about-us__item-li">• забезпечення відповідності своєї діяльності зазначеним у Статуті Фонду завданням та цілям;</li>
-              <li class="about-us__item-li">• надання органам державної влади і місцевого самоврядування, а також широкому колу суспільства вільний доступ до проектів, що були реалізовані, інших документів, що характеризують діяльність Фонду.</li>
+              <li class="about-us__item-li" th:text="#{about-us.about-us.responsibilities.item1}"></li>
+              <li class="about-us__item-li" th:text="#{about-us.about-us.responsibilities.item2}"></li>
+              <li class="about-us__item-li" th:text="#{about-us.about-us.responsibilities.item3}"></li>
             </ul>
           </div>
         </div>
       </div>
       <div class="about-us__documents statutory-documents">
-        <h3 class="subtitle statutory-documents__title" id="statutory-documents">Уставні документи</h3>
+        <h3 class="subtitle statutory-documents__title" id="statutory-documents" th:text="#{about-us.about-us.documents.title}"></h3>
         <div class="statutory-documents__slider" id="documents-slider">
             <div class="swiper-wrapper statutory-documents__container">
               <div class="swiper-slide statutory-documents__image">
                 <div class="swiper-zoom-container statutory-documents__bound">
-                  <img th:src="@{/img/documents-fond/public-oferta_01.png}" alt="Публічна оферта" class="image-responsive" loading="lazy">
+                  <img th:src="@{/img/documents-fond/public-oferta_01.png}" th:alt="#{about-us.about-us.documents.alt1}" class="image-responsive" loading="lazy">
                   <p class="statutory-documents__num">1</p>
                 </div>
               </div>
               <div class="swiper-slide statutory-documents__image">
                 <div class="swiper-zoom-container statutory-documents__bound">
-                  <img th:src="@{/img/documents-fond/public-oferta_02.png}" alt="Публічна оферта" class="image-responsive" loading="lazy">
+                  <img th:src="@{/img/documents-fond/public-oferta_02.png}" th:alt="#{about-us.about-us.documents.alt1}" class="image-responsive" loading="lazy">
                   <p class="statutory-documents__num">2</p>
                 </div>
               </div>
               <div class="swiper-slide statutory-documents__image">
                 <div class="swiper-zoom-container statutory-documents__bound">
-                  <img th:src="@{/img/documents-fond/public-oferta_03.png}" alt="Публічна оферта" class="image-responsive" loading="lazy">
+                  <img th:src="@{/img/documents-fond/public-oferta_03.png}" th:alt="#{about-us.about-us.documents.alt1}" class="image-responsive" loading="lazy">
                   <p class="statutory-documents__num">3</p>
                 </div>
               </div>
               <div class="swiper-slide statutory-documents__image">
                 <div class="swiper-zoom-container statutory-documents__bound">
-                  <img th:src="@{/img/documents-fond/statute-сharter_01.png}" alt="Статут" class="image-responsive" loading="lazy">
+                  <img th:src="@{/img/documents-fond/statute-сharter_01.png}" th:alt="#{about-us.about-us.documents.alt2}" class="image-responsive" loading="lazy">
                   <p class="statutory-documents__num">4</p>
                 </div>
               </div>
               <div class="swiper-slide statutory-documents__image">
                 <div class="swiper-zoom-container statutory-documents__bound">
-                  <img th:src="@{/img/documents-fond/statute-сharter_03.png}" alt="Статут" class="image-responsive" loading="lazy">
+                  <img th:src="@{/img/documents-fond/statute-сharter_03.png}" th:alt="#{about-us.about-us.documents.alt2}" class="image-responsive" loading="lazy">
                   <p class="statutory-documents__num">5</p>
                 </div>
               </div>
               <div class="swiper-slide statutory-documents__image">
                 <div class="swiper-zoom-container statutory-documents__bound">
-                  <img th:src="@{/img/documents-fond/statute-сharter_04.png}" alt="Статут" class="image-responsive" loading="lazy">
+                  <img th:src="@{/img/documents-fond/statute-сharter_04.png}" th:alt="#{about-us.about-us.documents.alt2}" class="image-responsive" loading="lazy">
                   <p class="statutory-documents__num">6</p>
                 </div>
               </div>
               <div class="swiper-slide statutory-documents__image">
                 <div class="swiper-zoom-container statutory-documents__bound">
-                  <img th:src="@{/img/documents-fond/statute-сharter_05.png}" alt="Статут" class="image-responsive" loading="lazy">
+                  <img th:src="@{/img/documents-fond/statute-сharter_05.png}" th:alt="#{about-us.about-us.documents.alt2}" class="image-responsive" loading="lazy">
                   <p class="statutory-documents__num">7</p>
                 </div>
               </div>
               <div class="swiper-slide statutory-documents__image">
                 <div class="swiper-zoom-container statutory-documents__bound">
-                  <img th:src="@{/img/documents-fond/statute-сharter_06.png}" alt="Статут" class="image-responsive" loading="lazy">
+                  <img th:src="@{/img/documents-fond/statute-сharter_06.png}" th:alt="#{about-us.about-us.documents.alt2}" class="image-responsive" loading="lazy">
                   <p class="statutory-documents__num">8</p>
                 </div>
               </div>
               <div class="swiper-slide statutory-documents__image">
                 <div class="swiper-zoom-container statutory-documents__bound">
-                  <img th:src="@{/img/documents-fond/statute-сharter_07.png}" alt="Статут" class="image-responsive" loading="lazy">
+                  <img th:src="@{/img/documents-fond/statute-сharter_07.png}" th:alt="#{about-us.about-us.documents.alt2}" class="image-responsive" loading="lazy">
                   <p class="statutory-documents__num">9</p>
                 </div>
               </div>
               <div class="swiper-slide statutory-documents__image">
                 <div class="swiper-zoom-container statutory-documents__bound">
-                  <img th:src="@{/img/documents-fond/statute-сharter_08.png}" alt="Статут" class="image-responsive" loading="lazy">
+                  <img th:src="@{/img/documents-fond/statute-сharter_08.png}" th:alt="#{about-us.about-us.documents.alt2}" class="image-responsive" loading="lazy">
                   <p class="statutory-documents__num">10</p>
                 </div>
               </div>
               <div class="swiper-slide statutory-documents__image">
                 <div class="swiper-zoom-container statutory-documents__bound">
-                  <img th:src="@{/img/documents-fond/statute-сharter_09.png}" alt="Статут" class="image-responsive" loading="lazy">
+                  <img th:src="@{/img/documents-fond/statute-сharter_09.png}" th:alt="#{about-us.about-us.documents.alt2}" class="image-responsive" loading="lazy">
                   <p class="statutory-documents__num">11</p>
                 </div>
               </div>
               <div class="swiper-slide statutory-documents__image">
                 <div class="swiper-zoom-container statutory-documents__bound">
-                  <img th:src="@{/img/documents-fond/statute-сharter_10.png}" alt="Статут" class="image-responsive" loading="lazy">
+                  <img th:src="@{/img/documents-fond/statute-сharter_10.png}" th:alt="#{about-us.about-us.documents.alt2}" class="image-responsive" loading="lazy">
                   <p class="statutory-documents__num">12</p>
                 </div>
               </div>
               <div class="swiper-slide statutory-documents__image">
                 <div class="swiper-zoom-container statutory-documents__bound">
-                  <img th:src="@{/img/documents-fond/statute-сharter_11.png}" alt="Статут" class="image-responsive" loading="lazy">
+                  <img th:src="@{/img/documents-fond/statute-сharter_11.png}" th:alt="#{about-us.about-us.documents.alt2}" class="image-responsive" loading="lazy">
                   <p class="statutory-documents__num">13</p>
                 </div>
               </div>
               <div class="swiper-slide statutory-documents__image">
                 <div class="swiper-zoom-container statutory-documents__bound">
-                  <img th:src="@{/img/documents-fond/statute-сharter_12.png}" alt="Статут" class="image-responsive" loading="lazy">
+                  <img th:src="@{/img/documents-fond/statute-сharter_12.png}" th:alt="#{about-us.about-us.documents.alt2}" class="image-responsive" loading="lazy">
                   <p class="statutory-documents__num">14</p>
                 </div>
               </div>
               <div class="swiper-slide statutory-documents__image">
                 <div class="swiper-zoom-container statutory-documents__bound">
-                  <img th:src="@{/img/documents-fond/statute-сharter_13.png}" alt="Статут" class="image-responsive" loading="lazy">
+                  <img th:src="@{/img/documents-fond/statute-сharter_13.png}" th:alt="#{about-us.about-us.documents.alt2}" class="image-responsive" loading="lazy">
                   <p class="statutory-documents__num">15</p>
                 </div>
               </div>
               <div class="swiper-slide statutory-documents__image">
                 <div class="swiper-zoom-container statutory-documents__bound">
-                  <img th:src="@{/img/documents-fond/statute-сharter_14.png}" alt="Статут" class="image-responsive" loading="lazy">
+                  <img th:src="@{/img/documents-fond/statute-сharter_14.png}" th:alt="#{about-us.about-us.documents.alt2}" class="image-responsive" loading="lazy">
                   <p class="statutory-documents__num">16</p>
                 </div>
               </div>
               <div class="swiper-slide statutory-documents__image">
                 <div class="swiper-zoom-container statutory-documents__bound">
-                  <img th:src="@{/img/documents-fond/statute-сharter_15.png}" alt="Статут" class="image-responsive" loading="lazy">
+                  <img th:src="@{/img/documents-fond/statute-сharter_15.png}" th:alt="#{about-us.about-us.documents.alt2}" class="image-responsive" loading="lazy">
                   <p class="statutory-documents__num">17</p>
                 </div>
               </div>
               <div class="swiper-slide statutory-documents__image">
                 <div class="swiper-zoom-container statutory-documents__bound">
-                  <img th:src="@{/img/documents-fond/statute-сharter_16.png}" alt="Статут" class="image-responsive" loading="lazy">
+                  <img th:src="@{/img/documents-fond/statute-сharter_16.png}" th:alt="#{about-us.about-us.documents.alt2}" class="image-responsive" loading="lazy">
                   <p class="statutory-documents__num">18</p>
                 </div>
               </div>
               <div class="swiper-slide statutory-documents__image">
                 <div class="swiper-zoom-container statutory-documents__bound">
-                  <img th:src="@{/img/documents-fond/statute-сharter_17.png}" alt="Статут" class="image-responsive" loading="lazy">
+                  <img th:src="@{/img/documents-fond/statute-сharter_17.png}" th:alt="#{about-us.about-us.documents.alt2}" class="image-responsive" loading="lazy">
                   <p class="statutory-documents__num">19</p>
                 </div>
               </div>
               <div class="swiper-slide statutory-documents__image">
                 <div class="swiper-zoom-container statutory-documents__bound">
-                  <img th:src="@{/img/documents-fond/statute-сharter_18.png}" alt="Статут" class="image-responsive" loading="lazy">
+                  <img th:src="@{/img/documents-fond/statute-сharter_18.png}" th:alt="#{about-us.about-us.documents.alt2}" class="image-responsive" loading="lazy">
                   <p class="statutory-documents__num">20</p>
                 </div>
               </div>
               <div class="swiper-slide statutory-documents__image">
                 <div class="swiper-zoom-container statutory-documents__bound">
-                  <img th:src="@{/img/documents-fond/statute-сharter_19.png}" alt="Статут" class="image-responsive" loading="lazy">
+                  <img th:src="@{/img/documents-fond/statute-сharter_19.png}" th:alt="#{about-us.about-us.documents.alt2}" class="image-responsive" loading="lazy">
                   <p class="statutory-documents__num">21</p>
                 </div>
               </div>
               <div class="swiper-slide statutory-documents__image">
                 <div class="swiper-zoom-container statutory-documents__bound">
-                  <img th:src="@{/img/documents-fond/statute-сharter_20.png}" alt="Статут" class="image-responsive" loading="lazy">
+                  <img th:src="@{/img/documents-fond/statute-сharter_20.png}" th:alt="#{about-us.about-us.documents.alt2}" class="image-responsive" loading="lazy">
                   <p class="statutory-documents__num">22</p>
                 </div>
               </div>
               <div class="swiper-slide statutory-documents__image">
                 <div class="swiper-zoom-container statutory-documents__bound">
-                  <img th:src="@{/img/documents-fond/statute-сharter_21.png}" alt="Статут" class="image-responsive" loading="lazy">
+                  <img th:src="@{/img/documents-fond/statute-сharter_21.png}" th:alt="#{about-us.about-us.documents.alt2}" class="image-responsive" loading="lazy">
                   <p class="statutory-documents__num">23</p>
                 </div>
               </div>
               <div class="swiper-slide statutory-documents__image">
                 <div class="swiper-zoom-container statutory-documents__bound">
-                  <img th:src="@{/img/documents-fond/statute-сharter_22.png}" alt="Статут" class="image-responsive" loading="lazy">
+                  <img th:src="@{/img/documents-fond/statute-сharter_22.png}" th:alt="#{about-us.about-us.documents.alt2}" class="image-responsive" loading="lazy">
                   <p class="statutory-documents__num">24</p>
                 </div>
               </div>
               <div class="swiper-slide statutory-documents__image">
                 <div class="swiper-zoom-container statutory-documents__bound">
-                  <img th:src="@{/img/documents-fond/statute-сharter_23.png}" alt="Статут" class="image-responsive" loading="lazy">
+                  <img th:src="@{/img/documents-fond/statute-сharter_23.png}" th:alt="#{about-us.about-us.documents.alt2}" class="image-responsive" loading="lazy">
                   <p class="statutory-documents__num">25</p>
                 </div>
               </div>
               <div class="swiper-slide statutory-documents__image">
                 <div class="swiper-zoom-container statutory-documents__bound">
-                  <img th:src="@{/img/documents-fond/excerption_01.png}" alt="Витяг" class="image-responsive" loading="lazy">
+                  <img th:src="@{/img/documents-fond/excerption_01.png}" th:alt="#{about-us.about-us.documents.alt3}" class="image-responsive" loading="lazy">
                   <p class="statutory-documents__num">26</p>
                 </div>
               </div>
               <div class="swiper-slide statutory-documents__image">
                 <div class="swiper-zoom-container statutory-documents__bound">
-                  <img th:src="@{/img/documents-fond/excerption_02.png}" alt="Витяг" class="image-responsive" loading="lazy">
+                  <img th:src="@{/img/documents-fond/excerption_02.png}" th:alt="#{about-us.about-us.documents.alt3}" class="image-responsive" loading="lazy">
                   <p class="statutory-documents__num">27</p>
                 </div>
               </div>
               <div class="swiper-slide statutory-documents__image">
                 <div class="swiper-zoom-container statutory-documents__bound">
-                  <img th:src="@{/img/documents-fond/multi-account.png}" alt="Мультирахунок" class="image-responsive" loading="lazy">
+                  <img th:src="@{/img/documents-fond/multi-account.png}" th:alt="#{about-us.about-us.documents.alt4}" class="image-responsive" loading="lazy">
                   <p class="statutory-documents__num">28</p>
                 </div>
               </div>
               <div class="swiper-slide statutory-documents__image">
                 <div class="swiper-zoom-container statutory-documents__bound">
-                  <img th:src="@{/img/documents-fond/dollar-account.png}" alt="доларовий рахунок" class="image-responsive" loading="lazy">
+                  <img th:src="@{/img/documents-fond/dollar-account.png}" th:alt="#{about-us.about-us.documents.alt5}" class="image-responsive" loading="lazy">
                   <p class="statutory-documents__num">29</p>
                 </div>
               </div>
               <div class="swiper-slide statutory-documents__image">
                 <div class="swiper-zoom-container statutory-documents__bound">
-                  <img th:src="@{/img/documents-fond/euro-account.png}" alt="рахунок у евро" class="image-responsive" loading="lazy">
+                  <img th:src="@{/img/documents-fond/euro-account.png}" th:alt="#{about-us.about-us.documents.alt6}" class="image-responsive" loading="lazy">
                   <p class="statutory-documents__num">30</p>
                 </div>
               </div>
             </div>
           </div> <!-- end slider -->
         <div class="statutory-documents__parag text-parag">
-          На цьому сайті Ви можете
-          <a th:href="@{/help/become-volunteer#become-volunteer}" class="parag-link">стати частиною команди волонтерів</a>
-          або допомогти Україні іншим шляхом, перерахувавши посильну суму у якості
-          <a th:href="@{/help/donation#donation-now}" class="parag-link">пожертвування</a>.
+          <span th:text="#{about-us.about-us.documents.paragraph1}" th:remove="tag"></span>
+          <a th:href="@{/help/become-volunteer#become-volunteer}" class="parag-link" th:text="#{about-us.about-us.documents.paragraph2}"></a>
+          <span th:text="#{about-us.about-us.documents.paragraph3}" th:remove="tag"></span>
+          <a th:href="@{/help/donation#donation-now}" class="parag-link" th:text="#{about-us.about-us.documents.paragraph4}"></a>.
         </div>
       </div>
     </div>
