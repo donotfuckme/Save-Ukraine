@@ -1,3 +1,6 @@
+const observer = lozad();
+observer.observe();
+
 //Burger
 document.getElementById('burger-menu').onclick = (event) => {
   document.getElementById('burger-menu').classList.toggle('open')
