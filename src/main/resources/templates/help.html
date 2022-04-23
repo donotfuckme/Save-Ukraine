@@ -6,9 +6,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-  <title>Як я можу допомогти під час війни в Україні?</title>
+  <title th:text="#{help.head.title}"></title>
 
-  <meta name="description" content="Як допомогти біженцям та переселенцям | Де знайти волонтерську допомогу в Україні | Гуманітарна допомога від іноземців в Україні"/>
+  <meta name="description" th:content="#{help.head.meta.description}"/>
 
   <link rel="canonical" href="http://www.saveukraine.global/help#how-can-help"/>
 
@@ -39,74 +39,77 @@
   <section class="how-help">
     <div class="how-help__container container">
       <div class="how-help__main-link main-link">
-        <a th:href="@{/index#main-page}" class="main-link__anchor">Головна</a>
-        <p class="main-link__submenu"> / Наші Проєкти</p>
+        <a th:href="@{/index#main-page}" class="main-link__anchor" th:text="#{help.link.main}"></a>
+        <p class="main-link__submenu" th:text="#{help.link.projects}"></p>
       </div>
-      <h1 class="how-help__title title">Наші Проєкти</h1>
-      <p class="how-help__parag text-parag">Всі отримані кошти Міжнародного Благодійного Фонду «Врятувати Україну» спрямовуються на реалізацію таких проектів Фонду: Допомога дітям, Допомога тваринам, Допомога жінкам та людям похилого віку, а також на відновлення зруйнованого війною міста-героя Харкова.</p>
-      <p class="how-help__parag text-parag">На цій сторінці ви зможете самостійно обрати, на який із перелічених проектів підуть ваші благодійні пожертвування.</p>
-      <p class="how-help__parag text-parag">Якщо у вас немає побажань щодо конкретного проекту, але є бажання допомогти, то ви можете обрати опцію «Допомогти всім», тоді кошти від вашого благодійного пожертвування підуть на фінансування тих проектів, що будуть потребувати найбільшої уваги.</p>
-      <div class="how-help__attention text-parag"><span>Увага!</span> Остерігайтеся жертвувати на банківську картку людям, яких ви особисто не знаєте. Почастішали випадки шахрайства. На відміну від благодійного фонду, ці особи не мають контролюючих органів та звітності.</div>
+      <h1 class="how-help__title title" th:text="#{help.projects.title}"></h1>
+      <p class="how-help__parag text-parag" th:text="#{help.projects.paragraph1}"></p>
+      <p class="how-help__parag text-parag" th:text="#{help.projects.paragraph2}"></p>
+      <p class="how-help__parag text-parag" th:text="#{help.projects.paragraph3}"></p>
+      <div class="how-help__attention text-parag">
+        <span th:text="#{help.projects.paragraph4}"></span>
+        <span th:text="#{help.projects.paragraph5}" th:remove="tag"></span>
+      </div>
       <div class="how-help__body">
         <div class="how-help__item">
           <div class="how-help__image">
-            <img class="image-responsive" th:src="@{/img/how-can-help/help_01.png}" alt="Допомога.Благодыйнысть" loading="lazy">
+            <img class="image-responsive" th:src="@{/img/how-can-help/help_01.png}" th:alt="#{help.projects.project1.alt}" loading="lazy">
           </div>
           <div class="how-help__row">
-            <h2 class="how-help__subtitle" id="rebuild-kharkiv">Допомогти дітям</h2>
+            <h2 class="how-help__subtitle" id="rebuild-kharkiv" th:text="#{help.projects.project1.title}"></h2>
             <a th:href="@{/help/donation(project=children)#donation-now}" class="how-help__link icon-arrow-right2"></a>
           </div>
-          <p class="how-help__text-hidden">На що спрямовуються кошти: медикаменти і медицинське обладнання для дітей та лікарень; продукти харчування, одяг і предмети першої необхідності</p>
+          <p class="how-help__text-hidden" th:text="#{help.projects.project1.description}"></p>
         </div> <!-- end item -->
         <div class="how-help__item">
           <div class="how-help__image">
-            <img class="image-responsive" th:src="@{/img/how-can-help/help_02.png}" alt="Допомога.Благодыйнысть" loading="lazy">
+            <img class="image-responsive" th:src="@{/img/how-can-help/help_02.png}" th:alt="#{help.projects.project2.alt}" loading="lazy">
           </div>
           <div class="how-help__row">
-            <h2 class="how-help__subtitle">Допомогти тваринам</h2>
+            <h2 class="how-help__subtitle" th:text="#{help.projects.project2.title}"></h2>
             <a th:href="@{/help/donation(project=animals)#donation-now}" class="how-help__link icon-arrow-right2"></a>
           </div>
-          <p class="how-help__text-hidden">Допомога включає: лікування тварин, закупівля корму для людей, що притулили кинутих тварин внаслідок евакуації або смерті господарів, утримання в притулку; відновлення зруйнованих притулків; будівництво нових притулків для тварин.</p>
+          <p class="how-help__text-hidden" th:text="#{help.projects.project2.description}"></p>
         </div> <!-- end item -->
         <div class="how-help__item">
           <div class="how-help__image">
-            <img class="image-responsive" th:src="@{/img/how-can-help/help_03.png}" alt="Допомога.Благодыйнысть" loading="lazy">
+            <img class="image-responsive" th:src="@{/img/how-can-help/help_03.png}" th:alt="#{help.projects.project3.alt}" loading="lazy">
           </div>
           <div class="how-help__row">
-            <h2 class="how-help__subtitle">Відновлення міста-героя Харкова</h2>
+            <h2 class="how-help__subtitle" th:text="#{help.projects.project3.title}"></h2>
             <a th:href="@{/help/donation(project=kharkiv)#donation-now}" class="how-help__link icon-arrow-right2"></a>
           </div>
-          <p class="how-help__text-hidden">Ліквідація наслідків руйнувань (фонд приймає необхідну техніку передачі підрядникам). Фінансування: зведення тимчасового житла, ремонт зруйнованого житла.</p>
+          <p class="how-help__text-hidden" th:text="#{help.projects.project3.description}"></p>
         </div> <!-- end item -->
         <div class="how-help__item">
           <div class="how-help__image">
-            <img class="image-responsive" th:src="@{/img/how-can-help/help_04.png}" alt="Допомога.Благодыйнысть" loading="lazy">
+            <img class="image-responsive" th:src="@{/img/how-can-help/help_04.png}" th:alt="#{help.projects.project4.alt}" loading="lazy">
           </div>
           <div class="how-help__row">
-            <h2 class="how-help__subtitle">Допомога жінкам, літнім людям та біженцям, переселенцям</h2>
+            <h2 class="how-help__subtitle" th:text="#{help.projects.project4.title}"></h2>
             <a th:href="@{/help/donation(project=aged)#donation-now}" class="how-help__link icon-arrow-right2"></a>
           </div>
-          <p class="how-help__text-hidden">Що включає допомога: медикаменти і медицинське обладнання для людей похилого віку та лікарень; продукти харчування, одяг и предмети першої необхідності.</p>
+          <p class="how-help__text-hidden" th:text="#{help.projects.project4.description}"></p>
         </div> <!-- end item -->
         <div class="how-help__item">
           <div class="how-help__image">
-            <img class="image-responsive" th:src="@{/img/how-can-help/help_05.png}" alt="Допомога.Благодыйнысть" loading="lazy">
+            <img class="image-responsive" th:src="@{/img/how-can-help/help_05.png}" th:alt="#{help.projects.project5.alt}" loading="lazy">
           </div>
           <div class="how-help__row">
-            <h2 class="how-help__subtitle">Допомогти всім</h2>
+            <h2 class="how-help__subtitle" th:text="#{help.projects.project5.title}"></h2>
             <a th:href="@{/help/donation(project=all)#donation-now}" class="how-help__link icon-arrow-right2"></a>
           </div>
-          <p class="how-help__text-hidden">Кошти будуть розподілені між проєктами на розсуд Фонду.</p>
+          <p class="how-help__text-hidden" th:text="#{help.projects.project5.description}"></p>
         </div> <!-- end item -->
         <div class="how-help__item">
           <div class="how-help__image">
-            <img class="image-responsive" th:src="@{/img/how-can-help/help_03.png}" alt="Стать волонтером" loading="lazy">
+            <img class="image-responsive" th:src="@{/img/how-can-help/help_03.png}" th:alt="#{help.projects.project6.alt}" loading="lazy">
           </div>
           <div class="how-help__row">
-            <h2 class="how-help__subtitle">Стати Волонтером</h2>
+            <h2 class="how-help__subtitle" th:text="#{help.projects.project6.title}"></h2>
             <a th:href="@{/help/become-volunteer#become-volunteer}" class="how-help__link icon-arrow-right2"></a>
           </div>
-          <p class="how-help__text-hidden">Бажаючі допомогти можуть долучитися до наших рядів.</p>
+          <p class="how-help__text-hidden" th:text="#{help.projects.project6.description}"></p>
         </div><!-- end item -->
       </div>
     </div>
