@@ -4,25 +4,19 @@
 <head>
 
   <meta charset="utf-8">
-
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" th:content="#{reports.head.meta.description}"/>
 
-  <title>Фото- та письмові звіти за волонтерською діяльністю "Save Ukraine"</title>
-
-  <meta name="description" content="Волонтерська робота фонду «Врятувати Україну» | Звіти фонду гуманітарної допомоги по всій країні | Яку роботу проводить фонд «Save Ukraine»"/>
+  <title th:text="#{reports.head.title}"></title>
 
   <link rel="canonical" href="http://www.saveukraine.global/reports#reports"/>
-
   <link rel="shortcut icon" th:href="@{/img/favicon-heart.ico}" type="image/x-icon">
 
   <link href="https://fonts.googleapis.com/css?family=Open Sans" rel="stylesheet">
-
   <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet"/>
-
   <link th:href="@{/css/style.css}" rel="stylesheet">
 
   <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-
   <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
 
 </head>
@@ -41,12 +35,15 @@
     <div class="reports__container container">
 
       <div class="how-help__main-link main-link">
-        <a th:href="@{/index#main-page}" class="main-link__anchor">Головна</a>
-        <p class="main-link__submenu"> / Блог</p>
+        <a th:href="@{/index#main-page}" class="main-link__anchor" th:text="#{reports.link.main}"></a>
+        <p class="main-link__submenu" th:text="#{reports.link.reports}"></p>
       </div>
 
-      <h1 class="reports__title title">Блог БФ «Врятувати <span>Україну»</span></h1>
-      <p class="reports__parag text-parag">На цій сторінці ви можете побачити результати роботи Міжнародного Благодійного Фонду “Врятувати Україну”.</p>
+      <h1 class="reports__title title">
+        <span th:text="#{reports.reports.title1}" th:remove="tag"></span>
+        <span th:text="#{reports.reports.title2}"></span>
+      </h1>
+      <p class="reports__parag text-parag" th:text="#{reports.reports.paragraph}"></p>
       <div class="reports__body" id="all-report">
         <!--/*@thymesVar id="reportPage" type="org.springframework.data.domain.Page"*/-->
         <!--/*@thymesVar id="report" type="global.saveukraine.volunteer.entity.Report"*/-->
@@ -60,7 +57,7 @@
               <p class="item-reports__subtitle" th:text="${report.title}"></p>
               <p class="item-reports__text" th:text="${report.description}"></p>
               <div class="item-reports__link">
-                <a th:href="'/reports/' + ${report.id}" class="anchor__link icon-arrow-right2">Подивитись повністю</a>
+                <a th:href="'/reports/' + ${report.id}" class="anchor__link icon-arrow-right2" th:text="#{reports.reports.button.open}"></a>
               </div>
             </div>
           </div>
