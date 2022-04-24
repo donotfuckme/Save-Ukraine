@@ -4,29 +4,21 @@
 <head>
 
   <meta charset="utf-8">
-
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" th:content="#{report.head.meta.description}"/>
 
-  <title>Фото- та письмовий звіт за волонтерською діяльністю "Save Ukraine"</title>
-
-  <meta name="description" content="Волонтерська робота фонду «Врятувати Україну» | Звіти фонду гуманітарної допомоги по всій країні | Яку роботу проводить фонд «Save Ukraine»"/>
+  <title th:text="#{report.head.title}"></title>
 
   <link rel="canonical" href="http://www.saveukraine.global/report#report-item"/>
-
   <link rel="shortcut icon" th:href="@{/img/favicon-heart.ico}" type="image/x-icon">
 
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open Sans" >
-
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
-
-  <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet"/>
-
-  <link th:href="@{/css/style.css}" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css"/>
+  <link rel="stylesheet" href="#" th:href="@{/css/style.css}">
 
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-
   <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-
   <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
 
 </head>
@@ -45,11 +37,11 @@
     <!--/*@thymesVar id="report" type="global.saveukraine.volunteer.entity.Report"*/-->
     <div class="container__report container">
       <div class="how-help__main-link main-link">
-        <a th:href="@{/index#main-page}" class="main-link__anchor">Головна</a>
-        <a th:href="@{/reports#reports}" class="main-link__subanchor">/ Блог</a>
-        <p class="main-link__submenu" th:text="' / Звіт від ' + ${#temporals.format(report.dateTimeOf, 'dd-MM-yyyy, HH:mm')}"></p>
+        <a th:href="@{/index#main-page}" class="main-link__anchor" th:text="#{report.link.main}"></a>
+        <a th:href="@{/reports#reports}" class="main-link__subanchor" th:text="#{report.link.reports}"></a>
+        <p class="main-link__submenu" th:text="#{report.link.report} + ' ' + ${#temporals.format(report.dateTimeOf, 'dd-MM-yyyy, HH:mm')}"></p>
       </div>
-      <h1 class="reports__title title" th:text="'Звіт від ' + ${#temporals.format(report.dateTimeOf, 'dd-MM-yyyy, HH:mm')}"></h1>
+      <h1 class="reports__title title" th:text="#{report.report.title} + ' ' + ${#temporals.format(report.dateTimeOf, 'dd-MM-yyyy, HH:mm')}"></h1>
       <p class="report__parag" th:text="${report.description}"></p>
       <div th:if="${report.images ne null}" class="report__slider slider-reportDto">
         <div class="swiper swiper-report__big">
@@ -76,11 +68,11 @@
     <div class="report-arrows__container container">
       <div class="report-arrows__body">
         <div th:if="${reportAfter ne null}" class="report-arrows__prev">
-          <a th:href="'/reports/' + ${reportAfter.id}" class="report-arrows__link icon-arrow-right2"><span class="arrow-text__hidden">Подивитись наступний звіт</span></a>
+          <a th:href="'/reports/' + ${reportAfter.id}" class="report-arrows__link icon-arrow-right2"><span class="arrow-text__hidden" th:text="#{report.report.button.next}"></span></a>
         </div>
         <div class="text-report__show">Звіти</div>
         <div th:if="${reportBefore ne null}" class="report-arrows__next">
-          <a th:href="'/reports/' + ${reportBefore.id}" class="report-arrows__link icon-arrow-right2"><span class="arrow-text__hidden">Подивитись попередній звіт</span></a>
+          <a th:href="'/reports/' + ${reportBefore.id}" class="report-arrows__link icon-arrow-right2"><span class="arrow-text__hidden" th:text="#{report.report.button.previous}"></span></a>
         </div>
       </div>
     </div>
@@ -88,9 +80,9 @@
   <div class="report-baner ">
     <div class="report-baner__container container">
       <div class="report-baner__body">
-        <h3 class="report-baner__title">Україна потребує вашої допомоги!</h3>
+        <h3 class="report-baner__title" th:text="#{report.donate.title}"></h3>
         <div class="report-baner__donate donate">
-          <a th:href="@{/help/donation#donation-now}" class="donate__link _btn">Допомогти</a>
+          <a th:href="@{/help/donation#donation-now}" class="donate__link _btn" th:text="#{report.donate.button}"></a>
         </div>
       </div>
     </div>
