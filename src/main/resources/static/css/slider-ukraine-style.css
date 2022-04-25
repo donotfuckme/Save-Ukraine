@@ -149,9 +149,6 @@
 
 .slider-main-ukrain {
   flex: 1 1 auto;
-  max-width: 800px;
-  overflow: visible;
-  margin: 0 0 20px 0;
 }
 
 @media (max-width: 768px) {

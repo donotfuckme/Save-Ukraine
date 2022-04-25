@@ -1,6 +1,3 @@
-// const observer = lozad();
-// observer.observe();
-
 //Burger
 document.getElementById('burger-menu').onclick = (event) => {
   document.getElementById('burger-menu').classList.toggle('open')
@@ -110,11 +107,7 @@ if (document.querySelector('.slider-main-ukrain')) {
     autoplay: true,
     pagination: {
       el: '.swiper-pagination'
-    },
-    navigation: {
-      nextEl: '.slider-main-ukrain .slider-arrows-next',
-      prevEl: '.slider-main-ukrain .slider-arrows-prev',
-    },
+    }
   })
 }
 
