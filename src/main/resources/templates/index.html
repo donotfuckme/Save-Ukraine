@@ -20,7 +20,7 @@
   <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/lozad/dist/lozad.min.js"></script>
+ <!--  <script src="https://cdn.jsdelivr.net/npm/lozad/dist/lozad.min.js"></script> -->
 
 </head>
 
@@ -30,10 +30,10 @@
 
   <div class="flag-gifs">
     <div class="gif-ukraine gif-ukraine-left">
-      <img th:attr="data-src='/img/flag-ukraine.gif'" th:alt="#{index.flags.alt}" class="image-responsive lozad" loading="lazy">
+      <img th:src="@{/img/flag-ukraine.gif}" th:alt="#{index.flags.alt}" class="image-responsive lozad" loading="lazy">
     </div>
     <div class="gif-ukraine gif-ukraine-right">
-      <img th:attr="data-src='/img/flag-ukraine.gif'" th:alt="#{index.flags.alt}" class="image-responsive lozad" loading="lazy">
+      <img th:src="@{/img/flag-ukraine.gif}" th:alt="#{index.flags.alt}" class="image-responsive lozad" loading="lazy">
     </div>
   </div>
 
@@ -67,16 +67,16 @@
           <div class="slider-main-ukrain swiper">
             <div class="slider-wrapper-ukrain swiper-wrapper">
               <div class="slide-main-ukrain swiper-slide">
-                <img th:attr="data-src='/img/slider-ukrain/ukraine-slider_1.png'" th:alt="#{index.slider.image.alt}" class="image-responsive lozad">
+                <img th:src="@{/img/slider-ukrain/ukraine-slider_1.png}" th:alt="#{index.slider.image.alt}" class="image-responsive lozad">
               </div>
               <div class="slide-main-ukrain swiper-slide">
-                <img th:attr="data-src='/img/slider-ukrain/ukraine-slider_2.png'" th:alt="#{index.slider.image.alt}" class="image-responsive lozad">
+                <img th:src="@{/img/slider-ukrain/ukraine-slider_2.png}" th:alt="#{index.slider.image.alt}" class="image-responsive lozad">
               </div>
               <div class="slide-main-ukrain swiper-slide">
-                <img th:attr="data-src='/img/slider-ukrain/ukraine-slider_3.png'" th:alt="#{index.slider.image.alt}" class="image-responsive lozad">
+                <img th:src="@{/img/slider-ukrain/ukraine-slider_3.png}" th:alt="#{index.slider.image.alt}" class="image-responsive lozad">
               </div>
               <div class="slide-main-ukrain swiper-slide">
-                <img th:attr="data-src='/img/slider-ukrain/ukraine-slider_4.png'" th:alt="#{index.slider.image.alt}" class="image-responsive lozad">
+                <img th:src="@{/img/slider-ukrain/ukraine-slider_4.png}" th:alt="#{index.slider.image.alt}" class="image-responsive lozad">
               </div>
             </div>
             <div class="swiper-pagination slider-dots-ukrain"></div>
@@ -142,31 +142,31 @@
           <div class="slider-wrapper-building swiper-wrapper">
             <div class="slide-building swiper-slide">
               <div class="slide-building__image">
-                <img th:attr="data-src='/img/slide-building/slide-building_01.png'" th:alt="#{index.slider.building1.alt}" class="lozad">
+                <img th:src="@{/img/slide-building/slide-building_01.png} th:alt="#{index.slider.building1.alt}" class="lozad">
               </div>
               <div class="slide-building__text" th:text="#{index.slider.building1.text}"></div>
             </div>
             <div class="slide-building swiper-slide">
                 <div class="slide-building__image">
-                  <img th:attr="data-src='/img/slide-building/slide-building_02.png'" th:alt="#{index.slider.building2.alt}" class="lozad">
+                  <img th:src="@{/img/slide-building/slide-building_02.png}" th:alt="#{index.slider.building2.alt}" class="lozad">
                 </div>
               <div class="slide-building__text" th:text="#{index.slider.building2.text}"></div>
             </div>
             <div class="slide-building swiper-slide">
               <div class="slide-building__image">
-                <img th:attr="data-src='/img/slide-building/slide-building_03.png'" th:alt="#{index.slider.building3.alt}" class="lozad">
+                <img th:src="@{/img/slide-building/slide-building_03.png}h:alt="#{index.slider.building3.alt}" class="lozad">
               </div>
               <div class="slide-building__text" th:text="#{index.slider.building3.text}"></div>
             </div>
             <div class="slide-building swiper-slide">
               <div class="slide-building__image">
-                <img th:attr="data-src='/img/slide-building/slide-building_04.png'" th:alt="#{index.slider.building4.alt}" class="lozad">
+                <img th:src="@{/img/slide-building/slide-building_04.png} th:alt="#{index.slider.building4.alt}" class="lozad">
               </div>
               <div class="slide-building__text" th:text="#{index.slider.building4.text}"></div>
             </div>
             <div class="slide-building swiper-slide">
               <div class="slide-building__image">
-                <img th:attr="data-src='/img/slide-building/slide-building_05.png'" th:alt="#{index.slider.building5.alt}" class="lozad">
+                <img th:src="@{/img/slide-building/slide-building_05.png}" th:alt="#{index.slider.building5.alt}" class="lozad">
               </div>
               <div class="slide-building__text" th:text="#{index.slider.building5.text}"></div>
             </div>
