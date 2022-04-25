@@ -108,16 +108,12 @@
 
 .reports__item {
   flex: 0 1 50%;
-  display: flex;
   padding: 0 15px;
   margin: 0 0 50px 0;
 }
 
 .item-reports {
   display: flex;
-  width: 100%;
-  align-items: stretch;
-  justify-content: space-between;
   flex-direction: column;
 }
 
