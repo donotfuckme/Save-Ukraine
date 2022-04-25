@@ -5,23 +5,18 @@
 
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" th:content="#{help.head.meta.description}"/>
 
   <title th:text="#{help.head.title}"></title>
 
-  <meta name="description" th:content="#{help.head.meta.description}"/>
-
   <link rel="canonical" href="http://www.saveukraine.global/help#how-can-help"/>
-
   <link rel="shortcut icon" th:href="@{/img/favicon-heart.ico}" type="image/x-icon">
 
-  <link href="https://fonts.googleapis.com/css?family=Open Sans" rel="stylesheet">
-
-  <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet"/>
-
-  <link th:href="@{/css/style.css}" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open Sans">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css"/>
+  <link rel="stylesheet" href="#" th:href="@{/css/style.css}">
 
   <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-
   <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
 
 </head>
@@ -57,7 +52,7 @@
           </div>
           <div class="how-help__row">
             <h2 class="how-help__subtitle" id="rebuild-kharkiv" th:text="#{help.projects.project1.title}"></h2>
-            <a th:href="@{/help/donation(project=children)#donation-now}" class="how-help__link icon-arrow-right2"></a>
+            <a th:href="@{/help/donation?project=children#donation-now}" class="how-help__link icon-arrow-right2"></a>
           </div>
           <p class="how-help__text-hidden" th:text="#{help.projects.project1.description}"></p>
         </div> <!-- end item -->
@@ -67,7 +62,7 @@
           </div>
           <div class="how-help__row">
             <h2 class="how-help__subtitle" th:text="#{help.projects.project2.title}"></h2>
-            <a th:href="@{/help/donation(project=animals)#donation-now}" class="how-help__link icon-arrow-right2"></a>
+            <a th:href="@{/help/donation?project=animals#donation-now}" class="how-help__link icon-arrow-right2"></a>
           </div>
           <p class="how-help__text-hidden" th:text="#{help.projects.project2.description}"></p>
         </div> <!-- end item -->
@@ -77,7 +72,7 @@
           </div>
           <div class="how-help__row">
             <h2 class="how-help__subtitle" th:text="#{help.projects.project3.title}"></h2>
-            <a th:href="@{/help/donation(project=kharkiv)#donation-now}" class="how-help__link icon-arrow-right2"></a>
+            <a th:href="@{/help/donation?project=kharkiv#donation-now}" class="how-help__link icon-arrow-right2"></a>
           </div>
           <p class="how-help__text-hidden" th:text="#{help.projects.project3.description}"></p>
         </div> <!-- end item -->
@@ -87,7 +82,7 @@
           </div>
           <div class="how-help__row">
             <h2 class="how-help__subtitle" th:text="#{help.projects.project4.title}"></h2>
-            <a th:href="@{/help/donation(project=aged)#donation-now}" class="how-help__link icon-arrow-right2"></a>
+            <a th:href="@{/help/donation?project=aged#donation-now}" class="how-help__link icon-arrow-right2"></a>
           </div>
           <p class="how-help__text-hidden" th:text="#{help.projects.project4.description}"></p>
         </div> <!-- end item -->
@@ -97,7 +92,7 @@
           </div>
           <div class="how-help__row">
             <h2 class="how-help__subtitle" th:text="#{help.projects.project5.title}"></h2>
-            <a th:href="@{/help/donation(project=all)#donation-now}" class="how-help__link icon-arrow-right2"></a>
+            <a th:href="@{/help/donation?project=all#donation-now}" class="how-help__link icon-arrow-right2"></a>
           </div>
           <p class="how-help__text-hidden" th:text="#{help.projects.project5.description}"></p>
         </div> <!-- end item -->

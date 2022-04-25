@@ -6,15 +6,15 @@
     <div class="footer__row">
       <div class="footer__logo logo">
         <a href="/" class="logo__link">
-          <img th:src="@{/img/logo.png}" alt="БО «МБФ «ВРЯТУВАТИ УКРАЇНУ»">
+          <img th:src="@{/img/logo.png}" th:alt="#{footer.logo.alt}">
         </a>
       </div>
     </div>
     <div class="footer__body">
       <div class="footer__item contacts">
-        <h3 class="footer__subtitle">Контакти</h3>
+        <h3 class="footer__subtitle" th:text="#{footer.contacts}"></h3>
         <div class="contacts__items">
-          <div class="contacts__item icon-location2">м.Вінниця</div>
+          <div class="contacts__item icon-location2" th:text="#{footer.location}"></div>
           <div class="contacts__item icon-phone">
             <a href="tel:+380502845065">+380 50 284 50 65</a>
           </div>
@@ -24,7 +24,7 @@
         </div>
       </div>
       <div class="footer__item messengers">
-        <h3 class="footer__subtitle">Месенджери</h3>
+        <h3 class="footer__subtitle" th:text="#{footer.messengers}"></h3>
         <div class="messengers__items">
           <div class="messengers__item contacts__item">
             <a title="Viber" href="viber://chat?number=380502845065">+380 50 284 50 65</a>
@@ -38,7 +38,7 @@
         </div>
       </div>
       <div class="footer__item social-media">
-        <h3 class="footer__subtitle">Підписуйтесь на нас</h3>
+        <h3 class="footer__subtitle" th:text="#{footer.social-media}"></h3>
         <div class="social-media__items">
           <div class="social-media__item">
             <a th:href="@{https://www.instagram.com/save_ukraine_fund/?igshid=YmMyMTA2M2Y=}" class="icon-instagram" target="blank"></a>
@@ -52,12 +52,12 @@
         </div>
       </div>
       <div class="footer__item links-help">
-        <a th:href="@{/help/become-volunteer#become-volunteer}">Стати волонтером</a>
-        <a th:href="@{/help/donation#donation-now}">Пожертвувати</a>
+        <a th:href="@{/help/become-volunteer#become-volunteer}" th:text="#{footer.link.become-volunteer}"></a>
+        <a th:href="@{/help/donation#donation-now}" th:text="#{footer.link.donation}"></a>
       </div>
       <div class="footer__copyright copyright">
-        <div class="copyright__item">(с) Всі права захищено, 2022.</div>
-        <div class="copyright__item">Сайт розробляли:</div>
+        <div class="copyright__item" th:text="#{footer.copyright}"></div>
+        <div class="copyright__item" th:text="#{footer.developed-by}"></div>
         <div class="copyright__item"><a href="#!">Тарас Шевченко</a>,</div>
         <div class="copyright__item"><a href="#!">Леся Українка</a>,</div>
         <div class="copyright__item"><a href="#!">Богдан Хмельницький</a>.</div>
