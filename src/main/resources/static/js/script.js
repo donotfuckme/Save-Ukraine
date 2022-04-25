@@ -1,5 +1,5 @@
-const observer = lozad();
-observer.observe();
+// const observer = lozad();
+// observer.observe();
 
 //Burger
 document.getElementById('burger-menu').onclick = (event) => {
