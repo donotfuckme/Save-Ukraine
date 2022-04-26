@@ -31,12 +31,11 @@
             </div>
           </div>
           <form th:action="@{/language}" method="get" action="#" id="form-language">
-            <select class="js-example-basic-single language-select" name="lang">
+            <select class="js-example-basic-single language-select" name="lang" onchange="this.form.submit()">
               <option value="ua" data-option_flag="flag-ukr" class="language-option" th:text="#{header.language.selector.ukr.text}"></option>
               <option value="en" data-option_flag="flag-en" class="language-option" th:text="#{header.language.selector.eng.text}"></option>
               <option value="ru" data-option_flag="flag-ru" class="language-option" th:text="#{header.language.selector.rus.text}"></option>
             </select>
-            <button type="submit"></button>
           </form>
         </div>
       </div>
