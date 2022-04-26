@@ -47,7 +47,7 @@
         <div class="swiper swiper-report__big">
           <div class="swiper-wrapper">
             <div th:each="image : ${report.images}" class="swiper-slide slide-report__big">
-              <img th:src="'/storage/' + ${image.name}" alt="">
+              <img th:src="'/storage/' + ${image.name}" alt="" class="image-responsive">
             </div>
           </div>
           <div class="swiper-report-arrows swiper-arrow__next icon-arrow-right2"></div>
@@ -56,7 +56,7 @@
         <div thumbsSlider="" class="swiper swiper-report__small">
           <div class="swiper-wrapper">
             <div th:each="image : ${report.images}" class="swiper-slide slide-report__small">
-              <img th:src="'/storage/' + ${image.name}" alt="">
+              <img th:src="'/storage/' + ${image.name}" alt="" class="image-responsive">
             </div>
           </div>
         </div>

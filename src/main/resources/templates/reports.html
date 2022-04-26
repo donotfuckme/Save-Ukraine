@@ -50,7 +50,7 @@
         <div th:each="report : ${reportPage.content}" class="reports__item">
           <div class="item-reports">
             <div th:if="${report.images ne null}" class="item-reports__image">
-              <img class="image-responsive" th:src="'/storage/' + ${report.images[0].name}" alt="">
+              <img class="image-responsive" th:src="'/storage/' + ${report.images[0].name}" alt="" loading="lazy">
             </div>
             <div class="item-reports__content">
               <p class="item-reports__date" th:text="${#temporals.format(report.dateTimeOf, 'dd-MM-yyyy, HH:mm')}"></p>
